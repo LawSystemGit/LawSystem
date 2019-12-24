@@ -4,26 +4,6 @@
     الأحكام
 @endsection
 
-@section('stylesheets')
-    <!-- <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/dataTables.bootstrap4.min.css')}}">
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/bootstrap.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/main.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/select2.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/icons.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/jquery.toast.css')}}"/>
-    <style>
-        .table-right td {
-            text-align: center;
-        }
-
-        .general_btn {
-            margin-right: -4px;
-        }
-    </style>
-
-@endsection
-
 @section('content')
 
     <!-- start content-wrapper -->

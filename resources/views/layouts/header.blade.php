@@ -134,7 +134,7 @@
                       <li class="kt-notification__item-details">
                         <a href="#">
                           <div class="kt-notification__item-title kt-font-bold pull-right">
-                            <img src="{{asset('lawSystem/assets/images/user.jpg')}}" class="img-circle" alt="User Image">
+                              <img src="{{asset('assets/images/user.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>نزيم الريس
                             <small><div class="clock-icon menu-small-icon inline-icon gray-icon "></div> 5 دقائق</small>
@@ -145,7 +145,7 @@
                       <li class="kt-notification__item-details">
                         <a href="#">
                           <div class="kt-notification__item-title kt-font-bold pull-right">
-                            <img src="{{asset('lawSystem/assets/images/user.jpg')}}" class="img-circle" alt="User Image">
+                              <img src="{{asset('assets/images/user.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>نزيم الريس
                             <small><div class="clock-icon menu-small-icon inline-icon gray-icon "></div> 5 دقائق</small>
@@ -156,7 +156,7 @@
                       <li class="kt-notification__item-details">
                           <a href="#">
                             <div class="kt-notification__item-title kt-font-bold pull-right">
-                              <img src="{{asset('lawSystem/assets/images/user.jpg')}}" class="img-circle" alt="User Image">
+                                <img src="{{asset('assets/images/user.jpg')}}" class="img-circle" alt="User Image">
                             </div>
                             <h4>نزيم الريس
                               <small><div class="clock-icon menu-small-icon inline-icon gray-icon "></div> 5 دقائق</small>
@@ -167,7 +167,7 @@
                       <li class="kt-notification__item-details">
                         <a href="#">
                           <div class="kt-notification__item-title kt-font-bold pull-right">
-                            <img src="{{asset('lawSystem/assets/images/user.jpg')}}" class="img-circle" alt="User Image">
+                              <img src="{{asset('assets/images/user.jpg')}}" class="img-circle" alt="User Image">
                           </div>
                           <h4>نزيم الريس
                             <small><div class="clock-icon menu-small-icon inline-icon gray-icon "></div> 5 دقائق</small>
@@ -192,13 +192,13 @@
                بلال الايوبي
               </div>
               <div class="kt-user-card__avatar">
-                <img class="kt-hidden" alt="Pic" src="{{asset('lawSystem/assets/images/user.jpg')}}">
+                  <img class="kt-hidden" alt="Pic" src="{{asset('assets/images/user.jpg')}}">
               </div>
             </button>
             <div class="main-dropdown admin-list dropdown-menu py-0">
               <ul class="kt-notification ">
                 <li class="kt-notification__item-details text-center dropdown-user-header ">
-                  <img src="{{asset('lawSystem/assets/images/user.jpg')}}" class="img-card-musers" alt="User Image">
+                    <img src="{{asset('assets/images/user.jpg')}}" class="img-card-musers" alt="User Image">
                 </li>
                 <li class="kt-notification__item-details text-center dropdown-user-body">
                   <div class="kt-notification__item-title kt-font-bold">
