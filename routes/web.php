@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 
+// this is comment
 Route::get('/', 'AuthController@index');
 
 // login routes
