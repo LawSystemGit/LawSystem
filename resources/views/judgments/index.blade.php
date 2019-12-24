@@ -96,21 +96,7 @@
 @endsection
 
 @section('secripts')
-    <!-- end main-wrapper -->
-    <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
-    <script>
-        $(function () {
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
 
-        });
-    </script>
-    <script src="{{asset('lawSystem/assets/js/popper.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/full_numbers_no_ellipses.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/function.js')}}"></script>
     <script>
         $.fn.DataTable.ext.pager.numbers_length = 3;
         var table = $('#usersTable').DataTable({
@@ -243,9 +229,7 @@
         }
 
     </script>
-    <script src="{{asset('lawSystem/assets/js/select2.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
+
 
 
 @endsection
