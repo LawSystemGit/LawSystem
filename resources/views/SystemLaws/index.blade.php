@@ -4,6 +4,15 @@
     قوانين
 @endsection
 
+@section('stylesheets')
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/main.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/select2.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/icons.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/jquery.toast.css')}}"/>
+@endsection
+
 @section('content')
 
     <!-- start content-wrapper -->
@@ -91,7 +100,20 @@
 @endsection
 
 @section('secripts')
-    {{--    <script src="{{asset('js/master.js')}}"></script>--}}
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+
+        });
+    </script>
+    <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/popper.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/full_numbers_no_ellipses.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/function.js')}}"></script>
     <script>
         $.fn.DataTable.ext.pager.numbers_length = 3;
         var table = $('#usersTable').DataTable({
@@ -159,7 +181,7 @@
                 },
                 {
                     data: 'id', name: 'edit', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="laws/1/deActivate" >' + "حذف" + '</a>';
+                        data = '<a  class="general_btn btn_1 ml-2  " href="laws/1/deActivate" >' + "حذف" + '</a>';
                         return data;
                     }
                 },
@@ -223,6 +245,8 @@
         }
 
     </script>
-
+    <script src="{{asset('lawSystem/assets/js/select2.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
 
 @endsection

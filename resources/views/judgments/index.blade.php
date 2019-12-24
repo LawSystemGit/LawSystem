@@ -4,6 +4,26 @@
     الأحكام
 @endsection
 
+@section('stylesheets')
+    <!-- <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/bootstrap.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/main.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/select2.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/icons.css')}}"/>
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/jquery.toast.css')}}"/>
+    <style>
+        .table-right td {
+            text-align: center;
+        }
+
+        .general_btn {
+            margin-right: -4px;
+        }
+    </style>
+
+@endsection
+
 @section('content')
 
     <!-- start content-wrapper -->
@@ -96,7 +116,21 @@
 @endsection
 
 @section('secripts')
+    <!-- end main-wrapper -->
+    <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
 
+        });
+    </script>
+    <script src="{{asset('lawSystem/assets/js/popper.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/full_numbers_no_ellipses.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/function.js')}}"></script>
     <script>
         $.fn.DataTable.ext.pager.numbers_length = 3;
         var table = $('#usersTable').DataTable({
@@ -229,7 +263,9 @@
         }
 
     </script>
-
+    <script src="{{asset('lawSystem/assets/js/select2.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
 
 
 @endsection

@@ -61,7 +61,7 @@ class LawsController extends Controller
         }
 
         $lawId = Law::create($request->all());
-        $lawId->slug = LawsController::make_slug($request['lawrelation']);
+        $lawId->slug = str_slug($request['lawrelation']);
         $lawId->save();
         // check if the $request has a file
         // Note:: the lawfile column is nullable
@@ -73,7 +73,7 @@ class LawsController extends Controller
             // get just the extention
             $extention = $request->file('lawfile')->getClientOriginalExtension();
             // file to store
-            $fileNmaeToStore = "_قانون رقم_" . $lawId->lawno . '.' . $extention;
+            $fileNmaeToStore = $lawId->lawno . '.' . $extention;
             // upload file
             if (!(Storage::exists('public/Law_PDF/' . $covernamewithEXT))) {
                 $path = Storage::move('public/files/' . $covernamewithEXT, 'public/Law_PDF/' . $fileNmaeToStore);
@@ -137,7 +137,7 @@ class LawsController extends Controller
         $lawID->lawno = $request['lawno'];
         $lawID->lawyear = $request['lawyear'];
         $lawID->lawrelation = $request['lawrelation'];
-        $lawID->slug = LawsController::make_slug($request['lawrelation']);
+        $lawID->slug = str_slug($request['lawrelation']);
 
         // check if the request has file
         // if file is changed then
@@ -183,19 +183,7 @@ class LawsController extends Controller
     }
 
     // laravel doesn't support arabic slug so this method is used to generate arabic ones
-    public static function make_slug($string, $separator = '-')
-    {
-        $string = trim($string);
-        $string = mb_strtolower($string, 'UTF-8');
 
-        $string = preg_replace("/[^a-z0-9_\s-۰۱۲۳۴۵۶۷۸۹ءاآؤئبپتثجچحخدذرزژسشصضطظعغفقکكگگلمنوهی]/u", '', $string);
-
-        $string = preg_replace("/[\s-_]+/", ' ', $string);
-
-        $string = preg_replace("/[\s_]/", $separator, $string);
-
-        return $string;
-    }
 
 
     public function AddArticles(Request $request, Law $lawID)
