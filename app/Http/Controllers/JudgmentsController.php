@@ -56,7 +56,7 @@ class JudgmentsController extends Controller
 
         $lastJudgment = judgments::create($request->all());
         $lastJudgment->incompletednotes = $request['notes'];
-
+        $lastJudgment->save();
         if ($lastJudgment) {
             $suuccess = Storage::move(('public/unfinished_judgments/' . $request['judgmentfile']), ('public/Finished_Judgments/'
                 . $request['judgmentfile']));
@@ -170,12 +170,6 @@ class JudgmentsController extends Controller
         return view('judgments.editJudgment', compact('judgmentID'));
     }
 
-    public function addNote(Request $request, $judgmentID)
-    {
-        $judgment = judgments::find($judgmentID);
-        return view('judgments.addNoteTojudgment', compact(['judgment']));
-    }
-
 
     public static function readDirectory($directory)
     {
@@ -183,10 +177,10 @@ class JudgmentsController extends Controller
             function ($item) {
                 return strpos($item, 'pdf');
             });
-        $data = [];
         $realfilesName = [];
         foreach ($files as $file) {
             $data = explode("/", $file);
+            $realfilesName [] = $data[2];
             $realfilesName [] = $data[2];
         }
 

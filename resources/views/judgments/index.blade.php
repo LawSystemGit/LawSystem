@@ -178,10 +178,11 @@
                 {data: 'year', name: 'year'},
                 {data: 'objectionNo', name: 'objectionNo'},
                 {data: 'notes', name: 'notes'},
-                {data: 'notes', name: 'incompletednotes'},
+                {data: 'incompletednotes', name: 'incompletednotes'},
                 {
                     data: 'id', name: 'add', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="#">' + "عرض المبادئ" + '</a>';
+                        data = '<a class="general_btn btn_1 ml-2" ' +
+                            'href="/judgments/' + data + '/showNotes">' + "عرض المبادئ" + '</a>';
                         return data;
                     }
                 },

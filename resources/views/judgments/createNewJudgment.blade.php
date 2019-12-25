@@ -121,7 +121,6 @@
                                         var omyFrame = document.getElementById("myFrame");
                                         omyFrame.style.display = "block";
                                         let filename = "/storage/unfinished_judgments/" + file;
-
                                         omyFrame.src = filename;
                                     }
                                 </script>

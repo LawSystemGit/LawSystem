@@ -6,7 +6,8 @@
 
 @section('stylesheets')
     <!-- <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/dataTables.bootstrap4.min.css')}}" xmlns="">
+    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/dataTables.bootstrap4.min.css')}}"
+          xmlns="">
     <link rel="stylesheet" href="{{asset('lawSystem/assets/css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('lawSystem/assets/css/main.css')}}"/>
     <link rel="stylesheet" href="{{asset('lawSystem/assets/css/select2.min.css')}}"/>
@@ -28,6 +29,7 @@
                             <li><a href="#">الرئيسية</a></li>
                             <li>الاحكام</li>
                             <li>اضافة مبدأ والموجز</li>
+                            {{--                            <li > <p class="alert alert-info">هذا الحكم مكتمل</p></li>--}}
                         </ol>
                     </div>
                 </div>
@@ -42,8 +44,7 @@
                         <form method="post"
                               action="{{route('saveNote',['judgmentID'=>$judgment])}}"
                               enctype="multipart/form-data"
-                              id="notesForm"
-                              onsubmit="Prevent()"
+                              @submit.prevent="SaveData({{$judgment->id}})"
                         >
                             @csrf
                             <div class="col-md-6 float-right">
@@ -54,7 +55,7 @@
                                             <label>الموجز</label>
                                             <textarea class="form-control rounded-0" rows="4"
                                                       name="judgshort" id="judgshort"
-
+                                                      v-model="judgshort"
                                                       required
                                             ></textarea>
                                         </div>
@@ -62,7 +63,7 @@
                                             <label>المبدأ</label>
                                             <textarea class="form-control rounded-0" rows="4"
                                                       name="judgrule" id="judgrule" required
-
+                                                      v-model="judgrule"
                                             ></textarea>
                                         </div>
 
@@ -71,7 +72,10 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <input id="AddArticle" type="text"
-                                                           class="form-control">
+                                                           class="form-control"
+                                                           v-model="articleToSearch"
+                                                           @keyup="search"
+                                                    >
 
                                                     <select id="SelectedArticles" name="from[]"
                                                             class="multiselect form-control"
@@ -89,7 +93,6 @@
                                                     <select name="to[]" id="multiselect_to_1"
                                                             class="form-control" size="8"
                                                             multiple="multiple">
-
                                                     </select>
                                                 </div>
                                             </div>
@@ -98,22 +101,25 @@
                                     </div>
 
                                 </div>
-                                <button type="submit" data-dismiss="modal" class="btn general_btn btn_1">حفظ</button>
-                                <a href="{{route('addJudgments')}}" class="btn general_btn btn_1">الرجوع</a>
+                                @if($judgment->incompletednotes)
+                                    <input type="submit" class="btn general_btn btn_1" value="حفظ">
 
+                                @endif
+                                <a href="{{route('addJudgments')}}" class="btn general_btn btn_1">الرجوع</a>
                             </div>
 
                             <div class="col-md-6 float-right">
 
-                                <iframe id="myFrame" style="display:none" width="100%" height="400"></iframe>
-
-                                <div class="radio">
-                                    <label><input type="radio" name="pdf"
-                                                  onclick="openPdf({{json_encode($judgment->judgmentFile)}})">
-                                        {{$judgment->judgmentFile}}
-                                    </label>
-                                </div>
-
+                                <iframe id="myFrame" style="display:none" width="100%"
+                                        height="400"></iframe>
+                                @if($judgment->incompletednotes)
+                                    <div class="radio">
+                                        <label><input type="radio" name="pdf"
+                                                      onclick="openPdf({{json_encode($judgment->judgmentFile)}})">
+                                            {{$judgment->judgmentFile}}
+                                        </label>
+                                    </div>
+                                @endif
                             </div>
                         </form>
                     </div>
@@ -148,11 +154,79 @@
     <script src="{{asset('lawSystem/assets/js/dataTables.bootstrap4.min.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/function.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/select2.min.js')}}"></script>
+    <script src="{{asset('lawSystem/assets/js/multiselect.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/users.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
     <script>
+        const notes = new Vue({
+            el: '#formaction',
+            data: {
+                articleToSearch: '',
+                judgshort: '',
+                judgrule: '',
+                lawarticles: [],
+            },
+            methods: {
+                SaveData: function (id) {
+                    var articles = document.getElementById('multiselect_to_1').options;
+                    for (var i = 0; i < articles.length; i++) {
+                        this.lawarticles.push(articles[i].value);
+                    }
+                    axios.post('/judgments/saveNote/' + id,
+                        {
+                            judgment_id: id,
+                            judgrule: this.judgrule,
+                            judgshort: this.judgshort,
+                            lawarticles: this.lawarticles,
+                        })
+                        .then(function (response) {
+                            if (response.data.status == 200) {
+                                toast("عملية ناجة ", response.data.message, 'success');
+                            } else if (response.data.status == 422) {
+                                toast('خطأ', response.data.message, 'error');
+                            }
 
+                        })
+                        .catch(function (error) {
+                            toast('خطأ', "خطأ قد يكون المبدأ والموجز موجودين بالفعل ", 'error');
+                        });
+                    this.articleToSearch = this.judgshort = this.judgrule = "";
+                    $('#SelectedArticles').find('option').remove();
+                    $('#multiselect_to_1').find('option').remove();
+                    this.lawarticles = [];
+                },
+                search: function () {
+                    $('#SelectedArticles').find('option').remove();
+                    axios.get('/laws/SearchArticles/' + this.articleToSearch)
+                        .then(function (response) {
+                            var datalength = response.data.length;
+                            if (datalength) {
+
+                                for (var i = 0; i < datalength; i++) {
+                                    var option = document.createElement('option');
+                                    option.innerHTML = response.data[i].info;
+                                    option.value = response.data[i].articleId;
+                                    option.setAttribute('id', response.data[i].articleId);
+                                    // option.setAttribute('name', '');
+                                    $('#SelectedArticles').append(option);
+                                }
+                            }
+
+                        });
+                }
+            },
+
+
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // make code pretty
+            window.prettyPrint && prettyPrint();
+
+            $('.multiselect').multiselect();
+        });
     </script>
     <script type="text/javascript">
 

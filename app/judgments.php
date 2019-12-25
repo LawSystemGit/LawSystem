@@ -18,6 +18,6 @@ class judgments extends Model
 
     public function judgmentnotes()
     {
-      return $this->hasMany(judgmentNotes::class);
+        return $this->hasMany(judgmentNotes::class, 'judgment_id');
     }
 }

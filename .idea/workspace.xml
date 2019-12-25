@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/lawSystem/assets/js/multiselect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/judgments/showNotes.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JudgmentNotesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JudgmentNotesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/judgmentNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/judgmentNotes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/judgments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/judgments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_04_061618_create_judgments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_04_061618_create_judgments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/judgments/addNoteTojudgment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/judgments/addNoteTojudgment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/judgments/createNewJudgment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/judgments/createNewJudgment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/judgments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/judgments/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,11 +27,6 @@
     <execution>
       <executable />
     </execution>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>تس</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,7 +129,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/inside.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/lawSystem/assets/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -133,6 +137,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/lawSystem/assets/js" />
       <recent name="C:\xampp\htdocs\LawSystem\public\css" />
       <recent name="C:\xampp\htdocs\LawSystem\public\images" />
     </key>
@@ -167,7 +172,7 @@
       <updated>1577184412249</updated>
       <workItem from="1577184414425" duration="4634000" />
       <workItem from="1577189697635" duration="5841000" />
-      <workItem from="1577254501031" duration="254000" />
+      <workItem from="1577254501031" duration="16041000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -204,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577210321405</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changing judgments table from dateTime to Date">
+      <created>1577254851622</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1577254851622</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -237,7 +249,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="change pc" />
     <MESSAGE value="change pc bju" />
-    <option name="LAST_COMMIT_MESSAGE" value="change pc bju" />
+    <MESSAGE value="changing judgments table from dateTime to Date" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing judgments table from dateTime to Date" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

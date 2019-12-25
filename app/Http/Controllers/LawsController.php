@@ -303,7 +303,6 @@ class LawsController extends Controller
     {
         if ($articleNo) {
             $formatedData = [];
-            $laws = [];
             $results = DB::table('law_articls')
                 ->where('articleno', $articleNo)
                 ->get();

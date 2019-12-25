@@ -14,4 +14,5 @@ class judgmentNotes extends Model
   {
     return $this->belongsTo(judgments::class);
   }
+
 }
