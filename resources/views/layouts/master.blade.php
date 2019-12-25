@@ -10,7 +10,7 @@
     <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
     <script src="{{asset('js/axios.js')}}"></script>
     <title> @yield('title') </title>
-    <!-- <link rel="shortcut icon" href="assets/images/favicon.ico" /> -->
+    <link rel="shortcut icon" href="{{asset('lawSystem/assets/images/logo4.png')}}" title=""/>
     @yield('stylesheets')
     @include('layouts.header')
     @include('layouts.nav')

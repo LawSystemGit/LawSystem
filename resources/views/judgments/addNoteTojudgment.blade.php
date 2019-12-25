@@ -20,7 +20,6 @@
     <!-- start content-wrapper -->
     <div class="content-wrapper">
         <div class="main_content">
-
             <!-- start row -->
             <div class="row align-items-center min-height-row">
                 <div class="col-lg-6">
@@ -33,8 +32,6 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-
-
                 </div>
             </div>
             <!-- end row -->
@@ -42,11 +39,11 @@
             <div class="row mt-0">
                 <div class="col-lg-12 tbl-new-brdr">
                     <div class="panel panel-default no-brdr" id="formaction">
-
                         <form method="post"
                               action="{{route('saveNote',['judgmentID'=>$judgment])}}"
                               enctype="multipart/form-data"
-
+                              id="notesForm"
+                              onsubmit="Prevent()"
                         >
                             @csrf
                             <div class="col-md-6 float-right">
@@ -71,11 +68,33 @@
 
                                         <div class="form-group">
                                             <label for="inputAddress">المواد المرتبطة</label>
-                                            <select class="selectStatic" multiple="multiple"></select>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input id="AddArticle" type="text"
+                                                           class="form-control">
+
+                                                    <select id="SelectedArticles" name="from[]"
+                                                            class="multiselect form-control"
+                                                            size="8"
+                                                            multiple="multiple"
+                                                            data-right="#multiselect_to_1"
+                                                            data-right-all="#right_All_1"
+                                                            data-right-selected="#right_Selected_1"
+                                                            data-left-all="#left_All_1"
+                                                            data-left-selected="#left_Selected_1">
+
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <select name="to[]" id="multiselect_to_1"
+                                                            class="form-control" size="8"
+                                                            multiple="multiple">
+
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
 
-
-                                        {{-- /////////////// --}}
                                     </div>
 
                                 </div>
@@ -111,6 +130,10 @@
     <!-- end main-wrapper -->
     <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
     <script>
+
+    </script>
+    <script>
+
         $(function () {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
@@ -128,44 +151,9 @@
     <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/users.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
-
     <script>
 
-
-        $.fn.addSelect2Items = function (items, config) {
-            var that = this;
-            that.select2("destroy");
-            for (var k in items) {
-                var data = items[k];
-                that.append("<option value='" + data.id + "'>" + data.text + "</option>");
-            }
-            that.select2(config || {});
-        };
-
-
-        $(".selectStatic").select2({
-            placeholder: "اختر", width: "100%", height: "100%"
-        });
-
-        $('.select2-search__field').keyup(function (event) {
-
-            axios.get('/judgments/getArticles/' + 33, {})
-                .then(function (response) {
-                    for (var i = 0; i < response.data.length; i++) {
-                        $(".selectStatic").addSelect2Items([{
-                            id: response.data[i].articleId,
-                            text: response.data[i].info
-                        }], {});
-                    }
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
-
-
-        });
     </script>
-
     <script type="text/javascript">
 
         function openPdf(file) {

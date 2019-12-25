@@ -16,7 +16,7 @@ class CreateJudgmentsTable extends Migration
         Schema::create('judgments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('judgmentcategory');
-            $table->dateTime('judgmentDate');
+            $table->date('judgmentDate');
             $table->string('objectionNo');
             $table->string('year');
             $table->string('judgmentFile')->nullable();
