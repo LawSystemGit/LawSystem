@@ -34,6 +34,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/laws/{articleID}/deleteArticle', 'LawsController@deleteArticle')->name('deleteArticle');
     Route::get('/laws/{lawID}/off', 'LawsController@lawOFF')->name('lawOFF');
     Route::get('/laws/{lawID}/on', 'LawsController@lawON')->name('lawON');
+    Route::get('/laws/{articleID}/show', 'lawfrontController@show')->name('showArticle');
+    Route::get('/laws/{articleID}/relatedJudgments', 'lawfrontController@relatedJudgments')->name('relatedJudgments');
     Route::get('/laws/SearchArticles/{articleNo}', 'LawsController@SearchArticles')->name('searchArticle');
 
 // judgments routes

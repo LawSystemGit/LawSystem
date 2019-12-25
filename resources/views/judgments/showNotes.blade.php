@@ -60,8 +60,10 @@
                                             <td>{{$note->judgshort}} </td>
                                             <td>
                                                 @foreach($judgmentID->Articls as $art)
-                                                    | <a class="btn  general_btn btn_1"
-                                                         href="{{$art->articleno}}">{{$art->articleno}}</a>
+                                                    <a class="btn  general_btn btn_1"
+                                                       href="{{route('showArticle',
+                                                         ['articleID'=>$art->id])
+                                                         }}">{{$art->articleno}}</a>
                                                 @endforeach
                                             </td>
                                         </tr>
