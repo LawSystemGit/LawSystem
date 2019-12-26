@@ -15,7 +15,6 @@ Route::post('/post-registration', 'AuthController@postRegistration')->name('post
 // logout route
 Route::get('/logout', 'AuthController@logout')->name('logout');
 
-
 Route::middleware(['auth'])->group(function () {
 
 // law Rotes
