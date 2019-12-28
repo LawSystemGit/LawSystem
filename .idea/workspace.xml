@@ -124,7 +124,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaravelYajra" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -170,7 +170,8 @@
       <workItem from="1577254501031" duration="22658000" />
       <workItem from="1577341740055" duration="3397000" />
       <workItem from="1577385639917" duration="59000" />
-      <workItem from="1577520603283" duration="2249000" />
+      <workItem from="1577520603283" duration="2335000" />
+      <workItem from="1577546103692" duration="1857000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -249,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577521709101</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fixing file duplication file names in create judgment">
+      <created>1577530920554</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1577530920554</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">

@@ -25,6 +25,7 @@ class LawsController extends Controller
         return datatables()->of($laws)->make(true);
 
     }
+
     // store method used to save the new law
     public function store(Request $request)
     {
@@ -183,7 +184,6 @@ class LawsController extends Controller
     }
 
     // laravel doesn't support arabic slug so this method is used to generate arabic ones
-
 
 
     public function AddArticles(Request $request, Law $lawID)
