@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +170,7 @@
       <workItem from="1577254501031" duration="22658000" />
       <workItem from="1577341740055" duration="3397000" />
       <workItem from="1577385639917" duration="59000" />
-      <workItem from="1577520603283" duration="722000" />
+      <workItem from="1577520603283" duration="2249000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -242,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577342061070</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixing file duplication file names in create judgment">
+      <created>1577521709101</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577521709101</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -279,7 +286,8 @@
     <MESSAGE value="changing judgments table from dateTime to Date" />
     <MESSAGE value="cod is working untile now" />
     <MESSAGE value="adding some frontend pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding some frontend pages" />
+    <MESSAGE value="fixing file duplication file names in create judgment" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing file duplication file names in create judgment" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

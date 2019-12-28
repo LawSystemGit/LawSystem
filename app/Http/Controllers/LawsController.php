@@ -61,7 +61,7 @@ class LawsController extends Controller
         }
 
         $lawId = Law::create($request->all());
-        $lawId->slug = str_slug($request['lawrelation']);
+        $lawId->slug = LawsController::make_slug($request['lawrelation']);
         $lawId->save();
         // check if the $request has a file
         // Note:: the lawfile column is nullable
@@ -137,7 +137,7 @@ class LawsController extends Controller
         $lawID->lawno = $request['lawno'];
         $lawID->lawyear = $request['lawyear'];
         $lawID->lawrelation = $request['lawrelation'];
-        $lawID->slug = str_slug($request['lawrelation']);
+        $lawID->slug = LawsController::make_slug($request['lawrelation']);
 
         // check if the request has file
         // if file is changed then
@@ -318,6 +318,21 @@ class LawsController extends Controller
         } else {
             return null;
         }
+    }
+
+    // laravel doesn't support arabic slug so this method is used to generate arabic ones
+    public static function make_slug($string, $separator = '-')
+    {
+        $string = trim($string);
+        $string = mb_strtolower($string, 'UTF-8');
+
+        $string = preg_replace("/[^a-z0-9_\s-۰۱۲۳۴۵۶۷۸۹ءاآؤئبپتثجچحخدذرزژسشصضطظعغفقکكگگلمنوهی]/u", '', $string);
+
+        $string = preg_replace("/[\s-_]+/", ' ', $string);
+
+        $string = preg_replace("/[\s_]/", $separator, $string);
+
+        return $string;
     }
 
 }
