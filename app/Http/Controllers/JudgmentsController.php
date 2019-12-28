@@ -181,7 +181,7 @@ class JudgmentsController extends Controller
         foreach ($files as $file) {
             $data = explode("/", $file);
             $realfilesName [] = $data[2];
-            $realfilesName [] = $data[2];
+            //$realfilesName [] = $data[2];
         }
 
         return $realfilesName;

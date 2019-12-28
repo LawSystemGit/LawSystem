@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +19,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -121,7 +124,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/lawSystem/assets/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaravelYajra" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -165,7 +168,9 @@
       <workItem from="1577184414425" duration="4634000" />
       <workItem from="1577189697635" duration="5841000" />
       <workItem from="1577254501031" duration="22658000" />
-      <workItem from="1577341740055" duration="286000" />
+      <workItem from="1577341740055" duration="3397000" />
+      <workItem from="1577385639917" duration="59000" />
+      <workItem from="1577520603283" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -230,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577281936611</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="adding some frontend pages">
+      <created>1577342061070</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577342061070</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
