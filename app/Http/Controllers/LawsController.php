@@ -107,6 +107,7 @@ class LawsController extends Controller
     // return view to create / add new law
     public function create()
     {
+
         return view('SystemLaws.createNewLaw');
     }
 
@@ -333,6 +334,22 @@ class LawsController extends Controller
         $string = preg_replace("/[\s_]/", $separator, $string);
 
         return $string;
+    }
+
+    public static function readDirectory($directory)
+    {
+        $files = array_filter(Storage::disk('local')->files($directory),
+            function ($item) {
+                return strpos($item, 'pdf');
+            });
+        $realfilesName = [];
+        foreach ($files as $file) {
+            $data = explode("/", $file);
+            $realfilesName [] = $data[2];
+            //$realfilesName [] = $data[2];
+        }
+
+        return $realfilesName;
     }
 
 }
