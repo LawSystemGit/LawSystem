@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('laws-list', 'LawsController@lawsList');
     Route::get('/laws/create', 'LawsController@create')->name('addNewLaw');
     Route::post('/laws/store', 'LawsController@store')->name('saveLaw');
+    Route::get('/laws/{law}/showlaw', 'LawsController@show')->name('showlaw');
     Route::get('/laws/{lawID}/edit', 'LawsController@edit')->name('editLaw');
     Route::patch('/laws/{lawID}/update', 'LawsController@update')->name('updateLaw');
     Route::delete('/law/delete/{lawID}', 'LawsController@destory')->name('delteLaw');

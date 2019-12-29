@@ -1,0 +1,24 @@
+{
+                    data: 'id', name: 'add', "render": function (data) {
+                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/showArticles">' + "عرض المواد" + '</a>';
+                        return data;
+                    }
+                },
+                {
+                    data: 'id', name: 'add', "render": function (data) {
+                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/addArticles">' + "إضافة مادة" + '</a>';
+                        return data;
+                    }
+                },
+                {
+                    data: 'id', name: 'edit', "render": function (data) {
+                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/edit" >' + "تعديل" + '</a>';
+                        return data;
+                    }
+                },
+                {
+                    data: 'id', name: 'edit', "render": function (data) {
+                        data = '<a  class="general_btn btn_1 ml-2  " href="laws/1/deActivate" >' + "حذف" + '</a>';
+                        return data;
+                    }
+                },

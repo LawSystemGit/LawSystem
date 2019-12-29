@@ -103,6 +103,11 @@ class LawsController extends Controller
 
     }
 
+    public function show(Law $law)
+    {
+        return view('SystemLaws.show', compact('law'));
+    }
+
     // return view to create / add new law
     public function create()
     {

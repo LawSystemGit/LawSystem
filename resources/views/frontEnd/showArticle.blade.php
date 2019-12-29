@@ -26,8 +26,8 @@
                         <ol class="breadcrumb">
                             <li><a href="#">الرئيسية</a></li>
                             <li><a href="{{route('getLaws')}}">القوانين</a></li>
-                            <li> قانون رقم {{$articleID->law->lawno}} لسنة
-                                {{$articleID->law->lawyear}}
+                            <li> قانون رقم ({{$articleID->law->lawno}})
+                                لسنة ({{$articleID->law->lawyear}})
                                 بشأن {{$articleID->law->lawrelation}}
                             </li>
                         </ol>
@@ -39,7 +39,7 @@
                 <div class="col-lg-12 tbl-new-brdr">
                     <div class="panel panel-default no-brdr">
 
-                        <div class="col-md-3 float-right">
+                        <div class="col-md-4 float-right">
 
                             <div class="user-block">
                                 <table class="table table-striped mb-0">
@@ -49,69 +49,73 @@
                                             <div class="float-right ml-5"
                                                  style="padding-top: 12px;">
                                                 <i class="edit-icon btn-icon-width inline-icon gray-icon"></i>
-                                                المواد <a href="viewall.html">(عرض الكل)</a>
+                                                الأحكام المتعلقة بالمادة
                                             </div>
-                                            <form>
-                                                <div class="input-group search_code">
-                                                    <input type="text" class="form-control"
-                                                           placeholder="رقم المادة">
-                                                </div>
-                                            </form>
-
+                                            {{--                                            <form>--}}
+                                            {{--                                                <div class="input-group search_code">--}}
+                                            {{--                                                    <input type="text" class="form-control"--}}
+                                            {{--                                                           placeholder="رقم المادة">--}}
+                                            {{--                                                </div>--}}
+                                            {{--                                            </form>--}}
                                         </th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>
-                                            <a class="tab-link" href='#article1'> <span
-                                                    class="circle"></span>
-                                                مادة 1
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="tab-link" href='#article2'>
-                                                <span class="circle"></span>
-                                                مادة 2
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a class="tab-link" href='#article3'>
-
-                                                <span class="circle"></span>
-                                                مادة 3
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @foreach($articleID->Judgments as $judgment)
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article{{$judgment->id}}'> <span
+                                                        class="circle"></span>
+                                                    الحكم: {{$judgment->judgmentcategory}}
+                                                    تاريخ الجلسة : {{$judgment->judgmentDate}}
+                                                    لسنة: {{$judgment->year}}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
                         </div>
 
-                        <div class="col-md-9 float-right">
-                            <div id="article1" class="article active-article">
-                                <h1 style="border-bottom: 1px solid #eee;
-">مادة {{$articleID->articleno}} </h1>
+                        <div class="col-md-8 float-right">
+                            <div class="article active-article">
+                                <h1 style="border-bottom: 1px solid #eee;">مادة {{$articleID->articleno}} </h1>
                                 <br/>
                                 <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">
                                     {{$articleID->articlebody}}
                                 </p>
                                 <br/>
-                                <a href="{{route('relatedJudgments',['articleID'=>$articleID])}}">
-                                    <button
-                                        class="btn
-                                general_btn btn_4 p-3"><i
-                                            class="gavel-icon btn-icon-width inline-icon white-icon pl-4"></i><span>  احكام متعلقة  </span>
-                                    </button>
-                                </a>
+                                {{--                                <a href="{{route('relatedJudgments',['articleID'=>$articleID])}}">--}}
+                                {{--                                    <button--}}
+                                {{--                                        class="btn--}}
+                                {{--                                general_btn btn_4 p-3"><i--}}
+                                {{--                                            class="gavel-icon btn-icon-width inline-icon white-icon pl-4"></i><span>  احكام متعلقة  </span>--}}
+                                {{--                                    </button>--}}
+                                {{--                                </a>--}}
                                 <br/><br/>
+                                <div id="article1" class="article">
+                                    <h1 style="border-bottom: 1px solid #eee;">مادة {{$articleID->articleno}} </h1>
+                                    <br/>
+                                    <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">
+                                        {{$articleID->articlebody}}
+                                    </p>
+                                </div>
+                                <div id="article2" class="article">
+                                    <h1 style="border-bottom: 1px solid #eee;">مادة {{$articleID->articleno}} </h1>
+                                    <br/>
+                                    <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">
+                                        {{$articleID->articlebody}}
+                                    </p>
+                                </div>
+                                <div id="article3" class="article">
+                                    <h1 style="border-bottom: 1px solid #eee;">مادة {{$articleID->articleno}} </h1>
+                                    <br/>
+                                    <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">
+                                        {{$articleID->articlebody}}
+                                    </p>
+                                </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>

@@ -29,13 +29,6 @@
                         </ol>
                     </div>
                 </div>
-
-                <template id="alert_template">
-                    <div :class="alertClasses" v-show="show">
-                        <slot></slot>
-                        <span class="alert_close" @click="show=false">X</span>
-                    </div>
-                </template>
                 <div class="col-lg-6">
                     <div
                         class="navbar d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end rec-counts">
@@ -44,7 +37,9 @@
                                 <i class="plus-icon btn-icon-width inline-icon green-icon"></i><span>اضافة جديد</span>
                             </button>
                         </a>
+
                     </div>
+
                 </div>
             </div>
             <!-- end row -->
@@ -57,15 +52,14 @@
                                 <thead>
                                 <tr>
                                     <th class="w_40 pr-2">م</th>
-                                    <th class="w_100 text-center">نوع</th>
-                                    <th class="w_100 text-center">التصنيف</th>
-                                    <th class="w_120 text-center">رقم القانون</th>
-                                    <th class="w_100 text-center">سنة الاصدار</th>
-                                    <th class="w_150 text-center">بشأن</th>
-                                    <th class="w_73 text-center"> عرض المواد</th>
-                                    <th class="w_73 text-center">إضافة مادة</th>
-                                    <th class="w_70 text-center">تعديل</th>
-                                    <th class="w_70 text-center">حذف</th>
+                                    <th class="w_80 text-center">نوع</th>
+                                    <th class="w_70 text-center">التصنيف</th>
+                                    <th class="w_80 text-center">رقم القانون</th>
+                                    <th class="w_70 text-center">سنة الاصدار</th>
+                                    <th class="w_200 text-center">بشأن</th>
+                                    <th class="w_70 text-center"> تاريخ النشر</th>
+                                    <th class="w_100 text-center">رقم العدد فى الجريدة الرسمية</th>
+                                    <th class="w_70 text-center">إستعراض القانون</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
@@ -78,10 +72,11 @@
                                     <th><input id="Name2" class="form-control" type="text" placeholder="سنة الاصدار"/>
                                     </th>
                                     <th><input id="Name2" class="form-control" type="text" placeholder="بشأن"/></th>
-                                    <th>######</th>
-                                    <th>######</th>
-                                    <th>######</th>
-                                    <th>######</th>
+                                    <th><input id="Name2" class="form-control" type="text" placeholder="تاريخ النشر"/>
+                                    </th>
+                                    <th><input id="Name2" class="form-control" disabled placeholder=""/></th>
+                                    <th><input id="Name2" class="form-control" disabled placeholder=""/></th>
+
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -100,13 +95,7 @@
 @endsection
 
 @section('secripts')
-    <script>
-        $(function () {
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
 
-        });
-    </script>
     <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/popper.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/bootstrap.min.js')}}"></script>
@@ -161,31 +150,14 @@
                 {data: 'lawno', name: 'lawno'},
                 {data: 'lawyear', name: 'lawyear'},
                 {data: 'lawrelation', name: 'lawrelation'},
+                {data: 'publishdate', name: 'publishdate'},
+                {data: 'publishid', name: 'publishid'},
                 {
-                    data: 'id', name: 'add', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/showArticles">' + "عرض المواد" + '</a>';
+                    data: 'id', name: 'showlaw', "render": function (data) {
+                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/showlaw">' + "إستعراض القانون" + '</a>';
                         return data;
                     }
                 },
-                {
-                    data: 'id', name: 'add', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/addArticles">' + "إضافة مادة" + '</a>';
-                        return data;
-                    }
-                },
-                {
-                    data: 'id', name: 'edit', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/edit" >' + "تعديل" + '</a>';
-                        return data;
-                    }
-                },
-                {
-                    data: 'id', name: 'edit', "render": function (data) {
-                        data = '<a  class="general_btn btn_1 ml-2  " href="laws/1/deActivate" >' + "حذف" + '</a>';
-                        return data;
-                    }
-                },
-
             ]
 
         });
