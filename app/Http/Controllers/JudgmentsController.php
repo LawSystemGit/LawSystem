@@ -58,6 +58,7 @@ class JudgmentsController extends Controller
         $lastJudgment->incompletednotes = $request['notes'];
         $lastJudgment->save();
         if ($lastJudgment) {
+
             $suuccess = Storage::move(('public/unfinished_judgments/' . $request['judgmentfile']), ('public/Finished_Judgments/'
                 . $request['judgmentfile']));
             if ($suuccess) {

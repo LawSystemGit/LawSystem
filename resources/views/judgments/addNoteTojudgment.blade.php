@@ -189,7 +189,7 @@
 
                         })
                         .catch(function (error) {
-                            toast('خطأ', "خطأ قد يكون المبدأ والموجز موجودين بالفعل ", 'error');
+                            toast('خطأ', "خطأ لقد إكتمل هذا الحكم", 'error');
                         });
                     this.articleToSearch = this.judgshort = this.judgrule = "";
                     $('#SelectedArticles').find('option').remove();
