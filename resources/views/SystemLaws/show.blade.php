@@ -113,7 +113,7 @@
                                         </a>
                                         <a href="{{route('addNewLaw')}}">
                                             <button class="general_btn btn_1 ml-2">
-                                                <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>
+                                                <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>
                                             </button>
                                         </a>
                                         <br/><br/>
