@@ -25,6 +25,7 @@ class LawsController extends Controller
         return datatables()->of($laws)->make(true);
 
     }
+
     // store method used to save the new law
     public function store(Request $request)
     {
@@ -106,6 +107,7 @@ class LawsController extends Controller
     // return view to create / add new law
     public function create()
     {
+
         return view('SystemLaws.createNewLaw');
     }
 
@@ -183,7 +185,6 @@ class LawsController extends Controller
     }
 
     // laravel doesn't support arabic slug so this method is used to generate arabic ones
-
 
 
     public function AddArticles(Request $request, Law $lawID)
@@ -333,6 +334,22 @@ class LawsController extends Controller
         $string = preg_replace("/[\s_]/", $separator, $string);
 
         return $string;
+    }
+
+    public static function readDirectory($directory)
+    {
+        $files = array_filter(Storage::disk('local')->files($directory),
+            function ($item) {
+                return strpos($item, 'pdf');
+            });
+        $realfilesName = [];
+        foreach ($files as $file) {
+            $data = explode("/", $file);
+            $realfilesName [] = $data[2];
+            //$realfilesName [] = $data[2];
+        }
+
+        return $realfilesName;
     }
 
 }
