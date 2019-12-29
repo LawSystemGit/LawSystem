@@ -33,11 +33,12 @@ class LawsController extends Controller
             [
                 'lawtype' => 'required',
                 'lawcategory' => 'required',
-                'lawno' => 'required',
+                'lawno' => 'required|unique:laws',
                 'lawyear' => 'required',
                 'lawrelation' => 'required',
             ], [   // change the default error messages from english to arabic
                 'lawno.required' => 'مطلوب إدخال رقم القانون',
+                'lawno.unique' => 'القانون موجود بالفعل',
                 'lawno.unique' => " القانون رقم " . $request['lawno'] . " موجود بالفعل  ",
                 'lawtype.required' => 'مطلوب إخال نوع القانون',
                 'lawcategory.required' => 'مطلوب إدخال تصنيف القانون',
@@ -45,25 +46,23 @@ class LawsController extends Controller
                 'lawrelation.required' => 'القانون بشأن ماذا',
             ]);
 
-        $results = Law::where('lawno', $request['lawno'])->get();
-
-        if ($results) {
-            foreach ($results as $result) {
-                if ($result->lawno == $request['lawno'] && $result->lawcategory == $request['lawcategory']) {
-                    Session::put('notification', [
-                        'message' => " خطأ القانون موجود بالفعل ",
-                        'alert-type' => 'error',
-                    ]);
-
-                    // if the creation of new law is fails redirect it back
-                    return redirect()->route('addNewLaw');
-                }
-            }
-        }
+//        $results = Law::where('lawno', $request['lawno'])->get();
+//
+//        if ($results) {
+//            foreach ($results as $result) {
+//                if ($result->lawno == $request['lawno'] && $result->lawcategory == $request['lawcategory']) {
+//                    Session::put('notification', [
+//                        'message' => " خطأ القانون موجود بالفعل ",
+//                        'alert-type' => 'error',
+//                    ]);
+//
+//                    // if the creation of new law is fails redirect it back
+//                    return redirect()->route('addNewLaw');
+//                }
+//            }
+//        }
 
         $lawId = Law::create($request->all());
-        $lawId->slug = LawsController::make_slug($request['lawrelation']);
-        $lawId->save();
         // check if the $request has a file
         // Note:: the lawfile column is nullable
         if (request()->hasFile('lawfile')) {
@@ -139,8 +138,8 @@ class LawsController extends Controller
         $lawID->lawno = $request['lawno'];
         $lawID->lawyear = $request['lawyear'];
         $lawID->lawrelation = $request['lawrelation'];
-        $lawID->slug = LawsController::make_slug($request['lawrelation']);
-
+        $lawID->publishdate = $request['publishdate'] ? $request['publishdate'] : null;
+        $lawID->publishid = $request['publishid'] ? $request['publishid'] : null;
         // check if the request has file
         // if file is changed then
         if (request()->hasFile('lawfile')) {
@@ -148,23 +147,34 @@ class LawsController extends Controller
             // then save and do nothing & return direct back with success message
             if (Storage::exists('public/Law_PDF/' . $request->file('lawfile')->getClientOriginalExtension())) {
                 $lawID->save();
-                return redirect()->route('getLaws')->with('laws', Law::latest()->paginate(10));
+                return redirect()->route('getLaws');
             } else {
-                // if the request has new file is different from the old one change the file
-                Storage::move(('public/Law_PDF/' . $lawID->lawfile), ('public/files/' . time() . '_' . 'old' . '_' . $lawID->lawfile));
-                // adding the new file
-                $covernamewithEXT = $request->file('lawfile')->getClientOriginalName();
-                // get just the file name
-                $filename = pathinfo($covernamewithEXT, PATHINFO_FILENAME);
-                // get just the extention
-                $extention = $request->file('lawfile')->getClientOriginalExtension();
-                // file to store
-                $fileNmaeToStore = $lawID->lawno . '.' . $extention;
-                // upload file
-                Storage::move(('public/files/' . $covernamewithEXT), ('public/Law_PDF/' . $fileNmaeToStore));
+                if ($lawID->lawfile != null) {
+                    // if the request has new file is different from the old one change the file
+                    Storage::move(('public/Law_PDF/' . $lawID->lawfile), ('public/files/' . 'old' . '_' . $lawID->lawfile));
+                    // adding the new file
+                    $covernamewithEXT = $request->file('lawfile')->getClientOriginalName();
+                    // get just the file name
+                    $filename = pathinfo($covernamewithEXT, PATHINFO_FILENAME);
+                    // get just the extention
+                    $extention = $request->file('lawfile')->getClientOriginalExtension();
+                    // file to store
+                    $fileNmaeToStore = $lawID->lawno . '.' . $extention;
+                    // upload file
 
-                $lawID->lawfile = $fileNmaeToStore;
-
+                    Storage::move(('public/files/' . $covernamewithEXT), ('public/Law_PDF/' . $fileNmaeToStore));
+                    $lawID->lawfile = $fileNmaeToStore;
+                } else {
+                    $covernamewithEXT = $request->file('lawfile')->getClientOriginalName();
+                    // get just the file name
+                    $filename = pathinfo($covernamewithEXT, PATHINFO_FILENAME);
+                    // get just the extention
+                    $extention = $request->file('lawfile')->getClientOriginalExtension();
+                    // file to store
+                    $fileNmaeToStore = $lawID->lawno . '.' . $extention;
+                    Storage::move('public/files/' . $covernamewithEXT, 'public/Law_PDF/' . $fileNmaeToStore);
+                    $lawID->lawfile = $fileNmaeToStore;
+                }
             }
 
         }
@@ -321,20 +331,6 @@ class LawsController extends Controller
         }
     }
 
-    // laravel doesn't support arabic slug so this method is used to generate arabic ones
-    public static function make_slug($string, $separator = '-')
-    {
-        $string = trim($string);
-        $string = mb_strtolower($string, 'UTF-8');
-
-        $string = preg_replace("/[^a-z0-9_\s-۰۱۲۳۴۵۶۷۸۹ءاآؤئبپتثجچحخدذرزژسشصضطظعغفقکكگگلمنوهی]/u", '', $string);
-
-        $string = preg_replace("/[\s-_]+/", ' ', $string);
-
-        $string = preg_replace("/[\s_]/", $separator, $string);
-
-        return $string;
-    }
 
     public static function readDirectory($directory)
     {

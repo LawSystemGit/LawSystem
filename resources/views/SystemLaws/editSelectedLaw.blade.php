@@ -70,6 +70,20 @@
                                                 dir="rtl" value="مقترح">
                                                 مقترح
                                             </option>
+                                            <option
+                                                @if ($lawID->lawtype == "إعلان")
+                                                selected
+                                                @endif
+                                                dir="rtl" value="إعلان">
+                                                مقترح
+                                            </option>
+                                            <option
+                                                @if ($lawID->lawtype == "قرار")
+                                                selected
+                                                @endif
+                                                dir="rtl" value="قرار">
+                                                مقترح
+                                            </option>
                                         </select>
                                     </div>
                                     <div class="form-group col-md-2">
@@ -116,6 +130,19 @@
                                         <input type="num" class="form-control" placeholder="القانون بشأن"
                                                id="lawrelation" name="lawrelation"
                                                required value="{{$lawID->lawrelation}}">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label>تاريخ النشر بالجريدة الرسمية</label>
+                                        <input type="date" class="form-control" name="publishdate" id="publishdate"
+                                               {{old('publishdate')}} value="{{$lawID->publishdate}}">
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <label>رقم العدد بالجريدة الرسمية</label>
+                                        <input type="num" name="publishid" id="publishid" class="form-control"
+                                               placeholder="رقم العدد بالجريدة الرسمية" {{old('publishid')}} dir="rtl"
+                                               value="{{$lawID->publishid}}">
                                     </div>
                                 </div>
                                 <div class="form-row">

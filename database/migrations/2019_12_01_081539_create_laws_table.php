@@ -20,7 +20,8 @@ class CreateLawsTable extends Migration
             $table->string('lawno');
             $table->string('lawyear');
             $table->text('lawrelation');
-            $table->text('slug')->nullable();
+            $table->date('publishdate')->nullable();
+            $table->integer('publishid')->nullable();
             $table->text('lawfile')->nullable();
             $table->timestamps();
         });

@@ -47,13 +47,13 @@
                                 <div class="form-group col-md-2">
                                     <label>النوع<span class="redstar">*</span></label>
 
-                                    <select name="lawtype" id="lawtype" dir="rtl" class="SelectRemovedSearch" required>
+                                    <select name="lawtype" id="lawtype" dir="rtl" class="SelectWithSearch" required>
                                         <option selected>....</option>
                                         <option dir="rtl" value="قانون">قانون</option>
                                         <option dir="rtl" value="مرسوم">مرسوم</option>
                                         <option dir="rtl" value="مقترح"> مقترح</option>
-
-
+                                        <option dir="rtl" value="إعلان"> إعلان</option>
+                                        <option dir="rtl" value="قرار"> قرار</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -85,6 +85,18 @@
                                     <input type="num" class="form-control" placeholder="القانون بشأن"
                                            id="lawrelation" name="lawrelation"
                                            required {{old('lawyear')}}>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>تاريخ النشر بالجريدة الرسمية</label>
+                                    <input type="date" class="form-control" name="publishdate" id="publishdate"
+                                        {{old('publishdate')}}>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>رقم العدد بالجريدة الرسمية</label>
+                                    <input type="num" name="publishid" id="publishid" class="form-control"
+                                           placeholder="رقم العدد بالجريدة الرسمية" {{old('publishid')}} dir="rtl">
                                 </div>
                             </div>
                             <div class="form-row">

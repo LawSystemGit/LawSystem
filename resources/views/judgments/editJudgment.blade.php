@@ -80,25 +80,32 @@
                                         <label>تاريخ الجلسة</label>
 
                                         <input type="date" class="form-control" name="judgmentDate" id="judgmentDate"
-                                               required>
+                                               required value="{{$judgmentID->judgmentDate}}"
+                                            {{old('judgmentDate')}}>
 
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label>السنة</label>
                                         <input type="text" class="form-control" id="year" name="year" required
-                                               value="{{$judgmentID->year}}">
+                                               value="{{$judgmentID->year}}"
+                                            {{old('year')}}
+                                        >
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label>رقم الطعن</label>
                                         <input type="text" class="form-control" id="objectionNo" name="objectionNo"
-                                               value="{{$judgmentID->objectionNo}}">
+                                               value="{{$judgmentID->objectionNo}}"
+                                            {{old('objectionNo')}}
+                                        >
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label> عدد المبادئ <span class="redstar"></span></label>
                                         <input type="text" class="form-control" id="notes" name="notes"
-                                               required value="{{$judgmentID->notes}}">
+                                               required value="{{$judgmentID->notes}}"
+                                            {{old('notes')}}
+                                        >
                                     </div>
                                 </div>
 
