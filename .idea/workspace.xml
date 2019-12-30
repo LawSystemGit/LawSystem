@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Law.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Law.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
-              <caret line="190" column="59" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="59" />
+              <caret line="190" column="62" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -91,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="129" column="48" selection-start-line="129" selection-start-column="48" selection-end-line="129" selection-end-column="48" />
+            <state relative-caret-position="930">
+              <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
               <folding>
                 <element signature="e#3477#3503#0#HTML" expanded="true" />
                 <element signature="e#5494#5532#0#HTML" expanded="true" />
@@ -375,7 +366,7 @@
       <workItem from="1577537205747" duration="3088000" />
       <workItem from="1577605525664" duration="18384000" />
       <workItem from="1577627428397" duration="71000" />
-      <workItem from="1577694967398" duration="5749000" />
+      <workItem from="1577694967398" duration="6020000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -461,11 +452,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577627451976</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="editing some buttons">
+      <created>1577700975872</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577700975872</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31011000" />
+    <option name="totallyTimeSpent" value="31282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -549,7 +547,8 @@
     <MESSAGE value="تغيير شكل عرض القوانين" />
     <MESSAGE value="عرض المواد" />
     <MESSAGE value="gdfbg" />
-    <option name="LAST_COMMIT_MESSAGE" value="gdfbg" />
+    <MESSAGE value="editing some buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="editing some buttons" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -750,7 +749,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="190" column="59" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="59" />
+          <caret line="190" column="62" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -770,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="129" column="48" selection-start-line="129" selection-start-column="48" selection-end-line="129" selection-end-column="48" />
+        <state relative-caret-position="930">
+          <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
           <folding>
             <element signature="e#3477#3503#0#HTML" expanded="true" />
             <element signature="e#5494#5532#0#HTML" expanded="true" />
