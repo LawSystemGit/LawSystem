@@ -188,7 +188,7 @@ class LawsController extends Controller
             'message' => " تم تعديل القانون رقم  " . $lawID->lawno,
             'alert-type' => 'success',
         ]);
-        return redirect()->route('getLaws');
+        return redirect()->route('showlaw', ['law' => $lawID]);
     }
 
 
@@ -243,7 +243,6 @@ class LawsController extends Controller
         $articleLaw->sectiontitle = $request['sectiontitle'];
         $articleLaw->articletitle = $request['articletitle'];
         $articleLaw->save();
-
         if ($articleLaw) {
             return response()->json([
                 'message' => "تم اضافة المادة بنجاح",

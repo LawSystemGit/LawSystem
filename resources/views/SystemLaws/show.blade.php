@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('lawSystem/assets/css/select2.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('lawSystem/assets/css/icons.css')}}"/>
     <link rel="stylesheet" href="{{asset('lawSystem/assets/css/jquery.toast.css')}}"/>
+
 @endsection
 
 @section('content')
@@ -36,11 +37,11 @@
                                 <i class="plus-icon btn-icon-width inline-icon green-icon"></i><span>إضافة مادة</span>
                             </button>
                         </a>
-                        <a href="{{route('addNewLaw')}}">
-                            <button class="general_btn btn_1 ml-2">
-                                <i class="gavel-icon btn-icon-width inline-icon green-icon"></i><span>عرض المواد</span>
-                            </button>
-                        </a>
+                        {{--                        <a href="{{route('addNewLaw')}}">--}}
+                        {{--                            <button class="general_btn btn_1 ml-2">--}}
+                        {{--                                <i class="gavel-icon btn-icon-width inline-icon green-icon"></i><span>عرض المواد</span>--}}
+                        {{--                            </button>--}}
+                        {{--                        </a>--}}
                         <a href="{{route('editLaw',['lawID'=>$law])}}">
                             <button class="general_btn btn_1 ml-2">
                                 <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل القانون</span>
@@ -56,12 +57,40 @@
 
                 </div>
             </div>
+            <div class="row align-items-center min-height-row">
+                <div class="col-lg-12">
+                    <table class="table table-active align-content-center">
+                        <tr>
+                            <th class="w_70"><b>النوع</b></th>
+                            <th class="w_70 "><b>التصنيف</b></th>
+                            <th class="w_70 "><b>رقم القانون</b></th>
+                            <th class="w_70 "><b>سنة الإصدار</b></th>
+                            <th class="w_100 "><b>تاريخ النشر بالجريدة الرسمية</b></th>
+                            <th class="w_80 "><b>رقم العدد باجريدة الرسمية</b></th>
+                            <th class="w_250 "><b>القانون بشأن</b></th>
+
+                        </tr>
+                        <tbody>
+                        <tr>
+                            <td><b>{{$law->lawtype}}</b></td>
+                            <td><b>{{$law->lawcategory}}</b></td>
+                            <td><b>{{$law->lawno}}</b></td>
+                            <td><b>{{$law->lawyear}}</b></td>
+                            <td><b>{{$law->publishdate}}</b></td>
+                            <td><b>{{$law->publishid}}</b></td>
+                            <td><b>{{$law->lawrelation}}</b></td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             <div class="row align-items-center">
                 <div class="row mt-0">
                     <div class="col-lg-12 tbl-new-brdr">
                         <div class="panel panel-default no-brdr">
 
-                            <div class="col-md-3 float-right">
+                            <div class="col-md-2 float-right">
 
                                 <div class="user-block">
                                     <table class="table table-striped mb-0">
@@ -98,7 +127,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-8 float-right">
+                            <div class="col-md-9 float-right">
                                 @foreach($law->lawArticles as $article)
                                     <div class="article " id="article{{$article->id}}">
                                         <h1 style="border-bottom: 1px solid #eee;">مادة {{$article->articleno}} </h1>
@@ -106,13 +135,15 @@
                                         <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">
                                             {{$article->articlebody}}
                                         </p>
-                                        <a href="{{route('addNewLaw')}}">
+                                        <a href="{{route('editArticle',['articleID'=>$article])}}">
                                             <button class="general_btn btn_1 ml-2">
                                                 <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
                                             </button>
                                         </a>
-                                        <a href="{{route('addNewLaw')}}">
-                                            <button class="general_btn btn_1 ml-2">
+                                        <a href="{{route('deleteArticle',['articleID'=>$article])}}">
+                                            <button class="general_btn btn_1 ml-2"
+                                                    onclick="return confirm('هل أنت من متأكد من أنك تريد حذف المادة');"
+                                            >
                                                 <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>
                                             </button>
                                         </a>
@@ -124,13 +155,14 @@
                     </div>
                 </div>
             </div>
-            <a href="#top">top</a>
+            @if(count($law->lawArticles))
+                <a href="#top" class="general_btn btn_1">العودة للإعلى</a>
+            @endif
         </div>
     </div>
 @endsection
 
 @section('secripts')
-
     <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/popper.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/bootstrap.min.js')}}"></script>
@@ -141,5 +173,7 @@
     <script src="{{asset('lawSystem/assets/js/select2.min.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
+    <script>
 
+    </script>
 @endsection

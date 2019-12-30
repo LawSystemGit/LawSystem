@@ -114,7 +114,9 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <input type="submit" class="btn general_btn btn_1" value="حفظ">
-                                <input type="reset" class="btn general_btn btn_1" value="إلغاء">
+                                <a href="{{route('getLaws')}}" class="btn general_btn btn_1">
+                                    العودة
+                                </a>
                             </div>
                         </form>
                         {{-- onclick="return toast('عملية ناجحة','تم تعديل المستخدم','success')" --}}

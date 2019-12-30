@@ -24,7 +24,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/laws/store', 'LawsController@store')->name('saveLaw');
     Route::get('/laws/{law}/showlaw', 'LawsController@show')->name('showlaw');
     Route::get('/laws/{lawID}/edit', 'LawsController@edit')->name('editLaw');
-    Route::patch('/laws/{lawID}/update', 'LawsController@update')->name('updateLaw');
+    Route::patch('/laws/{lawID}/ushowlawpdate', 'LawsController@update')->name('updateLaw');
     Route::delete('/law/delete/{lawID}', 'LawsController@destory')->name('delteLaw');
     Route::get('/laws/{lawID}/addArticles', 'LawsController@AddArticles')->name('addArticle');
     Route::post('/laws/SaveLawArticle', 'LawsController@SaveLawArticles')->name('SaveLawArticle');

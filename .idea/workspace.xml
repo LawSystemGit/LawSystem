@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="gdfbg" />
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Law.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Law.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+            <state relative-caret-position="240">
+              <caret line="24" column="75" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -62,8 +73,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="336">
+              <caret line="54" column="58" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="190" column="59" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -71,22 +91,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="123" column="26" lean-forward="true" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+            <state relative-caret-position="468">
+              <caret line="129" column="48" selection-start-line="129" selection-start-column="48" selection-end-line="129" selection-end-column="48" />
               <folding>
-                <element signature="e#3430#3456#0#HTML" expanded="true" />
-                <element signature="e#5036#5074#0#HTML" expanded="true" />
-                <element signature="e#5191#5260#0#HTML" expanded="true" />
+                <element signature="e#3477#3503#0#HTML" expanded="true" />
+                <element signature="e#5494#5532#0#HTML" expanded="true" />
+                <element signature="e#5657#5726#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/showArticles.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="92" column="99" lean-forward="true" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="108" />
+            <state relative-caret-position="374">
+              <caret line="164" column="55" lean-forward="true" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -97,6 +117,7 @@
     <findStrings>
       <find>تس</find>
       <find>slug</find>
+      <find>showlaw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,18 +127,21 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/database/migrations/2019_12_01_081539_create_laws_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/resources/views/judgments/editJudgment.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/JudgmentNotesController.php" />
         <option value="$PROJECT_DIR$/resources/views/judgments/addNoteTojudgment.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/code" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontEnd/showArticle.blade.php" />
+        <option value="$PROJECT_DIR$/app/Law.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" />
       </list>
     </option>
@@ -230,6 +254,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,13 +314,12 @@
               <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="SystemLaws" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,6 +374,8 @@
       <workItem from="1577341659097" duration="1956000" />
       <workItem from="1577537205747" duration="3088000" />
       <workItem from="1577605525664" duration="18384000" />
+      <workItem from="1577627428397" duration="71000" />
+      <workItem from="1577694967398" duration="5749000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -428,11 +454,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577627378221</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="gdfbg">
+      <created>1577627451976</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1577627451976</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25191000" />
+    <option name="totallyTimeSpent" value="31011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,12 +478,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1818792" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18724832" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50067115" side_tool="true" weight="0.509915" />
@@ -464,6 +497,7 @@
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49932885" weight="0.44759208" />
+      <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Database" order="0" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -514,7 +548,8 @@
     <MESSAGE value="fixing if the law file is null buh" />
     <MESSAGE value="تغيير شكل عرض القوانين" />
     <MESSAGE value="عرض المواد" />
-    <option name="LAST_COMMIT_MESSAGE" value="عرض المواد" />
+    <MESSAGE value="gdfbg" />
+    <option name="LAST_COMMIT_MESSAGE" value="gdfbg" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -574,27 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="92" column="38" selection-start-line="89" selection-start-column="24" selection-end-line="100" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/judgments/editJudgment.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2162">
-          <caret line="143" column="61" lean-forward="true" selection-start-line="143" selection-start-column="61" selection-end-line="143" selection-end-column="61" />
-          <folding>
-            <element signature="e#7281#7301#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -643,27 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" column="86" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Law.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontEnd/showArticle.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -688,22 +685,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/lawSystem/assets/images/times.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/showArticles.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="92" column="99" lean-forward="true" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="108" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/lawSystem/assets/css/icons.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -712,14 +695,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/showArticles.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="92" column="99" selection-start-line="92" selection-start-column="99" selection-end-line="92" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/LawArticl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Law.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="54" column="58" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="168" column="85" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1238">
+          <caret line="121" column="39" lean-forward="true" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="177" column="22" selection-start-line="177" selection-start-column="22" selection-end-line="177" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="190" column="59" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="75" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="164" column="55" lean-forward="true" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="123" column="26" lean-forward="true" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+        <state relative-caret-position="468">
+          <caret line="129" column="48" selection-start-line="129" selection-start-column="48" selection-end-line="129" selection-end-column="48" />
           <folding>
-            <element signature="e#3430#3456#0#HTML" expanded="true" />
-            <element signature="e#5036#5074#0#HTML" expanded="true" />
-            <element signature="e#5191#5260#0#HTML" expanded="true" />
+            <element signature="e#3477#3503#0#HTML" expanded="true" />
+            <element signature="e#5494#5532#0#HTML" expanded="true" />
+            <element signature="e#5657#5726#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

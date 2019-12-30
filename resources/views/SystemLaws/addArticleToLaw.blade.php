@@ -166,7 +166,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <input type="submit" class="btn general_btn btn_1" value="حفظ">
-                                        <a href="{{route('getLaws')}}" class="btn general_btn btn_1">
+                                        <a href="{{route('showlaw',['law'=>$lawID])}}" class="btn general_btn btn_1">
                                             العودة
                                         </a>
                                     </div>

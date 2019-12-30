@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\LawArticl;
 class Law extends Model
 {
+
     protected $fillable = [
       'lawtype','lawno','lawyear','lawrelation','lawcategory','lawfile','slug'
     ];
@@ -14,7 +15,7 @@ class Law extends Model
 
     public function lawArticles()
     {
-      return $this->hasMany(LawArticl::class,'laws_id');
+        return $this->hasMany(LawArticl::class, 'laws_id')->orderBy('articleno', 'asc');
     }
 
 
