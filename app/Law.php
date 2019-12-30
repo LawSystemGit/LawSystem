@@ -12,10 +12,11 @@ class Law extends Model
     ];
 
   //protected $with = ['LawArticles'];
-
+    protected $withCount = ['LawArticles'];
     public function lawArticles()
     {
-        return $this->hasMany(LawArticl::class, 'laws_id')->orderBy('articleno', 'ASC');
+        return $this->hasMany(LawArticl::class, 'laws_id')
+            ->orderBy('articleno', 'ASC');
     }
 
 

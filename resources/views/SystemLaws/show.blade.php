@@ -66,7 +66,7 @@
                             <th class="w_70 "><b>رقم القانون</b></th>
                             <th class="w_70 "><b>سنة الإصدار</b></th>
                             <th class="w_100 "><b>تاريخ النشر بالجريدة الرسمية</b></th>
-                            <th class="w_80 "><b>رقم العدد باجريدة الرسمية</b></th>
+                            <th class="w_80 "><b>رقم العدد بالجريدة الرسمية</b></th>
                             <th class="w_250 "><b>القانون بشأن</b></th>
 
                         </tr>
@@ -100,7 +100,8 @@
                                                 <div class="float-right ml-5"
                                                      style="padding-top: 12px;">
                                                     <i class="edit-icon btn-icon-width inline-icon gray-icon"></i>
-                                                    مواد القانون
+                                                    عدد مواد القانون ({{$law->law_articles_count}})
+
                                                 </div>
                                                 <form>
                                                     <div class="input-group search_code">
