@@ -113,9 +113,10 @@
                                         </thead>
                                         <tbody>
                                         @foreach($law->lawArticles as $article)
-                                            <tr>
+                                            <tr id="link{{$article->id}}">
                                                 <td>
-                                                    <a class="tab-link" href='#article{{$article->id}}'> <span
+                                                    <a class="tab-link" href='#article{{$article->id}}'
+                                                    > <span
                                                             class="circle"></span>
                                                         مادة رقم ({{$article->articleno}})
                                                     </a>
@@ -140,13 +141,13 @@
                                                 <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
                                             </button>
                                         </a>
-                                        <a href="{{route('deleteArticle',['articleID'=>$article])}}">
+                                        {{--                                        <a href="{{route('deleteArticle',['articleID'=>$article])}}">--}}
                                             <button class="general_btn btn_1 ml-2"
-                                                    onclick="return confirm('هل أنت من متأكد من أنك تريد حذف المادة');"
+                                                    onclick="deleteArticle({{$article->id}})"
                                             >
                                                 <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>
                                             </button>
-                                        </a>
+                                        {{--                                        </a>--}}
                                         <br/><br/>
                                     </div>
                                 @endforeach
@@ -174,6 +175,20 @@
     <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
     <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
     <script>
-
+        function deleteArticle(id) {
+            let confirmation = confirm('هل أنت متأكم من حذف هذه المادة ؟');
+            if (confirmation) {
+                axios.delete("/laws/" + id + "/deleteArticle")
+                    .then(function (response) {
+                        if (response.data.status == 200) {
+                            $('#link' + id).remove();
+                            $('#article' + id).remove();
+                            toast(" تم ", response.data.message, 'info');
+                        } else if (response.data.status == 422) {
+                            toast(" خطأ ", response.data.message, 'error');
+                        }
+                    });
+            }
+        }
     </script>
 @endsection

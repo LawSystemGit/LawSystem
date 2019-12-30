@@ -15,7 +15,8 @@ class Law extends Model
 
     public function lawArticles()
     {
-        return $this->hasMany(LawArticl::class, 'laws_id')->orderBy('articleno', 'asc');
+        return $this->hasMany(LawArticl::class, 'laws_id')
+            ->orderBy('articleno', 'ASC');
     }
 
 

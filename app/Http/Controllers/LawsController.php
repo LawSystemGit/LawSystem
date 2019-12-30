@@ -306,12 +306,19 @@ class LawsController extends Controller
 
     public function deleteArticle(LawArticl $articleID)
     {
-        $articleID->delete();
-        Session::put('notification', [
-            'message' => " تم حذف المادة بنجاح  ",
-            'alert-type' => 'success',
-        ]);
-        return redirect()->back();
+
+        $status = $articleID->delete();
+        if ($status) {
+            return response()->json([
+                'message' => "تم حذ المادة بنجاح",
+                "status" => 200
+            ]);
+        } else {
+            return response()->json([
+                'message' => "خطأ أثناء حذف المادة",
+                "status" => 422
+            ]);
+        }
     }
 
     public function SearchArticles(Request $request, $articleNo)

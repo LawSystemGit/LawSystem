@@ -52,6 +52,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/judgments/saveNote/{judgmentID}', 'JudgmentNotesController@store')->name('saveNote');
     Route::get('/judgments/{judgmentID}/showNotes', 'JudgmentNotesController@showNotes')->name('showNotes');
 
+    // Al Kuwait Alyoum
 });
 
 
