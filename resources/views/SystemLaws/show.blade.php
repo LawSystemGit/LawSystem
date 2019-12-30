@@ -121,7 +121,9 @@
                                                         مادة رقم ({{$article->articleno}})
                                                     </a>
                                                 </td>
+
                                             </tr>
+
                                         @endforeach
                                         </tbody>
                                     </table>
@@ -132,6 +134,22 @@
                                 @foreach($law->lawArticles as $article)
                                     <div class="article " id="article{{$article->id}}">
                                         <h1 style="border-bottom: 1px solid #eee;">مادة {{$article->articleno}} </h1>
+                                        <br/>
+                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الكتاب : {{$article->subjectid}}
+                                                &nbsp;&nbsp;</b></div>
+                                        <div class="float-right"><b>&nbsp;&nbsp; عنوان الكتاب
+                                                : {{$article->subjectitle}} &nbsp;&nbsp;</b></div>
+                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الباب : {{$article->chapterid}}
+                                                &nbsp;&nbsp;</b></div>
+                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الباب : {{$article->chaptertitle}}
+                                                &nbsp;&nbsp;</b></div>
+                                        <div class="float-right"><b>&nbsp;&nbsp;رقم الفصل : {{$article->sectionid}}
+                                                &nbsp;&nbsp;</b></div>
+                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الفصل : {{$article->sectiontitle}}
+                                                &nbsp;&nbsp;</b></div>
+                                        <br>
+                                        <div><b>&nbsp;&nbsp;عنوان المادة : {{$article->articletitle}} &nbsp;&nbsp;</b>
+                                        </div>
                                         <br/>
                                         <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">
                                             {{$article->articlebody}}

@@ -53,7 +53,7 @@
                                         <label>رقم الكتاب<span class="redstar"></span></label>
                                         <select name="subjectid" id="subjectid" dir="rtl"
                                                 class="SelectRemovedSearch">
-                                            <option selected>....</option>
+                                            <option>....</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -82,7 +82,7 @@
                                         <select name="chapterid" id="chapterid" lang="ar" placeholder=" رقم الباب"
                                                 dir="rtl"
                                                 class="SelectRemovedSearch">
-                                            <option selected>....</option>
+                                            <option>....</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -111,7 +111,7 @@
                                         <select name="sectionid" id="sectionid" lang="ar" placeholder=" رقم الفصل"
                                                 dir="rtl"
                                                 class="SelectRemovedSearch">
-                                            <option selected>....</option>
+                                            <option>....</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>

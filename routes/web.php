@@ -53,6 +53,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/judgments/{judgmentID}/showNotes', 'JudgmentNotesController@showNotes')->name('showNotes');
 
     // Al Kuwait Alyoum
+
+
 });
 
 

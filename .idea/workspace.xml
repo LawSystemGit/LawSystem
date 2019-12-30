@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="delete article button is working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Law.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Law.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,26 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="24" column="75" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="54" column="58" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="190" column="62" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="62" />
+            <state relative-caret-position="330">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -82,22 +69,68 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+            <state relative-caret-position="319">
+              <caret line="109" column="55" lean-forward="true" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="55" />
               <folding>
-                <element signature="e#3477#3503#0#HTML" expanded="true" />
-                <element signature="e#5494#5532#0#HTML" expanded="true" />
-                <element signature="e#5657#5726#0#HTML" expanded="true" />
+                <element signature="e#7319#7325#0#HTML" expanded="true" />
+                <element signature="e#7325#7331#0#HTML" expanded="true" />
+                <element signature="e#7367#7373#0#HTML" expanded="true" />
+                <element signature="e#7373#7379#0#HTML" expanded="true" />
+                <element signature="e#7459#7465#0#HTML" expanded="true" />
+                <element signature="e#7465#7471#0#HTML" expanded="true" />
+                <element signature="e#7511#7517#0#HTML" expanded="true" />
+                <element signature="e#7517#7523#0#HTML" expanded="true" />
+                <element signature="e#7602#7608#0#HTML" expanded="true" />
+                <element signature="e#7608#7614#0#HTML" expanded="true" />
+                <element signature="e#7649#7655#0#HTML" expanded="true" />
+                <element signature="e#7655#7661#0#HTML" expanded="true" />
+                <element signature="e#7742#7748#0#HTML" expanded="true" />
+                <element signature="e#7748#7754#0#HTML" expanded="true" />
+                <element signature="e#7793#7799#0#HTML" expanded="true" />
+                <element signature="e#7799#7805#0#HTML" expanded="true" />
+                <element signature="e#7885#7891#0#HTML" expanded="true" />
+                <element signature="e#7891#7897#0#HTML" expanded="true" />
+                <element signature="e#7931#7937#0#HTML" expanded="true" />
+                <element signature="e#7937#7943#0#HTML" expanded="true" />
+                <element signature="e#8024#8030#0#HTML" expanded="true" />
+                <element signature="e#8030#8036#0#HTML" expanded="true" />
+                <element signature="e#8075#8081#0#HTML" expanded="true" />
+                <element signature="e#8081#8087#0#HTML" expanded="true" />
+                <element signature="e#8147#8153#0#HTML" expanded="true" />
+                <element signature="e#8153#8159#0#HTML" expanded="true" />
+                <element signature="e#8200#8206#0#HTML" expanded="true" />
+                <element signature="e#8206#8212#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="251" selection-start-line="251" selection-end-line="251" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Law.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="164" column="55" lean-forward="true" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
+              <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+              <folding>
+                <element signature="e#23#62#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="288" column="41" selection-start-line="288" selection-start-column="41" selection-end-line="288" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -109,6 +142,7 @@
       <find>تس</find>
       <find>slug</find>
       <find>showlaw</find>
+      <find>&lt;form&gt;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,13 +160,13 @@
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/code" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontEnd/showArticle.blade.php" />
-        <option value="$PROJECT_DIR$/app/Law.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" />
+        <option value="$PROJECT_DIR$/app/Law.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" />
       </list>
     </option>
@@ -366,7 +400,7 @@
       <workItem from="1577537205747" duration="3088000" />
       <workItem from="1577605525664" duration="18384000" />
       <workItem from="1577627428397" duration="71000" />
-      <workItem from="1577694967398" duration="6020000" />
+      <workItem from="1577694967398" duration="12092000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -459,11 +493,25 @@
       <option name="project" value="LOCAL" />
       <updated>1577700975872</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="editing some buttons">
+      <created>1577701009789</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1577701009789</updated>
+    </task>
+    <task id="LOCAL-00015" summary="delete article button is working">
+      <created>1577703258864</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1577703258864</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31282000" />
+    <option name="totallyTimeSpent" value="37354000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,7 +596,8 @@
     <MESSAGE value="عرض المواد" />
     <MESSAGE value="gdfbg" />
     <MESSAGE value="editing some buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="editing some buttons" />
+    <MESSAGE value="delete article button is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete article button is working" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -708,30 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Law.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="54" column="58" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="168" column="85" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1238">
@@ -746,35 +771,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="164" column="55" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="190" column="62" selection-start-line="190" selection-start-column="27" selection-end-line="190" selection-end-column="62" />
+        <state relative-caret-position="204">
+          <caret line="288" column="41" selection-start-line="288" selection-start-column="41" selection-end-line="288" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Law.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="75" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="164" column="55" lean-forward="true" selection-start-line="164" selection-start-column="55" selection-end-line="164" selection-end-column="55" />
+        <state relative-caret-position="330">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+        <state relative-caret-position="319">
+          <caret line="109" column="55" lean-forward="true" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="55" />
           <folding>
-            <element signature="e#3477#3503#0#HTML" expanded="true" />
-            <element signature="e#5494#5532#0#HTML" expanded="true" />
-            <element signature="e#5657#5726#0#HTML" expanded="true" />
+            <element signature="e#7319#7325#0#HTML" expanded="true" />
+            <element signature="e#7325#7331#0#HTML" expanded="true" />
+            <element signature="e#7367#7373#0#HTML" expanded="true" />
+            <element signature="e#7373#7379#0#HTML" expanded="true" />
+            <element signature="e#7459#7465#0#HTML" expanded="true" />
+            <element signature="e#7465#7471#0#HTML" expanded="true" />
+            <element signature="e#7511#7517#0#HTML" expanded="true" />
+            <element signature="e#7517#7523#0#HTML" expanded="true" />
+            <element signature="e#7602#7608#0#HTML" expanded="true" />
+            <element signature="e#7608#7614#0#HTML" expanded="true" />
+            <element signature="e#7649#7655#0#HTML" expanded="true" />
+            <element signature="e#7655#7661#0#HTML" expanded="true" />
+            <element signature="e#7742#7748#0#HTML" expanded="true" />
+            <element signature="e#7748#7754#0#HTML" expanded="true" />
+            <element signature="e#7793#7799#0#HTML" expanded="true" />
+            <element signature="e#7799#7805#0#HTML" expanded="true" />
+            <element signature="e#7885#7891#0#HTML" expanded="true" />
+            <element signature="e#7891#7897#0#HTML" expanded="true" />
+            <element signature="e#7931#7937#0#HTML" expanded="true" />
+            <element signature="e#7937#7943#0#HTML" expanded="true" />
+            <element signature="e#8024#8030#0#HTML" expanded="true" />
+            <element signature="e#8030#8036#0#HTML" expanded="true" />
+            <element signature="e#8075#8081#0#HTML" expanded="true" />
+            <element signature="e#8081#8087#0#HTML" expanded="true" />
+            <element signature="e#8147#8153#0#HTML" expanded="true" />
+            <element signature="e#8153#8159#0#HTML" expanded="true" />
+            <element signature="e#8200#8206#0#HTML" expanded="true" />
+            <element signature="e#8206#8212#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

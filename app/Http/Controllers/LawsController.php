@@ -297,7 +297,7 @@ class LawsController extends Controller
                 'message' => " تم تعديل المادة بنجاح  ",
                 'alert-type' => 'success',
             ]);
-            return redirect()->route('showrticles', ['law' => $articleID->law]);
+            return redirect()->route('showlaw', ['law' => $articleID->law]);
         } else {
             return back();
         }
