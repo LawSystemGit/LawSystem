@@ -161,11 +161,11 @@
                                             </button>
                                         </a>
                                         {{--                                        <a href="{{route('deleteArticle',['articleID'=>$article])}}">--}}
-                                            <button class="general_btn btn_1 ml-2"
-                                                    onclick="deleteArticle({{$article->id}})"
-                                            >
-                                                <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>
-                                            </button>
+                                        <button class="general_btn btn_1 ml-2"
+                                                onclick="deleteArticle({{$article->id}})"
+                                        >
+                                            <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>
+                                        </button>
                                         {{--                                        </a>--}}
                                         <br/><br/>
                                     </div>
