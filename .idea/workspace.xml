@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="delete article button is working">
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="delete article button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Law.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Law.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,12 +62,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="109" column="55" lean-forward="true" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="55" />
+            <state relative-caret-position="320">
+              <caret line="148" column="92" lean-forward="true" selection-start-line="148" selection-start-column="92" selection-end-line="148" selection-end-column="92" />
               <folding>
+                <element signature="e#5033#5059#0#HTML" expanded="true" />
                 <element signature="e#7319#7325#0#HTML" expanded="true" />
                 <element signature="e#7325#7331#0#HTML" expanded="true" />
                 <element signature="e#7367#7373#0#HTML" expanded="true" />
@@ -105,20 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="251" selection-start-line="251" selection-end-line="251" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Law.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+              <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
               <folding>
                 <element signature="e#23#62#0#PHP" expanded="true" />
               </folding>
@@ -129,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="288" column="41" selection-start-line="288" selection-start-column="41" selection-end-line="288" selection-end-column="41" />
+            <state relative-caret-position="248">
+              <caret line="107" column="27" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -163,11 +151,11 @@
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/editArticle.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php" />
-        <option value="$PROJECT_DIR$/app/Law.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" />
         <option value="$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Law.php" />
       </list>
     </option>
   </component>
@@ -400,7 +388,7 @@
       <workItem from="1577537205747" duration="3088000" />
       <workItem from="1577605525664" duration="18384000" />
       <workItem from="1577627428397" duration="71000" />
-      <workItem from="1577694967398" duration="12092000" />
+      <workItem from="1577694967398" duration="14396000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -507,11 +495,25 @@
       <option name="project" value="LOCAL" />
       <updated>1577703258864</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="delete article button is working">
+      <created>1577710328367</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1577710328367</updated>
+    </task>
+    <task id="LOCAL-00017" summary="delete article button">
+      <created>1577713372156</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1577713372156</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37354000" />
+    <option name="totallyTimeSpent" value="39658000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,7 +530,7 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.18724832" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.18724832" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="1" weight="0.3286119" />
@@ -597,7 +599,8 @@
     <MESSAGE value="gdfbg" />
     <MESSAGE value="editing some buttons" />
     <MESSAGE value="delete article button is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete article button is working" />
+    <MESSAGE value="delete article button" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete article button" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -785,27 +788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="288" column="41" selection-start-line="288" selection-start-column="41" selection-end-line="288" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/addArticleToLaw.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="251" selection-start-line="251" selection-end-line="251" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Law.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,11 +802,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LawsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="107" column="27" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="109" column="55" lean-forward="true" selection-start-line="109" selection-start-column="47" selection-end-line="109" selection-end-column="55" />
+        <state relative-caret-position="320">
+          <caret line="148" column="92" lean-forward="true" selection-start-line="148" selection-start-column="92" selection-end-line="148" selection-end-column="92" />
           <folding>
+            <element signature="e#5033#5059#0#HTML" expanded="true" />
             <element signature="e#7319#7325#0#HTML" expanded="true" />
             <element signature="e#7325#7331#0#HTML" expanded="true" />
             <element signature="e#7367#7373#0#HTML" expanded="true" />
@@ -849,6 +843,16 @@
             <element signature="e#8153#8159#0#HTML" expanded="true" />
             <element signature="e#8200#8206#0#HTML" expanded="true" />
             <element signature="e#8206#8212#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Law.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
