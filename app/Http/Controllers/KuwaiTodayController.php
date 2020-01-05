@@ -7,5 +7,5 @@ use App\Models\KuwaiToday;
 
 class KuwaiTodayController extends Controller
 {
-    //
+
 }

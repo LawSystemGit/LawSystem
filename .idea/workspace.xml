@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/judgments/code" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/judgments/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JudgmentNotesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JudgmentNotesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/judgmentNotes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/judgmentNotes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/judgments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/judgments.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/judgments/addNoteTojudgment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/judgments/addNoteTojudgment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/judgments/createNewJudgment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/judgments/createNewJudgment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/judgments/editJudgment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/judgments/editJudgment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/judgments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/judgments/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KuwaiTodayController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KuwaiTodayController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/LawArticl.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/LawArticl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,10 +66,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/KuwaiTodayController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/judgments/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="76" column="32" selection-end-line="207" />
+            <state relative-caret-position="303">
+              <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
               <folding>
                 <element signature="e#3669#3694#0#HTML" expanded="true" />
                 <element signature="e#4515#4541#0#HTML" expanded="true" />
@@ -89,23 +94,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/LawArticl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="107" column="68" selection-end-line="200" />
+            <state relative-caret-position="307">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
-                <element signature="e#40#68#0#PHP" expanded="true" />
+                <element signature="e#23#62#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/judgments.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/kuwaiToday/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/KuwaiToday.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="27" selection-end-line="26" />
+            <state relative-caret-position="176">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -120,6 +130,7 @@
       <find>&lt;form&gt;</find>
       <find>top</find>
       <find>id=</find>
+      <find>law</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,7 +145,6 @@
         <option value="$PROJECT_DIR$/resources/views/frontEnd/showArticle.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_12_31_063025_create_kuwai_todays_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/KuwaiTodayController.php" />
         <option value="$PROJECT_DIR$/app/Models/LawArticl.php" />
         <option value="$PROJECT_DIR$/app/Law.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/LawArticlesController.php" />
@@ -164,6 +174,10 @@
         <option value="$PROJECT_DIR$/resources/views/judgments/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/JudgmentsController.php" />
         <option value="$PROJECT_DIR$/app/judgments.php" />
+        <option value="$PROJECT_DIR$/app/Models/KuwaiToday.php" />
+        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/KuwaiTodayController.php" />
+        <option value="$PROJECT_DIR$/app/LawArticl.php" />
       </list>
     </option>
   </component>
@@ -292,19 +306,6 @@
             <path>
               <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -345,13 +346,14 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\LawSystem\app" />
-      <recent name="E:\xampp\htdocs\LawSystem\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\LawSystem\public\css" />
       <recent name="C:\xampp\htdocs\LawSystem\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\LawSystem\resources\views\kuwaiToday" />
+      <recent name="E:\xampp\htdocs\LawSystem\app" />
+      <recent name="E:\xampp\htdocs\LawSystem\app\Models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,7 +393,7 @@
       <workItem from="1577627428397" duration="71000" />
       <workItem from="1577694967398" duration="15184000" />
       <workItem from="1577772171090" duration="5505000" />
-      <workItem from="1578204845845" duration="16981000" />
+      <workItem from="1578204845845" duration="17696000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -540,11 +542,25 @@
       <option name="project" value="LOCAL" />
       <updated>1578207776110</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="judgments notes delection &amp; edititing notes number is corrected .">
+      <created>1578222908490</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1578222908490</updated>
+    </task>
+    <task id="LOCAL-00023" summary="judgments notes delection &amp; edititing notes number is corrected .">
+      <created>1578222985464</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1578222985464</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62932000" />
+    <option name="totallyTimeSpent" value="63647000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -633,14 +649,12 @@
     <MESSAGE value="delete article button" />
     <MESSAGE value="removing order by articleno" />
     <MESSAGE value="master.blade.php code refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="master.blade.php code refactoring" />
+    <MESSAGE value="judgments notes delection &amp; edititing notes number is corrected ." />
+    <option name="LAST_COMMIT_MESSAGE" value="judgments notes delection &amp; edititing notes number is corrected ." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/549532cd-e4c5-4809-af67-8b16905f0538/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_12_05_112411_judgments_law_articls.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -746,16 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/KuwaiTodayController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -894,23 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/LawArticl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="e#23#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/KuwaiToday.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/announcementarticles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -973,18 +960,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/judgments/show.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/judgments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="76" column="32" selection-end-line="207" />
-          <folding>
-            <element signature="e#3669#3694#0#HTML" expanded="true" />
-            <element signature="e#4515#4541#0#HTML" expanded="true" />
-            <element signature="e#5996#6034#0#HTML" expanded="true" />
-            <element signature="e#6090#6159#0#HTML" expanded="true" />
-            <element signature="e#6360#6398#0#HTML" expanded="true" />
-            <element signature="e#6454#6523#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="336">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -998,10 +977,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/judgments.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/KuwaiTodayController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="27" selection-end-line="26" />
+        <state relative-caret-position="198">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kuwaiToday/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/KuwaiToday.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/judgments/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+          <folding>
+            <element signature="e#3669#3694#0#HTML" expanded="true" />
+            <element signature="e#4515#4541#0#HTML" expanded="true" />
+            <element signature="e#5996#6034#0#HTML" expanded="true" />
+            <element signature="e#6090#6159#0#HTML" expanded="true" />
+            <element signature="e#6360#6398#0#HTML" expanded="true" />
+            <element signature="e#6454#6523#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/LawArticl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="e#23#62#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
