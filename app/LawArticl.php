@@ -7,6 +7,7 @@ use App\Law;
 use App\judgments;
 class LawArticl extends Model
 {
+
     protected $fillable =
         [
             'laws_id','articleno','articlebody'

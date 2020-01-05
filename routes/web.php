@@ -16,6 +16,8 @@ Route::post('/post-registration', 'AuthController@postRegistration')->name('post
 Route::get('/logout', 'AuthController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function () {
+// Al Kuwait Alyoum Routes
+    //  Route::get('')
 
 // law Rotes
     Route::get('laws', 'LawsController@index')->name('getLaws');
@@ -52,7 +54,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/judgments/saveNote/{judgmentID}', 'JudgmentNotesController@store')->name('saveNote');
     Route::get('/judgments/{judgmentID}/showNotes', 'JudgmentNotesController@showNotes')->name('showNotes');
 
-    // Al Kuwait Alyoum
 
 
 });

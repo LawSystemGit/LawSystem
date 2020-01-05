@@ -6,11 +6,6 @@
 
 @section('stylesheets')
 
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/bootstrap.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/main.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/select2.min.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/icons.css')}}"/>
-    <link rel="stylesheet" href="{{asset('lawSystem/assets/css/jquery.toast.css')}}"/>
 @endsection
 
 @section('content')
@@ -86,18 +81,6 @@
 @endsection
 
 @section('secripts')
-
-    <script src="{{asset('lawSystem/assets/js/jquery.js')}}"></script>
-
-    <script src="{{asset('lawSystem/assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/full_numbers_no_ellipses.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/function.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/select2.min.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/users.js')}}"></script>
-    <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
 
 @endsection
 
