@@ -97,7 +97,8 @@
                                     <input type="submit" class="btn general_btn btn_1" value="حفظ">
 
                                 @endif
-                                <a href="{{route('addJudgments')}}" class="btn general_btn btn_1">الرجوع</a>
+                                <a href="{{route('showjudgment',['judgment'=>$judgment])}}"
+                                   class="btn general_btn btn_1">الرجوع</a>
                             </div>
 
                             <div class="col-md-6 float-right">

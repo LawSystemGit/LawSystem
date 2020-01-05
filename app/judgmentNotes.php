@@ -12,7 +12,7 @@ class judgmentNotes extends Model
 
   public function judgments()
   {
-    return $this->belongsTo(judgments::class);
+      return $this->belongsTo(judgments::class, 'judgment_id');
   }
 
 }

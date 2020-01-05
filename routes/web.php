@@ -46,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('judgments-list', 'JudgmentsController@judgmentsList');
     Route::get('/judgments/create/{lastJudgment?}', 'JudgmentsController@create')->name('addJudgments');
     Route::post('/judgments/store', 'JudgmentsController@store')->name('saveJudgments');
+    Route::get('/judgments/{judgment}/showjudgment', 'JudgmentsController@show')->name('showjudgment');
     Route::get('/judgments/{lastJudgment}/updateLastInput', 'JudgmentsController@updateLastInput')->name('updateLastInput');
     Route::patch('/judgments/{lastJudgment}/saveLastInput', 'JudgmentsController@saveLastInput')->name('saveLastInput');
     Route::get('/judgments/{judgmentID}/edit', 'JudgmentsController@edit')->name('editJudgment');
@@ -53,8 +54,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/judgments/addNote/{judgmentID}', 'JudgmentNotesController@addNote')->name('addNote');
     Route::post('/judgments/saveNote/{judgmentID}', 'JudgmentNotesController@store')->name('saveNote');
     Route::get('/judgments/{judgmentID}/showNotes', 'JudgmentNotesController@showNotes')->name('showNotes');
-
-
+    Route::delete('/judgments/{noteID}/deleteNote', 'JudgmentNotesController@deleteNote')->name('deleteNote');
 
 });
 

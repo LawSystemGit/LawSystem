@@ -60,5 +60,22 @@ class JudgmentNotesController extends Controller
         return view('judgments.showNotes', compact('judgmentID'));
     }
 
-
+    public function deleteNote(judgmentNotes $noteID)
+    {
+        $daat = judgments::find($noteID->judgments->id);
+        $status = $noteID->delete();
+        if ($status) {
+            $daat->incompletednotes += 1;
+            $daat->save();
+            return response()->json([
+                'message' => "تم خذف المبدأ بنجاح",
+                "status" => 200
+            ]);
+        } else {
+            return response()->json([
+                'message' => "خطأ أثناء حذف المبدأ",
+                "status" => 422
+            ]);
+        }
+    }
 }

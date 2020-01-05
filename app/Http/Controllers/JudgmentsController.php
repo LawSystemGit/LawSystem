@@ -78,6 +78,11 @@ class JudgmentsController extends Controller
 
     }
 
+    public function show(judgments $judgment)
+    {
+        return view('judgments.show', compact('judgment'));
+    }
+
     public function update(Request $request, $judgmentID)
     {
         $this->validate($request,
@@ -100,7 +105,10 @@ class JudgmentsController extends Controller
         $judgmentID->year = $request['year'];
         $judgmentID->objectionNo = $request['objectionNo'];
         $judgmentID->notes = $request['notes'];
-        $judgmentID->incompletednotes = $request['notes'];
+        if ($request['notes'] > count($judgmentID->judgmentnotes)) {
+            $judgmentID->incompletednotes = ($request['notes']) - count($judgmentID->judgmentnotes);
+        }
+
         $judgmentID->save();
 
         if ($judgmentID) {

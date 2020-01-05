@@ -67,10 +67,8 @@
                                     <th class="w_70 text-center">رقم الطعن</th>
                                     <th class="w_70 text-center">عدد المبادئ</th>
                                     <th class="w_70 text-center">غير مكتمل</th>
-                                    <th class="w_100 text-center">عرض المبادئ</th>
-                                    <th class="w_100 text-center">إضافة مبدأ</th>
-                                    <th class="w_70 text-center">تعديل</th>
-                                    <th class="w_70 text-center">حذف</th>
+                                    <th class="w_100 text-center">إستعراض الحكم</th>
+
                                 </tr>
                                 </thead>
                                 <tfoot>
@@ -85,12 +83,13 @@
                                     </th>
                                     <th><input id="Name2" class="form-control" type="text" placeholder="عدد المبادئ"/>
                                     </th>
-                                    <th><input id="Name2" class="form-control" type="text" placeholder="غير مكتمل"/>
+                                    <th><input id="Name2" class="form-control" disabled type="text"
+                                               placeholder="غير مكتمل"/>
                                     </th>
-                                    <th>######</th>
-                                    <th>######</th>
-                                    <th>######</th>
-                                    <th>######</th>
+                                    <th><input id="Name2" class="form-control" disabled type="text"
+                                               placeholder="إستعراض الحكم"/>
+                                    </th>
+
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -161,28 +160,11 @@
                 {
                     data: 'id', name: 'add', "render": function (data) {
                         data = '<a class="general_btn btn_1 ml-2" ' +
-                            'href="/judgments/' + data + '/showNotes">' + "عرض المبادئ" + '</a>';
+                            'href="/judgments/' + data + '/showjudgment">' + " إستعراض الحكم" + '</a>';
                         return data;
                     }
                 },
-                {
-                    data: 'id', name: 'add', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="/judgments/addNote/' + data + '">' + "إضافة مبادئ" + '</a>';
-                        return data;
-                    }
-                },
-                {
-                    data: 'id', name: 'edit', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="/judgments/' + data + '/edit">' + "تعديل" + '</a>';
-                        return data;
-                    }
-                },
-                {
-                    data: 'id', name: 'edit', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="#">' + "حذف" + '</a>';
-                        return data;
-                    }
-                },
+
 
             ]
 
