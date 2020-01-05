@@ -12,13 +12,14 @@ Route::post('/post-login', 'AuthController@postLogin')->name('postLogin');
 // registrations routes
 Route::get('/registration', 'AuthController@registration')->name('registration');
 Route::post('/post-registration', 'AuthController@postRegistration')->name('postRegistration');
+
 // logout route
 Route::get('/logout', 'AuthController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function () {
 // Al Kuwait Alyoum Routes
-    //  Route::get('')
-
+    Route::get('/KuwaitAlyoum', 'KuwaiTodayController@create')->name('addversion');
+    Route::post('/KuwaitAlyoum/store', 'KuwaiTodayController@store')->name('saveversion');
 // law Rotes
     Route::get('laws', 'LawsController@index')->name('getLaws');
     Route::get('laws-list', 'LawsController@lawsList');

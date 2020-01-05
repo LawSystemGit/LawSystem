@@ -13,12 +13,12 @@ class CreateKuwaiTodaysTable extends Migration
      */
     public function up()
     {
-        Schema::create('kuwai_todays', function (Blueprint $table) {
+        Schema::create('kuwaitodays', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('versionno');
             $table->string('versiontype');
-            $table->date('versionddate');
-            $table->string('versionfile');
+            $table->date('versiondate');
+            $table->text('versionfile');
             $table->timestamps();
         });
     }

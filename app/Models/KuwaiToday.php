@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class KuwaiToday extends Model
 {
+    protected $table = ['kuwaitodays'];
 
+    protected $fillable = [
+        'versionno', 'versiontype', 'versiondate', 'versionfile'
+    ];
 }
