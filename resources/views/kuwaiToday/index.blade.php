@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    قوانين
+    إصدارات الكويت اليوم
 @endsection
 
 @section('stylesheets')
@@ -20,19 +20,18 @@
                     <div class="d-flex align-items-center flex-wrap">
                         <ol class="breadcrumb">
                             <li><a href="#">الرئيسية</a></li>
-                            <li><a href="{{route('getLaws')}}">القوانين</a></li>
+                            <li>إصدارات الكويت اليوم</li>
                         </ol>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div
                         class="navbar d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end rec-counts">
-                        <a href="{{route('addNewLaw')}}">
+                        <a href="{{route('addVersion')}}">
                             <button class="general_btn btn_1 ml-2">
                                 <i class="plus-icon btn-icon-width inline-icon green-icon"></i><span>اضافة جديد</span>
                             </button>
                         </a>
-
                     </div>
 
                 </div>
@@ -43,35 +42,30 @@
                 <div class="col-lg-12 tbl-new-brdr">
                     <div class="panel panel-default no-brdr">
                         <div class="table-responsive">
-                            <table id="lawsTable" class="table table-striped mb-0 table-right CustomTable datatable">
+                            <table id="versionsTable"
+                                   class="table table-striped mb-0 table-right CustomTable datatable">
                                 <thead>
                                 <tr>
-                                    <th class="w_40 pr-2">م</th>
-                                    <th class="w_80 text-center">نوع</th>
-                                    <th class="w_70 text-center">التصنيف</th>
-                                    <th class="w_80 text-center">رقم القانون</th>
-                                    <th class="w_70 text-center">سنة الاصدار</th>
-                                    <th class="w_200 text-center">بشأن</th>
-                                    <th class="w_70 text-center"> تاريخ النشر</th>
-                                    <th class="w_100 text-center">رقم العدد فى الجريدة الرسمية</th>
-                                    <th class="w_70 text-center">إستعراض القانون</th>
+                                    <th class="w_10 pr-2">م</th>
+                                    <th class="w_100 text-center">نوع العدد</th>
+                                    <th class="w_100 text-center">رقم العدد</th>
+                                    <th class="w_100 text-center">تاريخ الإصدار بالجريدة الرسمية</th>
+                                    <th class="w_100 text-center">مستند العدد</th>
+                                    <th class="w_100 text-center">إستعراض العدد</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
                                     <th></th>
-                                    <th><input id="Name" class="form-control" type="text" placeholder="النوع"/></th>
-                                    <th><input id="Name" class="form-control" type="text" placeholder="التصنيف"/></th>
-                                    <th><input id="Name2" class="form-control" type="text" placeholder="رقم القانون"/>
+                                    <th><input id="Name" class="form-control" type="text" placeholder="نوع العدد"/></th>
+                                    <th><input id="Name" class="form-control" type="text" placeholder="رقم العدد"/></th>
+                                    <th><input id="Name2" class="form-control" type="text"
+                                               placeholder="تاريخ الإصدار بالجريدة الرسمية"/>
                                     </th>
-                                    <th><input id="Name2" class="form-control" type="text" placeholder="سنة الاصدار"/>
+                                    <th><input id="Name2" class="form-control" disabled placeholder="مستند العدد"/>
                                     </th>
-                                    <th><input id="Name2" class="form-control" type="text" placeholder="بشأن"/></th>
-                                    <th><input id="Name2" class="form-control" type="text" placeholder="تاريخ النشر"/>
+                                    <th><input id="Name2" class="form-control" disabled placeholder="إستعراض العدد"/>
                                     </th>
-                                    <th><input id="Name2" class="form-control" disabled placeholder=""/></th>
-                                    <th><input id="Name2" class="form-control" disabled placeholder=""/></th>
-
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -92,7 +86,7 @@
 @section('secripts')
     <script>
         $.fn.DataTable.ext.pager.numbers_length = 3;
-        var table = $('#lawsTable').DataTable({
+        var table = $('#versionsTable').DataTable({
             paging: true,
             destroy: true,
             columnDefs: [
@@ -122,19 +116,21 @@
                     "first": "<<"
                 }
             },
-            ajax: "{{ url('laws-list') }}",
+            ajax: "{{ url('KuwaitAlyoum-list') }}",
             columns: [
                 {data: 'id', name: 'id'},
-                {data: 'lawtype', name: 'lawtype'},
-                {data: 'lawcategory', name: 'lawcategory'},
-                {data: 'lawno', name: 'lawno'},
-                {data: 'lawyear', name: 'lawyear'},
-                {data: 'lawrelation', name: 'lawrelation'},
-                {data: 'publishdate', name: 'publishdate'},
-                {data: 'publishid', name: 'publishid'},
+                {data: 'versiontype', name: 'versiontype'},
+                {data: 'versionno', name: 'versionno'},
+                {data: 'versiondate', name: 'versiondate'},
+                {
+                    data: 'versionno', name: 'versionno', "render": function (data) {
+                        data = '<a type="button" class="general_btn btn_1 ml-2" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="openPdf(' + data + ')" >' + "مستند العدد " + '</a>';
+                        return data;
+                    }
+                },
                 {
                     data: 'id', name: 'showlaw', "render": function (data) {
-                        data = '<a class="general_btn btn_1 ml-2" href="/laws/' + data + '/showlaw">' + "إستعراض القانون" + '</a>';
+                        data = '<a class="general_btn btn_1 ml-2" href="/KuwaitAlyoum/' + data + '/show">' + "إستعراض العدد" + '</a>';
                         return data;
                     }
                 },
@@ -185,5 +181,28 @@
         }
 
     </script>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <iframe id="myFrame" style="display:none" width="100%" height="500"></iframe>
 
+                <button type="button" class="general_btn btn_1 ml-2 btn-icon-width inline-icon green-icon"
+                        data-dismiss="modal" style="margin: 6px 50px; height: 28px;width: 65px;">
+                    <b>
+                        إغلاق
+                    </b>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function openPdf(file) {
+            var omyFrame = document.getElementById("myFrame");
+            omyFrame.style.display = "block";
+            let filename = "/storage/KuwaitAlyoum_finished/" + file + '.pdf';
+            omyFrame.src = filename;
+        }
+    </script>
 @endsection

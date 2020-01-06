@@ -14,7 +14,13 @@ class KuwaiTodayController extends Controller
 {
     public function index()
     {
-        return "index";
+        return view('kuwaiToday.index');
+    }
+
+    public function KuwaitAlyoumList()
+    {
+        $versions = KuwaiToday::all();
+        return datatables()->of($versions)->make(true);
     }
 
     public function create($lastVersion = null)
@@ -68,6 +74,11 @@ class KuwaiTodayController extends Controller
             return back();
         }
 
+
+    }
+
+    public function show(KuwaiToday $version)
+    {
 
     }
 

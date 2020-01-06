@@ -57,7 +57,8 @@
                 <div class="col-lg-12 tbl-new-brdr">
                     <div class="panel panel-default no-brdr">
                         <div class="table-responsive">
-                            <table id="usersTable" class="table table-striped mb-0 table-right CustomTable datatable">
+                            <table id="judgmentsTable"
+                                   class="table table-striped mb-0 table-right CustomTable datatable">
                                 <thead>
                                 <tr>
                                     <th class="w_40 pr-2">م</th>
@@ -111,7 +112,7 @@
     <!-- end main-wrapper -->
     <script>
         $.fn.DataTable.ext.pager.numbers_length = 3;
-        var table = $('#usersTable').DataTable({
+        var table = $('#judgmentsTable').DataTable({
             paging: true,
             destroy: true,
             columnDefs: [
@@ -121,10 +122,6 @@
 
                 }
             ],
-            select: {
-                style: 'multi',
-                selector: '.select-box'
-            },
             order: [[2, 'asc']],
             orderCellsTop: true,
             "lengthMenu": [[10, 50, 100, -1], [10, 50, 100, "الكل"]],
@@ -132,9 +129,6 @@
             sDom: 'lrt<"row"<"col-sm-12 col-md-7"i><"col-sm-12 col-md-5"p>>',
             "bLengthChange": false,
             "language": {
-                select: {
-                    rows: " تم تحديد   %d   قانون اضافة الى<li class='add-to-group'><select class='fotrolo' title='اختر'><option>المدرسين</option> <option>اطباء</option></select><button class='btn save-to-group general_btn btn_1'><i class='plus-icon   btn-icon-width inline-icon green-icon'></i><span>اضافة </span></button></li>"
-                },
                 "emptyTable": "لا يوجد بيانات",
                 "infoEmpty": "عرض 0 الي 0 من 0 قانون",
                 "info": "عرض _START_ الى _END_ من _TOTAL_ قانون",

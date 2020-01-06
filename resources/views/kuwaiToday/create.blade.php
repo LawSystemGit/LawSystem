@@ -62,10 +62,10 @@
                                 @if ($files)
                                     <button type="submit" data-dismiss="modal" class="btn general_btn btn_1">حفظ
                                     </button>
-                                    <a href="{{route('getJudgments')}}" data-dismiss="modal"
+                                    <a href="{{route('KuwaitAlyoum')}}" data-dismiss="modal"
                                        class="btn general_btn btn_1">العودة</a>
                                 @else
-                                    <a href="{{route('getJudgments')}}" data-dismiss="modal"
+                                    <a href="{{route('KuwaitAlyoum')}}" data-dismiss="modal"
                                        class="btn general_btn btn_1">العودة</a>
                                 @endif
                                 @if ($lastVersion)

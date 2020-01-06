@@ -58,10 +58,13 @@ Route::middleware(['auth'])->group(function () {
 
 
     // Al Kuwait Alyoum Routes
+    Route::get('KuwaitAlyoum', 'KuwaiTodayController@index')->name('KuwaitAlyoum');
+    Route::get('KuwaitAlyoum-list', 'KuwaiTodayController@KuwaitAlyoumList')->name('KuwaitAlyoumList');
     Route::get('/KuwaitAlyoum/create/{lastVersion?}', 'KuwaiTodayController@create')->name('addVersion');
     Route::post('/KuwaitAlyoum/store', 'KuwaiTodayController@store')->name('saveVersion');
     Route::get('/KuwaitAlyoum/{lastVersion}/updateLastInput', 'KuwaiTodayController@updateLastInput')->name('updateLastVersion');
     Route::patch('/KuwaitAlyoum/{lastVersion}/saveLastInput', 'KuwaiTodayController@saveLastInput')->name('saveLastVersion');
+    Route::get('/KuwaitAlyoum/{version}/show', 'KuwaiTodayController@show')->name('showVersion');
 
 
 });

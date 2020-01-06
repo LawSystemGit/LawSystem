@@ -21,7 +21,7 @@ class LawsController extends Controller
 
     public function lawsList()
     {
-        $laws = DB::table('laws')->select('*');
+        $laws = Law::all();
         return datatables()->of($laws)->make(true);
 
     }

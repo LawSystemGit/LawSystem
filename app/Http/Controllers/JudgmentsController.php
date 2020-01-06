@@ -20,7 +20,7 @@ class JudgmentsController extends Controller
 
     public function judgmentsList()
     {
-        $judgments = DB::table('judgments')->select('*');
+        $judgments = judgments::all();
         return datatables()->of($judgments)->make(true);
 
     }
