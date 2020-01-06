@@ -1,0 +1,53 @@
+  <form method="post" action="{{route('saveVersion')}}" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label>نوع الإصدار</label>
+                                    <select name="versiontype" id="versiontype" dir="rtl" class="SelectWithSearch"
+                                            required>
+                                        <option dir="rtl" value="عدد اساسى">عدد اساسى</option>
+                                        <option dir="rtl" value="ملحق">ملحق</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label>رقم العدد</label>
+                                    <input type="num" name="versionNo" id="versionNo" lang="en" class="form-control"
+                                           placeholder=" رقم العدد" required {{old('versionNo')}} dir="rtl">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label>تاريخ النشر بالجريدة الرسمية</label>
+                                    <input type="date" class="form-control" name="versionDate" id="versionDate"
+                                           {{old('versionDate')}} required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+
+                                    <label>مستند العدد</label>
+
+                                    <div class="uploader">
+                                        <input type="file" id="versionFile" name="versionFile" required
+                                               accept="application/pdf" placeholder="">
+                                        <span class="upload-file btn btn-secondary">ارفق ملف</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <input type="submit" class="btn general_btn btn_1" value="حفظ">
+                                <a href="{{route('getLaws')}}" class="btn general_btn btn_1">
+                                    العودة
+                                </a>
+                            </div>
+                        </form>
+
+                        KuwaiToday
+protected $table = ['kuwaitodays'];
+
+    protected $fillable = [
+        'versionno', 'versiontype', 'versiondate', 'versionfile'
+    ];
+                  $table->integer('versionno');
+                     $table->string('versiontype');
+                     $table->date('versiondate');
+                     $table->text('versionfile')->nullable();

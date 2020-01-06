@@ -18,8 +18,10 @@ Route::get('/logout', 'AuthController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function () {
 // Al Kuwait Alyoum Routes
-    Route::get('/KuwaitAlyoum', 'KuwaiTodayController@create')->name('addversion');
-    Route::post('/KuwaitAlyoum/store', 'KuwaiTodayController@store')->name('saveversion');
+    Route::get('/KuwaitAlyoum', 'KuwaiTodayController@create')->name('addVersion');
+    Route::post('/KuwaitAlyoum/store', 'KuwaiTodayController@store')->name('saveVersion');
+
+
 // law Rotes
     Route::get('laws', 'LawsController@index')->name('getLaws');
     Route::get('laws-list', 'LawsController@lawsList');

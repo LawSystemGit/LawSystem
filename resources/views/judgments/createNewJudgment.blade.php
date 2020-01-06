@@ -98,7 +98,7 @@
 
                             </div>
 
-                            <div class="col-md-6 float-right">
+                            <div class="col-md-6 float-right overflow-auto" style="height: 650px;overflow-y: scroll;">
 
                                 <iframe id="myFrame" style="display:none" width="100%" height="400"></iframe>
 

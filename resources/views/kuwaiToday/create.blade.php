@@ -34,50 +34,75 @@
                 <div class="col-lg-12 tbl-new-brdr">
                     <div class="panel panel-default no-brdr">
 
-                        <form method="post" action="{{route('saveversion')}}" enctype="multipart/form-data">
+                        <form action="{{route('saveVersion')}}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-row">
-                                <div class="form-group col-md-2">
-                                    <label>نوع الإصدار<span class="redstar"></span></label>
-                                    <select name="versiontype" id="versiontype" dir="rtl" class="SelectWithSearch"
-                                            required>
-                                        <option dir="rtl" value="عدد اساسى">عدد اساسى</option>
-                                        <option dir="rtl" value="ملحق">ملحق</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label>رقم العدد</label>
-                                    <input type="num" name="versionno" id="versionno" lang="en" class="form-control"
-                                           placeholder=" رقم العدد" required {{old('versionno')}} dir="rtl">
-                                </div>
-                                <div class="form-group col-md-2">
-                                    <label>تاريخ النشر بالجريدة الرسمية</label>
-                                    <input type="date" class="form-control" name="versiondate" id="versiondate"
-                                           {{old('versiondate')}} required>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-
-                                    <label>مستند العدد</label>
-
-                                    <div class="uploader">
-                                        {{--                                        <span class="file-name" id="file-name">لم يتم ارفاق اي ملف</span>--}}
-                                        <input type="file" id="versionfile" name="versionfile" required
-                                               accept="application/pdf">
-                                        <span class="upload-file btn btn-secondary">ارفق ملف</span>
+                            <div class="col-md-6 float-right">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label>نوع الإصدار</label>
+                                        <select name="versionType" id="versionType" dir="rtl" class="SelectWithSearch"
+                                                required>
+                                            <option dir="rtl" value="عدد اساسى">عدد اساسى</option>
+                                            <option dir="rtl" value="ملحق">ملحق</option>
+                                        </select>
                                     </div>
+                                    <div class="form-group col-md-6">
+                                        <label>رقم العدد</label>
+                                        <input type="num" name="versionNo" id="versionNo" lang="en" class="form-control"
+                                               placeholder=" رقم العدد" required {{old('versionNo')}} dir="rtl">
+                                    </div>
+
+                                    <div class="form-group col-md-6">
+                                        <label>تاريخ النشر بالجريدة الرسمية</label>
+                                        <input type="date" class="form-control" name="versionDate" id="versionDate"
+                                               {{old('versionDate')}} required>
+                                    </div>
+
                                 </div>
+                                @if ($files)
+                                    <button type="submit" data-dismiss="modal" class="btn general_btn btn_1">حفظ
+                                    </button>
+                                    <a href="{{route('getJudgments')}}" data-dismiss="modal"
+                                       class="btn general_btn btn_1">العودة</a>
+                                @else
+                                    <a href="{{route('getJudgments')}}" data-dismiss="modal"
+                                       class="btn general_btn btn_1">العودة</a>
+                                @endif
+                                @if ($lastVersion)
+                                    <a href="{{route('updateLastInput',['lastJudgment'=>$lastVersion])}}"
+                                       class="btn general_btn btn_1"
+                                    >
+                                        تعديل الإدخال الأخير
+                                    </a>
+
+                                @endif
+
                             </div>
-                            <div class="form-group col-md-4">
-                                <input type="submit" class="btn general_btn btn_1" value="حفظ">
-                                <a href="{{route('getLaws')}}" class="btn general_btn btn_1">
-                                    العودة
-                                </a>
+
+                            <div class="col-md-6 float-right overflow-auto" style="height: 650px;overflow-y: scroll;">
+
+                                <iframe id="myFrame" style="display:none" width="100%" height="400"></iframe>
+
+                                <div class="radio">
+                                    @foreach ($files as $fileName)
+                                        <label>
+                                            <input type="radio"
+                                                   onclick="openPdf({{json_encode($fileName)}})" name="versionFile"
+                                                   id="versionFile" value="{{$fileName}}" required>
+                                            {{$fileName}}
+                                        </label>
+                                    @endforeach
+                                </div>
+                                <script type="text/javascript">
+                                    function openPdf(file) {
+                                        var omyFrame = document.getElementById("myFrame");
+                                        omyFrame.style.display = "block";
+                                        let filename = "/storage/KuwaitAlyoum_unfinished/" + file;
+                                        omyFrame.src = filename;
+                                    }
+                                </script>
                             </div>
                         </form>
-                        {{-- onclick="return toast('عملية ناجحة','تم تعديل المستخدم','success')" --}}
                     </div>
                 </div>
             </div>

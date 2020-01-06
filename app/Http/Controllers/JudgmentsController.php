@@ -31,7 +31,7 @@ class JudgmentsController extends Controller
         if ($lastJudgment) {
             $lastJudgment = judgments::find($lastJudgment);
         }
-        return view('judgments.createNewJudgment')->with('files', $files)->with('lastJudgment', $lastJudgment);
+        return view('judgments.createNewJudgment', compact(['files', 'lastJudgment']));
     }
 
     public function store(Request $request)
