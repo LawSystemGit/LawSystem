@@ -76,9 +76,33 @@ class KuwaiTodayController extends Controller
         return view('kuwaiToday.updateLastInput', compact('lastVersion'));
     }
 
-    public function saveLastInput(KuwaiToday $lastVersion)
+    public function saveLastInput(Request $request, KuwaiToday $lastVersion)
     {
+        $this->validate($request,
+            [
+                'versionNo' => 'required',
+                'versionType' => 'required',
+                'versionDate' => 'required',
+            ], [  // change the default english error validation messages with arabic ones
+                'versionNo.required' => 'مطلوب إدخال رقم العدد',
+                'versionType.required' => 'مطلوب إخال نوع العدد',
+                'versionDate.required' => 'مطلوب إدخال تاريخ العدد',
+            ]);
+        $updatedFilename = ($request->versionNo . '.' . 'pdf');
+        if ($request->versionNo != $lastVersion->versionno) {
+            $path = Storage::move(('/public/KuwaitAlyoum_finished/' . $lastVersion->versionfile), ('public/KuwaitAlyoum_finished/' . $updatedFilename));
+            $lastVersion->versionfile = $updatedFilename;
+        }
 
+        $lastVersion->versionno = $request->versionNo;
+        $lastVersion->versiontype = $request->versionType;
+        $lastVersion->versiondate = $request->versionDate;
+        $lastVersion->save();
+        Session::put('notification', [
+            'message' => " تم إضافة العدد بنجاح ",
+            'alert-type' => 'success',
+        ]);
+        return redirect()->route('addVersion', ['lastVersion' => $lastVersion]);
     }
 
     public static function readDirectory($directory)

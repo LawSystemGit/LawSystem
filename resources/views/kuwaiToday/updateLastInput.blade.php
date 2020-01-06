@@ -37,6 +37,7 @@
                         <form action="{{route('saveLastVersion',['lastVersion'=>$lastVersion])}}" method="POST"
                               enctype="multipart/form-data">
                             @csrf
+                            {{method_field('PATCH')}}
                             <div class="col-md-6 float-right">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -70,7 +71,7 @@
                                     <div class="form-group col-md-6">
                                         <label>تاريخ النشر بالجريدة الرسمية</label>
                                         <input type="date" class="form-control" name="versionDate" id="versionDate"
-                                               {{old('versionDate')}} required
+                                               {{old('versionDate')}}
                                                value="{{$lastVersion->versiondate}}"
                                         >
                                     </div>
