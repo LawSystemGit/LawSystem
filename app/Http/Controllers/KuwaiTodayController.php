@@ -33,13 +33,14 @@ class KuwaiTodayController extends Controller
                 'versionNo' => 'required|unique:kuwai_todays',
                 'versionType' => 'required',
                 'versionDate' => 'required',
-                'versionFile' => 'required',
+                'versionFile' => 'required|unique:kuwai_todays',
             ], [  // change the default english error validation messages with arabic ones
                 'versionNo.required' => 'مطلوب إدخال رقم العدد',
                 'versionNo.unique' => 'ملف هذا العدد موجود بالفعل',
                 'versionType.required' => 'مطلوب إخال نوع العدد',
                 'versionDate.required' => 'مطلوب إدخال تاريخ العدد',
                 'versionFile.required' => 'مطلوب إدخال مستند العدد ',
+                'versionFile.unique' => 'مستند العدد موجود بالفعل',
             ]);
 
         if (!(Storage::exists('public/KuwaitAlyoum_finished/' . $request->versionFile))) {
