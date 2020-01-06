@@ -4,130 +4,58 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\KuwaiToday;
-use Storage;
-use App\LawArticl;
+use Illuminate\Support\Facades\Storage;
 use Session;
-use Redirect, Response, DB, Config;
-use Datatables;
 
 class KuwaiTodayController extends Controller
 {
     public function index()
     {
-        return view('kuwaiToday.index');
+        return "index";
     }
 
-    public function KuwaitAlyoumList()
+    public function create()
     {
-        $versions = KuwaiToday::all();
-        return datatables()->of($versions)->make(true);
-    }
-
-    public function create($lastVersion = null)
-    {
-        $files = KuwaiTodayController::readDirectory('/public/KuwaitAlyoum_unfinished/');
-        if ($lastVersion) {
-            $lastVersion = KuwaiToday::find($lastVersion);
-        }
-        return view('kuwaiToday.create', compact(['files'], 'lastVersion'));
+        return view('kuwaiToday.create');
     }
 
     public function store(Request $request)
     {
+        dd($request->toArray());
         $this->validate($request,
             [
-                'versionNo' => 'required|unique:kuwai_todays',
-                'versionType' => 'required',
-                'versionDate' => 'required',
-                'versionFile' => 'required|unique:kuwai_todays',
+                'versionno' => 'required|unique:kuwaitodays',
+                'versiontype' => 'required',
+                'versiondate' => 'required',
+                'versionfile' => 'required',
             ], [  // change the default english error validation messages with arabic ones
-                'versionNo.required' => 'مطلوب إدخال رقم العدد',
-                'versionNo.unique' => 'ملف هذا العدد موجود بالفعل',
-                'versionType.required' => 'مطلوب إخال نوع العدد',
-                'versionDate.required' => 'مطلوب إدخال تاريخ العدد',
-                'versionFile.required' => 'مطلوب إدخال مستند العدد ',
-                'versionFile.unique' => 'مستند العدد موجود بالفعل',
+                'versionno.required' => 'مطلوب إدخال رقم العدد',
+                'versiontype.required' => 'مطلوب إخال نوع العدد',
+                'versiondate.required' => 'مطلوب إدخال تاريخ العدد',
+                'versionfile.required' => 'مطلوب إدخال مستند العدد ',
             ]);
 
-        if (!(Storage::exists('public/KuwaitAlyoum_finished/' . $request->versionFile))) {
-            $fileToSave = ($request->versionNo) . '.' . 'pdf';
-            $path = Storage::move(('/public/KuwaitAlyoum_unfinished/' . $request->versionFile), ('public/KuwaitAlyoum_finished/' . $fileToSave));
-            $lastVersion = KuwaiToday::create([
-                'versionno' => $request->versionNo,
-                'versiontype' => $request->versionType,
-                'versiondate' => $request->versionDate,
-                'versionfile' => $fileToSave,
-            ]);
-
-            if ($lastVersion) {
-                Session::put('notification', [
-                    'message' => " تم إضافة العدد بنجاح ",
-                    'alert-type' => 'success',
-                ]);
-                return redirect()->route('addVersion', ['lastVersion' => $lastVersion]);
+        $kwtoday = new KuwaiToday();
+        if (request()->hasFile('versionfile')) {
+            // get the file name with extention
+            $covernamewithEXT = $request->file('versionfile')->getClientOriginalName();
+            // get just the file name
+            $filename = pathinfo($covernamewithEXT, PATHINFO_FILENAME);
+            // get just the extention
+            $extention = $request->file('versionfile')->getClientOriginalExtension();
+            // file to store
+            $fileNmaeToStore = $kwtoday->versionno . '.' . $extention;
+            // upload file
+            if (!(Storage::exists('public/KuwaitAlyoum/' . $covernamewithEXT))) {
+                $path = Storage::move('public/files/' . $covernamewithEXT, 'public/KuwaitAlyoum/' . $fileNmaeToStore);
+                $kwtoday->versionno = $request->versionno;
+                $kwtoday->versiontype = $request->versiontype;
+                $kwtoday->versiondate = $request->versiondate;
+                $kwtoday->versionfile = $fileNmaeToStore;
+                $kwtoday->save();
             }
-        } else {
-            Session::put('notification', [
-                'message' => " خطأ العدد موجود بالفعل ",
-                'alert-type' => 'error',
-            ]);
-            return back();
+
         }
-
-
-    }
-
-    public function show(KuwaiToday $version)
-    {
-
-    }
-
-    public function updateLastInput(KuwaiToday $lastVersion)
-    {
-        return view('kuwaiToday.updateLastInput', compact('lastVersion'));
-    }
-
-    public function saveLastInput(Request $request, KuwaiToday $lastVersion)
-    {
-        $this->validate($request,
-            [
-                'versionNo' => 'required',
-                'versionType' => 'required',
-                'versionDate' => 'required',
-            ], [  // change the default english error validation messages with arabic ones
-                'versionNo.required' => 'مطلوب إدخال رقم العدد',
-                'versionType.required' => 'مطلوب إخال نوع العدد',
-                'versionDate.required' => 'مطلوب إدخال تاريخ العدد',
-            ]);
-        $updatedFilename = ($request->versionNo . '.' . 'pdf');
-        if ($request->versionNo != $lastVersion->versionno) {
-            $path = Storage::move(('/public/KuwaitAlyoum_finished/' . $lastVersion->versionfile), ('public/KuwaitAlyoum_finished/' . $updatedFilename));
-            $lastVersion->versionfile = $updatedFilename;
-        }
-
-        $lastVersion->versionno = $request->versionNo;
-        $lastVersion->versiontype = $request->versionType;
-        $lastVersion->versiondate = $request->versionDate;
-        $lastVersion->save();
-        Session::put('notification', [
-            'message' => " تم إضافة العدد بنجاح ",
-            'alert-type' => 'success',
-        ]);
-        return redirect()->route('addVersion', ['lastVersion' => $lastVersion]);
-    }
-
-    public static function readDirectory($directory)
-    {
-        $files = array_filter(Storage::disk('local')->files($directory),
-            function ($item) {
-                return strpos($item, 'pdf');
-            });
-        $realfilesName = [];
-        foreach ($files as $file) {
-            $data = explode("/", $file);
-            $realfilesName [] = $data[2];
-        }
-
-        return $realfilesName;
+        return redirect()->back();
     }
 }
