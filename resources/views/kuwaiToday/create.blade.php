@@ -69,7 +69,7 @@
                                        class="btn general_btn btn_1">العودة</a>
                                 @endif
                                 @if ($lastVersion)
-                                    <a href="{{route('updateLastInput',['lastJudgment'=>$lastVersion])}}"
+                                    <a href="{{route('updateLastVersion',['lastVersion'=>$lastVersion])}}"
                                        class="btn general_btn btn_1"
                                     >
                                         تعديل الإدخال الأخير

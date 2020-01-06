@@ -17,9 +17,6 @@ Route::post('/post-registration', 'AuthController@postRegistration')->name('post
 Route::get('/logout', 'AuthController@logout')->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-// Al Kuwait Alyoum Routes
-    Route::get('/KuwaitAlyoum', 'KuwaiTodayController@create')->name('addVersion');
-    Route::post('/KuwaitAlyoum/store', 'KuwaiTodayController@store')->name('saveVersion');
 
 
 // law Rotes
@@ -58,6 +55,14 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/judgments/saveNote/{judgmentID}', 'JudgmentNotesController@store')->name('saveNote');
     Route::get('/judgments/{judgmentID}/showNotes', 'JudgmentNotesController@showNotes')->name('showNotes');
     Route::delete('/judgments/{noteID}/deleteNote', 'JudgmentNotesController@deleteNote')->name('deleteNote');
+
+
+    // Al Kuwait Alyoum Routes
+    Route::get('/KuwaitAlyoum/create/{lastVersion?}', 'KuwaiTodayController@create')->name('addVersion');
+    Route::post('/KuwaitAlyoum/store', 'KuwaiTodayController@store')->name('saveVersion');
+    Route::get('/KuwaitAlyoum/{lastVersion}/updateLastInput', 'KuwaiTodayController@updateLastInput')->name('updateLastVersion');
+    Route::patch('/KuwaitAlyoum/{lastVersion}/saveLastInput', 'KuwaiTodayController@saveLastInput')->name('saveLastVersion');
+
 
 });
 

@@ -46,19 +46,19 @@ class KuwaiTodayController extends Controller
         if (!(Storage::exists('public/KuwaitAlyoum_finished/' . $request->versionFile))) {
             $fileToSave = ($request->versionNo) . '.' . 'pdf';
             $path = Storage::move(('/public/KuwaitAlyoum_unfinished/' . $request->versionFile), ('public/KuwaitAlyoum_finished/' . $fileToSave));
-            $kwAluom = KuwaiToday::create([
+            $lastVersion = KuwaiToday::create([
                 'versionno' => $request->versionNo,
                 'versiontype' => $request->versionType,
                 'versiondate' => $request->versionDate,
                 'versionfile' => $fileToSave,
             ]);
 
-            if ($kwAluom) {
+            if ($lastVersion) {
                 Session::put('notification', [
                     'message' => " تم إضافة العدد بنجاح ",
                     'alert-type' => 'success',
                 ]);
-                return back();
+                return redirect()->route('addVersion', ['lastVersion' => $lastVersion]);
             }
         } else {
             Session::put('notification', [
@@ -71,6 +71,15 @@ class KuwaiTodayController extends Controller
 
     }
 
+    public function updateLastInput(KuwaiToday $lastVersion)
+    {
+        return view('kuwaiToday.updateLastInput', compact('lastVersion'));
+    }
+
+    public function saveLastInput(KuwaiToday $lastVersion)
+    {
+
+    }
 
     public static function readDirectory($directory)
     {
