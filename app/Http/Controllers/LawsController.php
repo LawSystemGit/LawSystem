@@ -126,13 +126,36 @@ class LawsController extends Controller
         $lawID->publishdate = $request['publishdate'] ? $request['publishdate'] : null;
         $lawID->publishid = $request['publishid'] ? $request['publishid'] : null;
         $lawID->save();
+
         // check if the request has file
         if ($request->lawfile) {
 
-        } else {
 
         }
 
+
+        if ($request->lawfile) {
+            $fileToStore = $request->lawno . '.' . 'pdf';
+            if ($lawID->lawfile) {
+                $path0 = Storage::move(('/public/Law_PDF/' . $lawID->lawfile), ('/public/laws_unfinished/' . $lawID->lawfile));
+            }
+            if (!(fileHandling::checkForFile('public/Law_PDF/', $fileToStore))) {
+                $path = Storage::move(('/public/laws_unfinished/' . $request->lawfile), ('/public/Law_PDF/' . $fileToStore));
+                $lawID->lawfile = $fileToStore;
+                $lawID->save();
+                Session::put('notification', [
+                    'message' => " تم تعديل القانون رقم  " . $lawID->lawno,
+                    'alert-type' => 'success',
+                ]);
+                return redirect()->route('showlaw', ['law' => $lawID]);
+            }
+        }
+
+        Session::put('notification', [
+            'message' => " تم تعديل القانون رقم  " . $lawID->lawno,
+            'alert-type' => 'success',
+        ]);
+        return redirect()->route('showlaw', ['law' => $lawID]);
 
     }
 
