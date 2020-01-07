@@ -39,9 +39,9 @@
                         <form action="{{route('saveLaw')}}" method="POST" enctype="multipart/form-data">
                             @csrf
 
-                            <div class="col-md-7 float-right">
+                            <div class="col-md-6 float-right">
                                 <div class="form-row">
-                                    <div class="form-group col-md-2 col-lg-2">
+                                    <div class="form-group col-md-3 col-lg-3">
                                         <label>النوع<span class="redstar">*</span></label>
 
                                         <select name="lawtype" id="lawtype" dir="rtl" class="SelectWithSearch" required>
@@ -52,7 +52,7 @@
 
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-2 col-lg-2">
+                                    <div class="form-group col-md-3 col-lg-3">
                                         <label>التصنيف</label>
 
                                         <select name="lawcategory" id="lawcategory" dir="rtl" class="SelectWithSearch"
@@ -64,15 +64,14 @@
 
                                         </select>
                                     </div>
-
-                                    <div class="form-group col-md-2 col-lg-2">
+                                    <div class="form-group col-md-3 col-lg-3">
                                         <label>رقم القانون</label>
                                         <input type="num" name="lawno" id="lawno" lang="ar" class="form-control"
                                                placeholder="رقم القانون" required {{old('lawno')}} dir="rtl">
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group col-md-3 col-lg-3">
                                         <label>لسنة</label>
                                         <input type="num" name="lawyear" id="lawyear" lang="ar" class="form-control"
                                                placeholder="القانون لسنة" required {{old('lawyear')}} dir="rtl">
@@ -117,7 +116,8 @@
 
                             </div>
 
-                            <div class="col-md-5 float-right overflow-auto" style="height: 500px;overflow-y: scroll;">
+                            <div class="col-md-6 float-right overflow-auto" style="height: 500px;
+                            overflow-y: scroll;">
 
                                 <iframe id="myFrame" style="display:none" width="100%" height="400"></iframe>
 
@@ -138,9 +138,10 @@
                     </div>
                 </div>
             </div>
-            <!-- end row -->
         </div>
     </div>
+            <!-- end row -->
+
     <!-- end content-wrapper -->
 
 @endsection

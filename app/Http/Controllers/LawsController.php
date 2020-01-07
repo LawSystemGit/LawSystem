@@ -47,41 +47,15 @@ class LawsController extends Controller
                 'lawrelation.required' => 'القانون بشأن ماذا',
             ]);
 
-//        $results = Law::where('lawno', $request['lawno'])->get();
-//
-//        if ($results) {
-//            foreach ($results as $result) {
-//                if ($result->lawno == $request['lawno'] && $result->lawcategory == $request['lawcategory']) {
-//                    Session::put('notification', [
-//                        'message' => " خطأ القانون موجود بالفعل ",
-//                        'alert-type' => 'error',
-//                    ]);
-//
-//                    // if the creation of new law is fails redirect it back
-//                    return redirect()->route('addNewLaw');
-//                }
-//            }
-//        }
-
         $lawId = Law::create($request->all());
+        $fileToStore = $lawId->lawno . '.' . 'pdf';
         // check if the $request has a file
-        // Note:: the lawfile column is nullable
-        if (request()->hasFile('lawfile')) {
-            // get the file name with extention
-            $covernamewithEXT = $request->file('lawfile')->getClientOriginalName();
-            // get just the file name
-            $filename = pathinfo($covernamewithEXT, PATHINFO_FILENAME);
-            // get just the extention
-            $extention = $request->file('lawfile')->getClientOriginalExtension();
-            // file to store
-            $fileNmaeToStore = $lawId->lawno . '.' . $extention;
-            // upload file
-            if (!(Storage::exists('public/Law_PDF/' . $covernamewithEXT))) {
-                $path = Storage::move('public/files/' . $covernamewithEXT, 'public/Law_PDF/' . $fileNmaeToStore);
-                $lawId->lawfile = $fileNmaeToStore;
-                $lawId->save();
-
-            }
+        if ($request->lawfile) {
+            $path = Storage::move('/public/laws_unfinished/' . $request->lawfile, '/public/Law_PDF/' . $fileToStore);
+            $lawId->publishdate = $request['publishdate'] ? $request['publishdate'] : null;
+            $lawId->publishid = $request['publishid'] ? $request['publishid'] : null;
+            $lawId->lawfile = $fileToStore;
+            $lawId->save();
         }
         // check the creation of the new law is done
         // return success message
@@ -96,7 +70,6 @@ class LawsController extends Controller
                 'message' => " خطأ القانون موجود بالفعل ",
                 'alert-type' => 'error',
             ]);
-
             // if the creation of new law is fails redirect it back
             return redirect()->route('addNewLaw');
         }
@@ -237,8 +210,6 @@ class LawsController extends Controller
             ]);
             return redirect()->route('showlaw', ['law' => $lastLaw]);
         }
-
-
 
 
     }
@@ -384,21 +355,5 @@ class LawsController extends Controller
         }
     }
 
-
-    public static function readDirectory($directory)
-    {
-        $files = array_filter(Storage::disk('local')->files($directory),
-            function ($item) {
-                return strpos($item, 'pdf');
-            });
-        $realfilesName = [];
-        foreach ($files as $file) {
-            $data = explode("/", $file);
-            $realfilesName [] = $data[2];
-            //$realfilesName [] = $data[2];
-        }
-
-        return $realfilesName;
-    }
 
 }
