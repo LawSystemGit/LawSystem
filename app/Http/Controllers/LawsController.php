@@ -203,6 +203,43 @@ class LawsController extends Controller
 
     public function saveLastLaw(Request $request, Law $lastLaw)
     {
+        $this->validate($request,
+            [
+                'lawtype' => 'required',
+                'lawcategory' => 'required',
+                'lawno' => 'required',
+                'lawyear' => 'required',
+                'lawrelation' => 'required',
+            ], [  // change the default english error validation messages with arabic ones
+                'lawno.required' => 'مطلوب إدخال رقم القانون',
+                'lawtype.required' => 'مطلوب إخال نوع القانون',
+                'lawcategory.required' => 'مطلوب إدخال تصنيف القانون',
+                'lawyear.required' => 'مطلوب إدخال سنة القانون',
+                'lawrelation.required' => 'القانون بشأن ماذا',
+            ]);
+        $lastLaw->lawtype = $request['lawtype'];
+        $lastLaw->lawcategory = $request['lawcategory'];
+        $lastLaw->lawno = $request['lawno'];
+        $lastLaw->lawyear = $request['lawyear'];
+        $lastLaw->lawrelation = $request['lawrelation'];
+        $lastLaw->publishdate = $request['publishdate'] ? $request['publishdate'] : null;
+        $lastLaw->publishid = $request['publishid'] ? $request['publishid'] : null;
+
+        if ($lastLaw->lawfile) {
+            $lastLaw->lawfile = $request['lawno'] . '.' . 'pdf';
+            $path = fileHandling::fileRename('public/Law_PDF/', $lastLaw->lawfile, $request['lawno'] . '.' . 'pdf');
+        }
+        $lastLaw->save();
+        if ($lastLaw) {
+            Session::put('notification', [
+                'message' => " تم تعديل القانون رقم  " . $lastLaw->lawno,
+                'alert-type' => 'success',
+            ]);
+            return redirect()->route('showlaw', ['law' => $lastLaw]);
+        }
+
+
+
 
     }
 

@@ -109,21 +109,14 @@
 
                                         <label>
                                             <input type="radio"
-                                                   onclick="openPdf({{json_encode($judgment->judgmentFile)}})"
+                                                   onclick="openFile({{json_encode($judgment->judgmentFile)}},'Finished_Judgments')"
                                                    name="judgmentfile"
                                                    id="judgmentfile" value="{{$judgment->judgmentFile}}">
                                             {{$judgment->judgmentFile}}
                                         </label>
 
                                 </div>
-                                <script type="text/javascript">
-                                    function openPdf(file) {
-                                        var omyFrame = document.getElementById("myFrame");
-                                        omyFrame.style.display = "block";
-                                        let filename = "/storage/Finished_Judgments/" + file;
-                                        omyFrame.src = filename;
-                                    }
-                                </script>
+
                             </div>
                         </form>
                     </div>

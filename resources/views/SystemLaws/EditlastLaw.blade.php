@@ -147,7 +147,7 @@
                                     <div class="radio">
                                         <label>
                                             <input type="radio"
-                                                   onclick="openFile({{json_encode($lastLaw->lawfile)}},'laws_unfinished')"
+                                                   onclick="openFile({{json_encode($lastLaw->lawfile)}},'Law_PDF')"
                                                    name="lawfile"
                                                    id="lawfile" value="{{$lastLaw->lawfile}}">
                                             {{$lastLaw->lawfile}}
