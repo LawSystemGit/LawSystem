@@ -82,7 +82,8 @@
                                     @foreach ($files as $fileName)
                                         <label>
                                             <input type="radio"
-                                                   onclick="openFile({{json_encode($fileName)}})" name="versionFile"
+                                                   onclick="openFile({{json_encode($fileName)}},'KuwaitAlyoum_unfinished')"
+                                                   name="versionFile"
                                                    id="versionFile" value="{{$fileName}}" required>
                                             {{$fileName}}
                                         </label>

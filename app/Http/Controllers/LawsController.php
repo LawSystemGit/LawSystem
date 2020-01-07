@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\fileHandling;
 use App\Law;
 use Storage;
 use App\LawArticl;
@@ -109,10 +110,13 @@ class LawsController extends Controller
     }
 
     // return view to create / add new law
-    public function create()
+    public function create($lastLaw = null)
     {
-
-        return view('SystemLaws.createNewLaw');
+        if ($lastLaw) {
+            $lastLaw = Law::find($lastLaw);
+        }
+        $files = fileHandling::readDirectory('/public/laws_unfinished/');
+        return view('SystemLaws.createNewLaw', compact(['files', 'lastLaw']));
     }
 
     // return view to edit law
@@ -192,16 +196,17 @@ class LawsController extends Controller
     }
 
 
-    public function destory(Law $lawID)
+    public function updateLastLaw(Law $lastLaw)
     {
-//        $LawID->lawArticles->delete();
-//        $LawID->delete();
-        return back();
+        return view('SystemLaws.EditlastLaw', compact('lastLaw'));
+    }
+
+    public function saveLastLaw(Request $request, Law $lastLaw)
+    {
+
     }
 
     // laravel doesn't support arabic slug so this method is used to generate arabic ones
-
-
     public function AddArticles(Request $request, Law $lawID)
     {
         return view('SystemLaws.addArticleToLaw', compact('lawID'));

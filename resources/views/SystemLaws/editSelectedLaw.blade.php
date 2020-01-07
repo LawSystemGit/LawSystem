@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    اضافة قانون
+    تعديل قانون رقم {{$lawID->lawno}}
 @endsection
 
 @section('stylesheets')
@@ -22,7 +22,7 @@
                             <ol class="breadcrumb">
                                 <li><a href="#">الرئيسية</a></li>
                                 <li><a href="{{route('getLaws')}}">القوانين</a></li>
-                                <li><a href="{{route('addNewLaw')}}">اضافة قانون</a></li>
+                                <li>تعديل القانون رقم {{$lawID->lawno}}</li>
                             </ol>
                         </div>
                     </div>

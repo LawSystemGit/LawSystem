@@ -23,10 +23,12 @@ Route::middleware(['auth'])->group(function () {
 // law Rotes
     Route::get('laws', 'LawsController@index')->name('getLaws');
     Route::get('laws-list', 'LawsController@lawsList');
-    Route::get('/laws/create', 'LawsController@create')->name('addNewLaw');
+    Route::get('/laws/create/{lastLaw?}', 'LawsController@create')->name('addNewLaw');
     Route::post('/laws/store', 'LawsController@store')->name('saveLaw');
     Route::get('/laws/{law}/showlaw', 'LawsController@show')->name('showlaw');
     Route::get('/laws/{lawID}/edit', 'LawsController@edit')->name('editLaw');
+    Route::get('/laws/{lastLaw}/editLastLaw', 'LawsController@updateLastLaw')->name('updateLastLaw');
+    Route::patch('/laws/{lastLaw}/saveLastLaw', 'LawsController@saveLastLaw')->name('saveLastLaw');
     Route::patch('/laws/{lawID}/ushowlawpdate', 'LawsController@update')->name('updateLaw');
     Route::delete('/law/delete/{lawID}', 'LawsController@destory')->name('delteLaw');
     Route::get('/laws/{lawID}/addArticles', 'LawsController@AddArticles')->name('addArticle');
@@ -70,29 +72,5 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-Route::get('/test/', function () {
-
-    $files = array_filter(Storage::disk('local')->files('/public/KuwaitAlyoum_unfinished'),
-        function ($item) {
-            return strpos($item, 'pdf');
-        });
-    $realfilesName = [];
-    foreach ($files as $file) {
-        $data = explode("/", $file);
-        $realfilesName [] = $data[2];
-    }
-    return $realfilesName;
-
-});
-Route::get('test2', function () {
-    $files = Storage::allFiles('/public/KuwaitAlyoum_unfinished');
-    $realfilesName = [];
-    foreach ($files as $file) {
-        $data = explode("/", $file);
-        $realfilesName [] = $data[2];
-    }
-    return $realfilesName;
-
-});
 
 

@@ -48,12 +48,13 @@
         omyFrame.src = filename;
     }
 
-    function openFile(file) {
+    function openFile(file, folder) {
         var omyFrame = document.getElementById("myFrame");
         omyFrame.style.display = "block";
-        let filename = "/storage/KuwaitAlyoum_unfinished/" + file;
+        let filename = "/storage/" + folder + "/" + file;
         omyFrame.src = filename;
     }
+
 </script>
 @include('layouts.notification')
 </body>
