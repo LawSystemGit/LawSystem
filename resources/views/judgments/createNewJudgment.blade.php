@@ -106,20 +106,13 @@
                                     @foreach ($files as $fileName)
                                         <label>
                                             <input type="radio"
-                                                   onclick="openPdf({{json_encode($fileName)}})" name="judgmentfile"
+                                                   onclick="openFile({{json_encode($fileName)}})" name="judgmentfile"
                                                    id="judgmentfile" value="{{$fileName}}" required>
                                             {{$fileName}}
                                         </label>
                                     @endforeach
                                 </div>
-                                <script type="text/javascript">
-                                    function openPdf(file) {
-                                        var omyFrame = document.getElementById("myFrame");
-                                        omyFrame.style.display = "block";
-                                        let filename = "/storage/unfinished_judgments/" + file;
-                                        omyFrame.src = filename;
-                                    }
-                                </script>
+
                             </div>
                         </form>
                     </div>

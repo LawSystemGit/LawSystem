@@ -71,12 +71,17 @@
 
                         <a href="#">
                             <button class="general_btn btn_1 ml-2" style="height: 38px;">
-                                <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>إضافة تعديل</span>
+                                <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل العدد</span>
                             </button>
                         </a>
                         <a href="#">
                             <button class="general_btn btn_1 ml-2" style="height: 38px;">
-                                <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>إضافة عدد</span>
+                                <i class="plus-icon btn-icon-width inline-icon green-icon"></i><span>إضافة ملحق</span>
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class="general_btn btn_1 ml-2" style="height: 38px;">
+                                <i class="plus-icon btn-icon-width inline-icon green-icon"></i><span>إضافة عدد</span>
                             </button>
                         </a>
                     </div>
@@ -84,14 +89,14 @@
 
             </div>
             <div class="row">
-                <div class="col-lg-6 ">
+                <div class="col-lg-7 ">
                     <table class="table table-active ">
                         <tr>
                             <th class="w_70"><b>نوع الإصدار</b></th>
                             <th class="w_70 "><b>رقم العدد</b></th>
                             <th class="w_200 "><b>تاريخ النشر بالجريدة الرسمية</b></th>
                             <th class="w_80 "><b>مستند العدد</b></th>
-                            <th class="w_80 "><b>الملحقات</b></th>
+                            <th class="w_150 "><b>الملحقات</b></th>
 
                         </tr>
                         <tbody>
@@ -102,110 +107,138 @@
                             <td><a type="button" class="general_btn btn_1 ml-2" data-toggle="modal"
                                    data-target=".bd-example-modal-lg"
                                    onclick="openPdf({{$version->versionno}})">مستند العدد</a></td>
-                            <td><b>{{$version->versionfile}}</b></td>
+                            <td><a type="button" class="general_btn btn_1 ml-2" data-toggle="modal"
+                                   data-target=".bd-example-modal-lg"
+                                   onclick="openPdf({{$version->versionno}})">ملحق خاص بالعدد
+                                    رقم {{$version->versionno}}</a></td>
 
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            {{--            <div class="row align-items-center">--}}
-            {{--                <div class="row mt-0">--}}
-            {{--                    <div class="col-lg-12 tbl-new-brdr">--}}
-            {{--                        <div class="panel panel-default no-brdr">--}}
+            <div class="row align-items-center">
+                <div class="row mt-0">
+                    <div class="col-lg-12 tbl-new-brdr">
+                        <div class="panel panel-default no-brdr">
 
-            {{--                            <div class="col-md-2 float-right">--}}
+                            <div class="col-md-2 float-right">
 
-            {{--                                <div class="user-block">--}}
-            {{--                                    <table class="table table-striped mb-0">--}}
-            {{--                                        <thead>--}}
-            {{--                                        <tr>--}}
-            {{--                                            <th>--}}
-            {{--                                                <div class="float-right ml-5"--}}
-            {{--                                                     style="padding-top: 12px;">--}}
-            {{--                                                    <i class="edit-icon btn-icon-width inline-icon gray-icon"></i>--}}
-            {{--                                                    عدد مواد القانون ({{$law->law_articles_count}})--}}
+                                <div class="user-block">
+                                    <table class="table table-striped mb-0">
+                                        <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="float-right ml-5"
+                                                     style="padding-top: 12px;">
+                                                    <i class="cogs-icon btn-icon-width inline-icon gray-icon"></i>
+                                                    عدد مواد القانون (20)
+                                                </div>
+                                                <form>
+                                                    <div class="input-group search_code">
+                                                        <input type="text" class="form-control"
+                                                               placeholder="رقم المادة">
+                                                    </div>
+                                                </form>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
 
-            {{--                                                </div>--}}
-            {{--                                                <form>--}}
-            {{--                                                    <div class="input-group search_code">--}}
-            {{--                                                        <input type="text" class="form-control"--}}
-            {{--                                                               placeholder="رقم المادة">--}}
-            {{--                                                    </div>--}}
-            {{--                                                </form>--}}
-            {{--                                            </th>--}}
-            {{--                                        </tr>--}}
-            {{--                                        </thead>--}}
-            {{--                                        <tbody>--}}
-            {{--                                        @foreach($law->lawArticles as $article)--}}
-            {{--                                            <tr id="link{{$article->id}}">--}}
-            {{--                                                <td>--}}
-            {{--                                                    <a class="tab-link" href='#article{{$article->id}}'--}}
-            {{--                                                    > <span--}}
-            {{--                                                            class="circle"></span>--}}
-            {{--                                                        مادة رقم ({{$article->articleno}})--}}
-            {{--                                                    </a>--}}
-            {{--                                                </td>--}}
+                                        <tr id="link">
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد الملحقات (1)
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد الإعلانات (20)
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد القرارات 51)
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد الأحكام (01)
+                                                </a>
+                                            </td>
 
-            {{--                                            </tr>--}}
+                                        </tr>
 
-            {{--                                        @endforeach--}}
-            {{--                                        </tbody>--}}
-            {{--                                    </table>--}}
-            {{--                                </div>--}}
-            {{--                            </div>--}}
 
-            {{--                            <div class="col-md-9 float-right">--}}
-            {{--                                @foreach($law->lawArticles as $article)--}}
-            {{--                                    <div class="article " id="article{{$article->id}}">--}}
-            {{--                                        <h1 style="border-bottom: 1px solid #eee;">مادة {{$article->articleno}} </h1>--}}
-            {{--                                        <br/>--}}
-            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الكتاب : {{$article->subjectid}}--}}
-            {{--                                                &nbsp;&nbsp;</b></div>--}}
-            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; عنوان الكتاب--}}
-            {{--                                                : {{$article->subjectitle}} &nbsp;&nbsp;</b></div>--}}
-            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الباب : {{$article->chapterid}}--}}
-            {{--                                                &nbsp;&nbsp;</b></div>--}}
-            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الباب : {{$article->chaptertitle}}--}}
-            {{--                                                &nbsp;&nbsp;</b></div>--}}
-            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;رقم الفصل : {{$article->sectionid}}--}}
-            {{--                                                &nbsp;&nbsp;</b></div>--}}
-            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الفصل : {{$article->sectiontitle}}--}}
-            {{--                                                &nbsp;&nbsp;</b></div>--}}
-            {{--                                        <br>--}}
-            {{--                                        <div><b>&nbsp;&nbsp;عنوان المادة : {{$article->articletitle}} &nbsp;&nbsp;</b>--}}
-            {{--                                        </div>--}}
-            {{--                                        <br/>--}}
-            {{--                                        <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">--}}
-            {{--                                            {{$article->articlebody}}--}}
-            {{--                                        </p>--}}
-            {{--                                        <a href="{{route('editArticle',['articleID'=>$article])}}">--}}
-            {{--                                            <button class="general_btn btn_1 ml-2">--}}
-            {{--                                                <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>--}}
-            {{--                                            </button>--}}
-            {{--                                        </a>--}}
-            {{--                                        --}}{{--                                        <a href="{{route('deleteArticle',['articleID'=>$article])}}">--}}
-            {{--                                        <button class="general_btn btn_1 ml-2"--}}
-            {{--                                                onclick="deleteArticle({{$article->id}})"--}}
-            {{--                                        >--}}
-            {{--                                            <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>--}}
-            {{--                                        </button>--}}
-            {{--                                        --}}{{--                                        </a>--}}
-            {{--                                        <br/><br/>--}}
-            {{--                                    </div>--}}
-            {{--                                @endforeach--}}
-            {{--                            </div>--}}
-            {{--                        </div>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
-            {{--            @if(count($law->lawArticles))--}}
-            {{--                <a href="#top" class="general_btn btn_1">العودة للإعلى</a>--}}
-            {{--            @endif--}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
 
+                            {{--                            <div class="col-md-9 float-right">--}}
+                            {{--                                @foreach($law->lawArticles as $article)--}}
+                            {{--                                    <div class="article " id="article{{$article->id}}">--}}
+                            {{--                                        <h1 style="border-bottom: 1px solid #eee;">مادة {{$article->articleno}} </h1>--}}
+                            {{--                                        <br/>--}}
+                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الكتاب : {{$article->subjectid}}--}}
+                            {{--                                                &nbsp;&nbsp;</b></div>--}}
+                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; عنوان الكتاب--}}
+                            {{--                                                : {{$article->subjectitle}} &nbsp;&nbsp;</b></div>--}}
+                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الباب : {{$article->chapterid}}--}}
+                            {{--                                                &nbsp;&nbsp;</b></div>--}}
+                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الباب : {{$article->chaptertitle}}--}}
+                            {{--                                                &nbsp;&nbsp;</b></div>--}}
+                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;رقم الفصل : {{$article->sectionid}}--}}
+                            {{--                                                &nbsp;&nbsp;</b></div>--}}
+                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الفصل : {{$article->sectiontitle}}--}}
+                            {{--                                                &nbsp;&nbsp;</b></div>--}}
+                            {{--                                        <br>--}}
+                            {{--                                        <div><b>&nbsp;&nbsp;عنوان المادة : {{$article->articletitle}} &nbsp;&nbsp;</b>--}}
+                            {{--                                        </div>--}}
+                            {{--                                        <br/>--}}
+                            {{--                                        <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">--}}
+                            {{--                                            {{$article->articlebody}}--}}
+                            {{--                                        </p>--}}
+                            {{--                                        <a href="{{route('editArticle',['articleID'=>$article])}}">--}}
+                            {{--                                            <button class="general_btn btn_1 ml-2">--}}
+                            {{--                                                <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>--}}
+                            {{--                                            </button>--}}
+                            {{--                                        </a>--}}
+                            {{--                                        --}}{{--                                        <a href="{{route('deleteArticle',['articleID'=>$article])}}">--}}
+                            {{--                                        <button class="general_btn btn_1 ml-2"--}}
+                            {{--                                                onclick="deleteArticle({{$article->id}})"--}}
+                            {{--                                        >--}}
+                            {{--                                            <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>--}}
+                            {{--                                        </button>--}}
+                            {{--                                        --}}{{--                                        </a>--}}
+                            {{--                                        <br/><br/>--}}
+                            {{--                                    </div>--}}
+                            {{--                                @endforeach--}}
+                            {{--                            </div>--}}
+                            {{--                        </div>--}}
+                            {{--                    </div>--}}
+                            {{--                </div>--}}
+                            {{--            </div>--}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 @endsection
 
 @section('secripts')
@@ -215,7 +248,7 @@
             <div class="modal-content">
                 <iframe id="myFrame" style="display:none" width="100%" height="500"></iframe>
 
-                <button type="button" class="general_btn btn_1 ml-2 btn-icon-width inline-icon green-icon"
+                <button type="button" class="general_btn btn_1 ml-2"
                         data-dismiss="modal" style="margin: 6px 50px; height: 28px;width: 65px;">
                     <b>
                         إغلاق

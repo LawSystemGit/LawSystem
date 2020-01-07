@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 // this is comment
 Route::get('/', 'AuthController@index');
@@ -66,6 +67,31 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/KuwaitAlyoum/{lastVersion}/saveLastInput', 'KuwaiTodayController@saveLastInput')->name('saveLastVersion');
     Route::get('/KuwaitAlyoum/{version}/show', 'KuwaiTodayController@show')->name('showVersion');
 
+
+});
+
+Route::get('/test/', function () {
+
+    $files = array_filter(Storage::disk('local')->files('/public/KuwaitAlyoum_unfinished'),
+        function ($item) {
+            return strpos($item, 'pdf');
+        });
+    $realfilesName = [];
+    foreach ($files as $file) {
+        $data = explode("/", $file);
+        $realfilesName [] = $data[2];
+    }
+    return $realfilesName;
+
+});
+Route::get('test2', function () {
+    $files = Storage::allFiles('/public/KuwaitAlyoum_unfinished');
+    $realfilesName = [];
+    foreach ($files as $file) {
+        $data = explode("/", $file);
+        $realfilesName [] = $data[2];
+    }
+    return $realfilesName;
 
 });
 

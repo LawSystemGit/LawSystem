@@ -51,6 +51,7 @@
                                     <th class="w_100 text-center">رقم العدد</th>
                                     <th class="w_100 text-center">تاريخ الإصدار بالجريدة الرسمية</th>
                                     <th class="w_100 text-center">مستند العدد</th>
+                                    <th class="w_100 text-center">إضافة ملحق</th>
                                     <th class="w_100 text-center">إستعراض العدد</th>
                                 </tr>
                                 </thead>
@@ -63,6 +64,8 @@
                                                placeholder="تاريخ الإصدار بالجريدة الرسمية"/>
                                     </th>
                                     <th><input id="Name2" class="form-control" disabled placeholder="مستند العدد"/>
+                                    </th>
+                                    <th><input id="Name2" class="form-control" disabled placeholder="إضافة ملحق"/>
                                     </th>
                                     <th><input id="Name2" class="form-control" disabled placeholder="إستعراض العدد"/>
                                     </th>
@@ -129,6 +132,12 @@
                 },
                 {
                     data: 'id', name: 'showlaw', "render": function (data) {
+                        data = '<a class="general_btn btn_1 ml-2" href="/KuwaitAlyoum/' + data + '/show">' + "إضافة ملحق" + '</a>';
+                        return data;
+                    }
+                },
+                {
+                    data: 'id', name: 'showlaw', "render": function (data) {
                         data = '<a class="general_btn btn_1 ml-2" href="/KuwaitAlyoum/' + data + '/show">' + "إستعراض العدد" + '</a>';
                         return data;
                     }
@@ -173,7 +182,7 @@
             <div class="modal-content">
                 <iframe id="myFrame" style="display:none" width="100%" height="500"></iframe>
 
-                <button type="button" class="general_btn btn_1 ml-2 btn-icon-width inline-icon green-icon"
+                <button type="button" class="general_btn btn_1 ml-2"
                         data-dismiss="modal" style="margin: 6px 50px; height: 28px;width: 65px;">
                     <b>
                         إغلاق

@@ -10,7 +10,7 @@ use Session;
 use App\LawArticl;
 use Redirect, Response, DB, Config;
 use Datatables;
-
+use App\fileHandling;
 class JudgmentsController extends Controller
 {
     public function index()
@@ -27,7 +27,7 @@ class JudgmentsController extends Controller
 
     public function create($lastJudgment = null)
     {
-        $files = JudgmentsController::readDirectory('/public/unfinished_judgments/');
+        $files = fileHandling::readDirectory('/public/unfinished_judgments/');
         if ($lastJudgment) {
             $lastJudgment = judgments::find($lastJudgment);
         }
@@ -152,7 +152,7 @@ class JudgmentsController extends Controller
         $judgment->notes = $request['notes'];
         $judgment->save();
         if ($judgment) {
-            $files = JudgmentsController::readDirectory('/public/unfinished_judgments/');
+            $files = fileHandling::readDirectory('/public/unfinished_judgments/');
             $lastJudgment = null;
             Session::put('notification', [
                 'message' => " تم حفظ الحكم بنجاح  ",
@@ -177,23 +177,6 @@ class JudgmentsController extends Controller
     public function edit(Request $request, judgments $judgmentID)
     {
         return view('judgments.editJudgment', compact('judgmentID'));
-    }
-
-
-    public static function readDirectory($directory)
-    {
-        $files = array_filter(Storage::disk('local')->files($directory),
-            function ($item) {
-                return strpos($item, 'pdf');
-            });
-        $realfilesName = [];
-        foreach ($files as $file) {
-            $data = explode("/", $file);
-            $realfilesName [] = $data[2];
-            //$realfilesName [] = $data[2];
-        }
-
-        return $realfilesName;
     }
 
 

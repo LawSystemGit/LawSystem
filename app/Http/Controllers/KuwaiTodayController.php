@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\KuwaiToday;
 use Illuminate\Support\Facades\Storage;
 use Session;
+use App\fileHandling;
 
 class KuwaiTodayController extends Controller
 {
@@ -22,7 +23,7 @@ class KuwaiTodayController extends Controller
 
     public function create($lastVersion = null)
     {
-        $files = KuwaiTodayController::readDirectory('/public/KuwaitAlyoum_unfinished/');
+        $files = fileHandling::readDirectory('/public/KuwaitAlyoum_unfinished/');
         if ($lastVersion) {
             $lastVersion = KuwaiToday::find($lastVersion);
         }
@@ -39,15 +40,14 @@ class KuwaiTodayController extends Controller
                 'versionFile' => 'required|unique:kuwai_todays',
             ], [  // change the default english error validation messages with arabic ones
                 'versionNo.required' => 'مطلوب إدخال رقم العدد',
-                'versionNo.unique' => 'ملف هذا العدد موجود بالفعل',
+                'versionNo.unique' => 'رقم هذا العدد موجود بالفعل',
                 'versionType.required' => 'مطلوب إخال نوع العدد',
                 'versionDate.required' => 'مطلوب إدخال تاريخ العدد',
                 'versionFile.required' => 'مطلوب إدخال مستند العدد ',
                 'versionFile.unique' => 'مستند العدد موجود بالفعل',
             ]);
-
-        if (!(Storage::exists('public/KuwaitAlyoum_finished/' . $request->versionFile))) {
-            $fileToSave = ($request->versionNo) . '.' . 'pdf';
+        $fileToSave = ($request->versionNo) . '.' . 'pdf';
+        if (!fileHandling::checkForFile('public/KuwaitAlyoum_finished/', $fileToSave)) {
             $path = Storage::move(('/public/KuwaitAlyoum_unfinished/' . $request->versionFile), ('public/KuwaitAlyoum_finished/' . $fileToSave));
             $lastVersion = KuwaiToday::create([
                 'versionno' => $request->versionNo,
@@ -95,7 +95,7 @@ class KuwaiTodayController extends Controller
             ]);
         $updatedFilename = ($request->versionNo . '.' . 'pdf');
         if ($request->versionNo != $lastVersion->versionno) {
-            $path = Storage::move(('/public/KuwaitAlyoum_finished/' . $lastVersion->versionfile), ('public/KuwaitAlyoum_finished/' . $updatedFilename));
+            $path = fileHandling::fileRename('/public/KuwaitAlyoum_finished/', $lastVersion->versionfile, $updatedFilename);
             $lastVersion->versionfile = $updatedFilename;
         }
         $lastVersion->versionno = $request->versionNo;
@@ -107,21 +107,6 @@ class KuwaiTodayController extends Controller
             'alert-type' => 'success',
         ]);
         return redirect()->route('addVersion', ['lastVersion' => $lastVersion]);
-    }
-
-    public static function readDirectory($directory)
-    {
-        $files = array_filter(Storage::disk('local')->files($directory),
-            function ($item) {
-                return strpos($item, 'pdf');
-            });
-        $realfilesName = [];
-        foreach ($files as $file) {
-            $data = explode("/", $file);
-            $realfilesName [] = $data[2];
-        }
-        return $realfilesName;
-
     }
 
 
