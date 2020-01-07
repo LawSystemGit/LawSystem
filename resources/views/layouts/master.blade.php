@@ -41,7 +41,14 @@
 <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
 <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
 <script type="text/javascript">
-    function openPdf(file) {
+    function openPdf(fileNo) {
+        var omyFrame = document.getElementById("myFrame");
+        omyFrame.style.display = "block";
+        let filename = "/storage/KuwaitAlyoum_finished/" + fileNo + '.pdf';
+        omyFrame.src = filename;
+    }
+
+    function openFile(file) {
         var omyFrame = document.getElementById("myFrame");
         omyFrame.style.display = "block";
         let filename = "/storage/KuwaitAlyoum_unfinished/" + file;

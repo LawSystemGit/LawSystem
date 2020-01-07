@@ -73,7 +73,7 @@ class KuwaiTodayController extends Controller
 
     public function show(KuwaiToday $version)
     {
-        return $version;
+        return view('kuwaiToday.showVersion', compact(['version']));
     }
 
     public function updateLastInput(KuwaiToday $lastVersion)
@@ -103,7 +103,7 @@ class KuwaiTodayController extends Controller
         $lastVersion->versiondate = $request->versionDate;
         $lastVersion->save();
         Session::put('notification', [
-            'message' => " تم إضافة العدد بنجاح ",
+            'message' => " تم تعديل العدد بنجاح ",
             'alert-type' => 'success',
         ]);
         return redirect()->route('addVersion', ['lastVersion' => $lastVersion]);

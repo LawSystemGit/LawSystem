@@ -123,7 +123,7 @@
                 {data: 'versiondate', name: 'versiondate'},
                 {
                     data: 'versionno', name: 'versionno', "render": function (data) {
-                        data = '<a type="button" class="general_btn btn_1 ml-2" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="openFile(' + data + ')" >' + "مستند العدد " + '</a>';
+                        data = '<a type="button" class="general_btn btn_1 ml-2" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="openPdf(' + data + ')" >' + "مستند العدد " + '</a>';
                         return data;
                     }
                 },
@@ -183,12 +183,5 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        function openFile(file) {
-            var omyFrame = document.getElementById("myFrame");
-            omyFrame.style.display = "block";
-            let filename = "/storage/KuwaitAlyoum_finished/" + file + '.pdf';
-            omyFrame.src = filename;
-        }
-    </script>
+
 @endsection

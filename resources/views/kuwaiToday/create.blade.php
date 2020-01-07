@@ -33,7 +33,6 @@
             <div class="row mt-0">
                 <div class="col-lg-12 tbl-new-brdr">
                     <div class="panel panel-default no-brdr">
-
                         <form action="{{route('saveVersion')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-md-6 float-right">
@@ -83,7 +82,7 @@
                                     @foreach ($files as $fileName)
                                         <label>
                                             <input type="radio"
-                                                   onclick="openPdf({{json_encode($fileName)}})" name="versionFile"
+                                                   onclick="openFile({{json_encode($fileName)}})" name="versionFile"
                                                    id="versionFile" value="{{$fileName}}" required>
                                             {{$fileName}}
                                         </label>
