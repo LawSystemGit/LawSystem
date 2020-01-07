@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/laws/{lawID}/edit', 'LawsController@edit')->name('editLaw');
     Route::get('/laws/{lastLaw}/editLastLaw', 'LawsController@updateLastLaw')->name('updateLastLaw');
     Route::patch('/laws/{lastLaw}/saveLastLaw', 'LawsController@saveLastLaw')->name('saveLastLaw');
-    Route::patch('/laws/{lawID}/ushowlawpdate', 'LawsController@update')->name('updateLaw');
+    Route::patch('/laws/{lawID}/lawUpdate', 'LawsController@update')->name('updateLaw');
     Route::delete('/law/delete/{lawID}', 'LawsController@destory')->name('delteLaw');
     Route::get('/laws/{lawID}/addArticles', 'LawsController@AddArticles')->name('addArticle');
     Route::post('/laws/SaveLawArticle', 'LawsController@SaveLawArticles')->name('SaveLawArticle');

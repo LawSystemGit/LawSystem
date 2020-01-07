@@ -125,50 +125,15 @@ class LawsController extends Controller
         $lawID->lawrelation = $request['lawrelation'];
         $lawID->publishdate = $request['publishdate'] ? $request['publishdate'] : null;
         $lawID->publishid = $request['publishid'] ? $request['publishid'] : null;
+        $lawID->save();
         // check if the request has file
-        // if file is changed then
-        if (request()->hasFile('lawfile')) {
-            // if the new file is exists on the law files folder
-            // then save and do nothing & return direct back with success message
-            if (Storage::exists('public/Law_PDF/' . $request->file('lawfile')->getClientOriginalExtension())) {
-                $lawID->save();
-                return redirect()->route('getLaws');
-            } else {
-                if ($lawID->lawfile != null) {
-                    // if the request has new file is different from the old one change the file
-                    Storage::move(('public/Law_PDF/' . $lawID->lawfile), ('public/files/' . 'old' . '_' . $lawID->lawfile));
-                    // adding the new file
-                    $covernamewithEXT = $request->file('lawfile')->getClientOriginalName();
-                    // get just the file name
-                    $filename = pathinfo($covernamewithEXT, PATHINFO_FILENAME);
-                    // get just the extention
-                    $extention = $request->file('lawfile')->getClientOriginalExtension();
-                    // file to store
-                    $fileNmaeToStore = $lawID->lawno . '.' . $extention;
-                    // upload file
+        if ($request->lawfile) {
 
-                    Storage::move(('public/files/' . $covernamewithEXT), ('public/Law_PDF/' . $fileNmaeToStore));
-                    $lawID->lawfile = $fileNmaeToStore;
-                } else {
-                    $covernamewithEXT = $request->file('lawfile')->getClientOriginalName();
-                    // get just the file name
-                    $filename = pathinfo($covernamewithEXT, PATHINFO_FILENAME);
-                    // get just the extention
-                    $extention = $request->file('lawfile')->getClientOriginalExtension();
-                    // file to store
-                    $fileNmaeToStore = $lawID->lawno . '.' . $extention;
-                    Storage::move('public/files/' . $covernamewithEXT, 'public/Law_PDF/' . $fileNmaeToStore);
-                    $lawID->lawfile = $fileNmaeToStore;
-                }
-            }
+        } else {
 
         }
-        $lawID->save();
-        Session::put('notification', [
-            'message' => " تم تعديل القانون رقم  " . $lawID->lawno,
-            'alert-type' => 'success',
-        ]);
-        return redirect()->route('showlaw', ['law' => $lawID]);
+
+
     }
 
 

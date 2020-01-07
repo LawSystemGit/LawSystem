@@ -111,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-2 col-lg-2">
+                                    <div class="form-group col-md-3 col-lg-3">
                                         <label>رقم القانون</label>
                                         <input type="num" name="lawno" id="lawno" lang="ar"
                                                class="form-control"
@@ -119,13 +119,21 @@
                                                value="{{$lawID->lawno}}" dir="rtl">
 
                                     </div>
-                                    <div class="form-group col-md-4 col-lg-4">
-                                        <label> بشأن <span class="redstar">*</span></label>
-                                        <input type="num" class="form-control"
-                                               placeholder="القانون بشأن"
-                                               id="lawrelation" name="lawrelation"
-                                               required value="{{$lawID->lawrelation}}">
+                                    <div class="form-group col-md-3 col-lg-3">
+                                        <label>لسنة</label>
+                                        <input type="num" name="lawyear" id="lawyear" lang="ar"
+                                               class="form-control"
+                                               placeholder="القانون لسنة" required
+                                               value="{{$lawID->lawyear}}"
+                                               dir="rtl" {{old('lawyear')}}>
                                     </div>
+                                </div>
+                                <div class="form-row col-md-6 col-lg-6">
+                                    <label> بشأن <span class="redstar">*</span></label>
+                                    <input type="num" class="form-control"
+                                           placeholder="القانون بشأن"
+                                           id="lawrelation" name="lawrelation"
+                                           required value="{{$lawID->lawrelation}}">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
@@ -143,6 +151,7 @@
                                                value="{{$lawID->publishid}}">
                                     </div>
                                 </div>
+
                                 <div class="form-row">
                                     <div class="form-group col-md-4" id="changefile">
                                         <label>
