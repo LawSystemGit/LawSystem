@@ -41,7 +41,7 @@
 
                             <div class="col-md-6 float-right">
                                 <div class="form-row">
-                                    <div class="form-group col-md-3 col-lg-3">
+                                    <div class="form-group col-md-6 col-lg-6">
                                         <label>النوع<span class="redstar">*</span></label>
 
                                         <select name="lawtype" id="lawtype" dir="rtl"
@@ -82,7 +82,7 @@
                                             </option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-3 col-lg-3">
+                                    <div class="form-group col-md-6 col-lg-6">
                                         <label>التصنيف</label>
 
                                         <select name="lawcategory" id="lawcategory" dir="rtl"
@@ -111,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-3 col-lg-3">
+                                    <div class="form-group col-md-6 col-lg-6">
                                         <label>رقم القانون</label>
                                         <input type="num" name="lawno" id="lawno" lang="ar"
                                                class="form-control"
@@ -119,7 +119,7 @@
                                                value="{{$lawID->lawno}}" dir="rtl">
 
                                     </div>
-                                    <div class="form-group col-md-3 col-lg-3">
+                                    <div class="form-group col-md-6 col-lg-6">
                                         <label>لسنة</label>
                                         <input type="num" name="lawyear" id="lawyear" lang="ar"
                                                class="form-control"
@@ -128,7 +128,7 @@
                                                dir="rtl" {{old('lawyear')}}>
                                     </div>
                                 </div>
-                                <div class="form-row col-md-6 col-lg-6">
+                                <div class="form-row ">
                                     <label> بشأن <span class="redstar">*</span></label>
                                     <input type="num" class="form-control"
                                            placeholder="القانون بشأن"
@@ -136,13 +136,13 @@
                                            required value="{{$lawID->lawrelation}}">
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-6 col-lg-6">
                                         <label>تاريخ النشر بالجريدة الرسمية</label>
                                         <input type="date" class="form-control" name="publishdate"
                                                id="publishdate"
                                                {{old('publishdate')}} value="{{$lawID->publishdate}}">
                                     </div>
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-6 col-lg-6">
                                         <label>رقم العدد بالجريدة الرسمية</label>
                                         <input type="num" name="publishid" id="publishid"
                                                class="form-control"
@@ -153,7 +153,7 @@
                                 </div>
 
                                 <div class="form-row">
-                                    <div class="form-group col-md-4" id="changefile">
+                                    <div class="form-group col-md-6 col-lg-6" id="changefile">
                                         <label>
                                             <input type="radio"
                                                    onclick="document.getElementById('lawfilesection').style.display='block';document.getElementById('changefile').style.display='none';"/>
@@ -161,7 +161,7 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-6 col-lg-6">
                                         <input type="submit" class="btn general_btn btn_1"
                                                value="تحديث">
                                         <a href="{{route('showlaw',['law'=>$lawID])}}"
@@ -172,7 +172,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 float-right overflow-auto" style="height: 500px;
+                            <div class="col-md-6 col-lg-6 float-right overflow-auto" style="height: 500px;
                             overflow-y: scroll;display: none; " id="lawfilesection">
                                 <iframe id="myFrame" style="display:none" width="100%"
                                         height="400"></iframe>
