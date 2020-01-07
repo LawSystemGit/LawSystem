@@ -93,7 +93,6 @@
                 {
                     "targets": [0],
                     "orderable": false,
-
                 }
             ],
             order: [[2, 'asc']],
@@ -124,7 +123,7 @@
                 {data: 'versiondate', name: 'versiondate'},
                 {
                     data: 'versionno', name: 'versionno', "render": function (data) {
-                        data = '<a type="button" class="general_btn btn_1 ml-2" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="openPdf(' + data + ')" >' + "مستند العدد " + '</a>';
+                        data = '<a type="button" class="general_btn btn_1 ml-2" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="openFile(' + data + ')" >' + "مستند العدد " + '</a>';
                         return data;
                     }
                 },
@@ -135,51 +134,38 @@
                     }
                 },
             ]
-
         });
-
-
         table.columns().every(function (index) {
             $('.CustomTable tfoot tr:eq(0) th:eq(' + index + ') input[type="text"],.CustomTable tfoot tr:eq(0) th:eq(' + index + ') select').on('change', function () {
                 table.column($(this).parent().index() + ':visible')
                     .search(this.value)
                     .draw();
             });
-
         });
-
         table.on('order.dt search.dt', function () {
             table.column(0, {search: 'applied', order: 'applied'}).nodes().each(function (cell, i) {
                 cell.innerHTML = i + 1;
             });
         }).draw();
-
         $(window).on('load', function () {
             PageNumberInput();
         })
         $('.CustomTable').on('draw.dt', function () {
             PageNumberInput();
-
         });
-
-
         function PageNumberInput() {
             $(`<li><input type='number' min='1' id='goPage' onchange="Jumpto(this)" class='paginate_input go-to-page' placeholder='ادخل رقم'></li>`).insertBefore(".next");
         }
-
         function Jumpto(e) {
             table = $('.CustomTable').DataTable();
             var ss = e.value - 1;
             table.page(ss).draw(false);
         }
-
         function chabgepgln(pgln) {
             var value = pgln.value;
             var table = $('.CustomTable').DataTable();
             table.page.len(value).draw();
-
         }
-
     </script>
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
          aria-hidden="true">
@@ -198,7 +184,7 @@
         </div>
     </div>
     <script type="text/javascript">
-        function openPdf(file) {
+        function openFile(file) {
             var omyFrame = document.getElementById("myFrame");
             omyFrame.style.display = "block";
             let filename = "/storage/KuwaitAlyoum_finished/" + file + '.pdf';

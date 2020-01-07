@@ -92,18 +92,10 @@
                                         <input type="radio"
                                                onclick="openPdf({{json_encode($lastVersion->versionfile)}})"
                                                name="versionFile"
-                                               id="versionFile" value="{{$lastVersion->versionfile}}" required>
+                                               id="versionFile" value="{{$lastVersion->versionfile}}">
                                         {{$lastVersion->versionfile}}
                                     </label>
                                 </div>
-                                <script type="text/javascript">
-                                    function openPdf(file) {
-                                        var omyFrame = document.getElementById("myFrame");
-                                        omyFrame.style.display = "block";
-                                        let filename = "/storage/KuwaitAlyoum_finished/" + file;
-                                        omyFrame.src = filename;
-                                    }
-                                </script>
                             </div>
                         </form>
                     </div>

@@ -40,7 +40,14 @@
 <script src="{{asset('lawSystem/assets/js/select2.min.js')}}"></script>
 <script src="{{asset('lawSystem/assets/js/jquery.toast.js')}}"></script>
 <script src="{{asset('lawSystem/assets/js/alertfunction.js')}}"></script>
-
+<script type="text/javascript">
+    function openPdf(file) {
+        var omyFrame = document.getElementById("myFrame");
+        omyFrame.style.display = "block";
+        let filename = "/storage/KuwaitAlyoum_unfinished/" + file;
+        omyFrame.src = filename;
+    }
+</script>
 @include('layouts.notification')
 </body>
 </html>
