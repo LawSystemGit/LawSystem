@@ -129,12 +129,6 @@ class LawsController extends Controller
 
         // check if the request has file
         if ($request->lawfile) {
-
-
-        }
-
-
-        if ($request->lawfile) {
             $fileToStore = $request->lawno . '.' . 'pdf';
             if ($lawID->lawfile) {
                 $path0 = Storage::move(('/public/Law_PDF/' . $lawID->lawfile), ('/public/laws_unfinished/' . $lawID->lawfile));
