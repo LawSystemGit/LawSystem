@@ -1,51 +1,35 @@
-@extends('layouts.master')
-
-@section('title')
-    تعديل قانون رقم {{$lawID->lawno}}
-@endsection
-
-@section('stylesheets')
-
-@endsection
-
-@section('content')
     <div class="content-wrapper">
-        <div class="main_content">
+            <div class="main_content">
 
-            <!-- start row -->
-            <div class="row align-items-center min-height-row">
-                <div class="col-lg-6">
-                    <div class="d-flex align-items-center flex-wrap">
-                        <ol class="breadcrumb">
-                            <li><a href="#">الرئيسية</a></li>
-                            <li><a href="{{route('getLaws')}}">القوانين</a></li>
-                            <li>تعديل القانون رقم {{$lawID->lawno}}</li>
-                        </ol>
+                <!-- start row -->
+                <div class="row align-items-center min-height-row">
+                    <div class="col-lg-6">
+                        <div class="d-flex align-items-center flex-wrap">
+                            <ol class="breadcrumb">
+                                <li><a href="#">الرئيسية</a></li>
+                                <li><a href="{{route('getLaws')}}">القوانين</a></li>
+                                <li>تعديل القانون رقم {{$lawID->lawno}}</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <!-- end row -->
+                <!-- start row -->
+                <div class="row mt-0">
+                    <div class="col-lg-12 tbl-new-brdr">
+                        <div class="panel panel-default no-brdr">
 
-
-                </div>
-            </div>
-            <!-- end row -->
-            <!-- start row -->
-            <div class="row mt-0">
-                <div class="col-lg-12 tbl-new-brdr">
-                    <div class="panel panel-default no-brdr">
-
-                        <form method="post" action="{{route('updateLaw',['lawID'=>$lawID->id])}}"
-                              enctype="multipart/form-data">
-                            @csrf
-                            @method('PATCH')
-
-                            <div class="col-md-6 float-right">
+                            <form method="post" action="{{route('updateLaw',['lawID'=>$lawID->id])}}"
+                                  enctype="multipart/form-data">
+                                @csrf
+                                @method('PATCH')
                                 <div class="form-row">
-                                    <div class="form-group col-md-3 col-lg-3">
+                                    <div class="form-group col-md-2">
                                         <label>النوع<span class="redstar">*</span></label>
 
-                                        <select name="lawtype" id="lawtype" dir="rtl"
-                                                class="SelectRemovedSearch"
+                                        <select name="lawtype" id="lawtype" dir="rtl" class="SelectRemovedSearch"
                                                 required>
                                             <option
                                                 @if ($lawID->lawtype == "قانون")
@@ -82,11 +66,10 @@
                                             </option>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-3 col-lg-3">
+                                    <div class="form-group col-md-2">
                                         <label>التصنيف</label>
 
-                                        <select name="lawcategory" id="lawcategory" dir="rtl"
-                                                class="SelectWithSearch"
+                                        <select name="lawcategory" id="lawcategory" dir="rtl" class="SelectWithSearch"
                                                 required>
                                             <option
                                                 @if ($lawID->lawcategory=="دستوري")
@@ -109,20 +92,22 @@
 
                                         </select>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-2 col-lg-2">
-                                        <label>رقم القانون</label>
-                                        <input type="num" name="lawno" id="lawno" lang="ar"
-                                               class="form-control"
-                                               placeholder="رقم القانون" {{old('lawno')}} required
-                                               value="{{$lawID->lawno}}" dir="rtl">
 
+                                    <div class="form-group col-md-2">
+                                        <label>رقم القانون</label>
+                                        <input type="num" name="lawno" id="lawno" lang="ar" class="form-control"
+                                               placeholder="رقم القانون" required value="{{$lawID->lawno}}" dir="rtl">
                                     </div>
-                                    <div class="form-group col-md-4 col-lg-4">
+                                    <div class="form-group col-md-2">
+                                        <label>لسنة</label>
+                                        <input type="num" name="lawyear" id="lawyear" lang="ar" class="form-control"
+                                               placeholder="القانون لسنة" required value="{{$lawID->lawyear}}"
+                                               dir="rtl">
+                                    </div>
+
+                                    <div class="form-group col-md-4">
                                         <label> بشأن <span class="redstar">*</span></label>
-                                        <input type="num" class="form-control"
-                                               placeholder="القانون بشأن"
+                                        <input type="num" class="form-control" placeholder="القانون بشأن"
                                                id="lawrelation" name="lawrelation"
                                                required value="{{$lawID->lawrelation}}">
                                     </div>
@@ -130,16 +115,13 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
                                         <label>تاريخ النشر بالجريدة الرسمية</label>
-                                        <input type="date" class="form-control" name="publishdate"
-                                               id="publishdate"
+                                        <input type="date" class="form-control" name="publishdate" id="publishdate"
                                                {{old('publishdate')}} value="{{$lawID->publishdate}}">
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label>رقم العدد بالجريدة الرسمية</label>
-                                        <input type="num" name="publishid" id="publishid"
-                                               class="form-control"
-                                               placeholder="رقم العدد بالجريدة الرسمية"
-                                               {{old('publishid')}} dir="rtl"
+                                        <input type="num" name="publishid" id="publishid" class="form-control"
+                                               placeholder="رقم العدد بالجريدة الرسمية" {{old('publishid')}} dir="rtl"
                                                value="{{$lawID->publishid}}">
                                     </div>
                                 </div>
@@ -150,45 +132,30 @@
                                                    onclick="document.getElementById('lawfilesection').style.display='block';document.getElementById('changefile').style.display='none';"/>
                                             تغيير مستند القانون </label>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <input type="submit" class="btn general_btn btn_1"
-                                               value="تحديث">
-                                        <a href="{{route('showlaw',['law'=>$lawID])}}"
-                                           class="btn general_btn btn_1">
-                                            رجوع
-                                        </a>
+                                    <div class="form-group col-md-6" style="display:none" id="lawfilesection">
 
+                                        <label>مستند القانون</label>
+
+
+                                        <div class="uploader">
+                                            <span class="file-name" id="file-name">لم يتم ارفاق اي ملف</span>
+                                            <input type="file" id="lawfile" name="lawfile" accept="application/pdf">
+                                            <span class="upload-file btn btn-secondary">ارفق ملف</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-6 float-right overflow-auto" style="height: 500px;
-                            overflow-y: scroll;display: none; " id="lawfilesection">
-                                <iframe id="myFrame" style="display:none" width="100%"
-                                        height="400"></iframe>
+                                <div class="form-group col-md-4">
+                                    <input type="submit" class="btn general_btn btn_1" value="تحديث">
+                                    <a href="{{route('showlaw',['law'=>$lawID])}}" class="btn general_btn btn_1">
+                                        رجوع
+                                    </a>
 
-                                <div class="radio">
-                                    @foreach ($files as $fileName)
-                                        <label>
-                                            <input type="radio"
-                                                   onclick="openFile({{json_encode($fileName)}},'laws_unfinished')"
-                                                   name="lawfile"
-                                                   id="lawfile" value="{{$fileName}}">
-                                            {{$fileName}}
-                                        </label>
-                                    @endforeach
                                 </div>
-
-                            </div>
-                        </form>
+                            </form>
+                            {{-- onclick="return toast('عملية ناجحة','تم تعديل المستخدم','success')" --}}
+                        </div>
                     </div>
                 </div>
+                <!-- end row -->
             </div>
         </div>
-    </div>
-@endsection
-
-@section('secripts')
-
-@endsection

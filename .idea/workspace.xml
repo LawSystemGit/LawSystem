@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/SystemLaws/code" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LawsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/createNewLaw.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/SystemLaws/editSelectedLaw.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,20 +52,6 @@
       </path>
     </expand>
     <select />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>تس</find>
-      <find>slug</find>
-      <find>showlaw</find>
-      <find>&lt;form&gt;</find>
-      <find>top</find>
-      <find>id=</find>
-      <find>law</find>
-      <find>myFrame</find>
-      <find>href=&quot;&quot;</find>
-      <find>$lawID</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -233,7 +220,7 @@
       <workItem from="1578230730180" duration="3169000" />
       <workItem from="1578291603460" duration="13446000" />
       <workItem from="1578306536626" duration="8551000" />
-      <workItem from="1578415240838" duration="4255000" />
+      <workItem from="1578415240838" duration="7412000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -501,17 +488,15 @@
       <option name="project" value="LOCAL" />
       <updated>1578406519147</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fixing add law blade &amp; controller">
+      <created>1578421812528</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1578421812528</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -566,7 +551,8 @@
     <MESSAGE value="creating fileHandling class" />
     <MESSAGE value="creating update last law blade" />
     <MESSAGE value="update last input is finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="update last input is finished" />
+    <MESSAGE value="fixing add law blade &amp; controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing add law blade &amp; controller" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

@@ -48,15 +48,17 @@ class LawsController extends Controller
             ]);
 
         $lawId = Law::create($request->all());
+        $lawId->publishdate = $request['publishdate'] ? $request['publishdate'] : null;
+        $lawId->publishid = $request['publishid'] ? $request['publishid'] : null;
         $fileToStore = $lawId->lawno . '.' . 'pdf';
+        //TODO:check if this code is working
         // check if the $request has a file
         if ($request->lawfile) {
             $path = Storage::move('/public/laws_unfinished/' . $request->lawfile, '/public/Law_PDF/' . $fileToStore);
-            $lawId->publishdate = $request['publishdate'] ? $request['publishdate'] : null;
-            $lawId->publishid = $request['publishid'] ? $request['publishid'] : null;
             $lawId->lawfile = $fileToStore;
             $lawId->save();
         }
+        $lawId->save();
         // check the creation of the new law is done
         // return success message
         if ($lawId) {
@@ -95,7 +97,8 @@ class LawsController extends Controller
     // return view to edit law
     public function edit(Law $lawID)
     {
-        return view('SystemLaws.editSelectedLaw', compact('lawID'));
+        $files = fileHandling::readDirectory('/public/laws_unfinished/');
+        return view('SystemLaws.editSelectedLaw', compact(['lawID', 'files']));
     }
 
     public function update(Request $request, Law $lawID)
