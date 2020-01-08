@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/code" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createAnnouncement.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createProvision.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editAnnouncement.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editProvision.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/announcement.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/announcementarticles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_01_081539_create_laws_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_01_081539_create_laws_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_01_081904_create_law_articls_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_01_081904_create_law_articls_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_04_061618_create_judgments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_04_061618_create_judgments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_06_193211_create_judgment_notes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_06_193211_create_judgment_notes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_31_070406_create_announcements_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_31_070436_create_announcementarticles_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,26 +50,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_08_114649_create_penalprovisions_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_08_130943_create_directives_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -701,19 +662,25 @@
       <option name="project" value="LOCAL" />
       <updated>1578427493376</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="إضافة إعلان إضافة حكم جزائي إضافة تعليمات">
+      <created>1578490036332</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1578490036332</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20356000" />
+    <option name="totallyTimeSpent" value="20592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.17114094" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.17114094" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="1" weight="0.3286119" />
@@ -727,7 +694,7 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4986577" visible="true" weight="0.42776203" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4986577" visible="true" weight="0.42776203" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Database" order="0" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -774,7 +741,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="change pc" />
     <MESSAGE value="change pc bju" />
     <MESSAGE value="fixing if the law file is null buh" />
     <MESSAGE value="تغيير شكل عرض القوانين" />
@@ -799,7 +765,8 @@
     <MESSAGE value="editing update law method" />
     <MESSAGE value="update law &amp;&amp; changing file is working" />
     <MESSAGE value="fixing edit law blade file" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing edit law blade file" />
+    <MESSAGE value="إضافة إعلان إضافة حكم جزائي إضافة تعليمات" />
+    <option name="LAST_COMMIT_MESSAGE" value="إضافة إعلان إضافة حكم جزائي إضافة تعليمات" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1119,14 +1086,14 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_08_114649_create_penalprovisions_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_08_130943_create_directives_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        <state relative-caret-position="374">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
