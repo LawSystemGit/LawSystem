@@ -17,7 +17,7 @@ class CreateJudgmentNotesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger('judgment_id');
             $table->text('judgrule');
-            $table->text('judgshort');
+            $table->longText('judgshort');
             $table->timestamps();
         });
     }

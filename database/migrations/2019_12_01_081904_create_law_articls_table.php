@@ -24,7 +24,7 @@ class CreateLawArticlsTable extends Migration
             $table->string('sectionid')->nullable();
             $table->string('articletitle')->nullable();
             $table->string('articleno');
-            $table->text('articlebody');
+            $table->longText('articlebody');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class CreateJudgmentsTable extends Migration
             $table->string('judgmentcategory');
             $table->date('judgmentDate');
             $table->string('objectionNo');
-            $table->string('year');
+            $table->year('year');
             $table->string('judgmentFile')->nullable();
             $table->integer('notes');
             $table->integer('incompletednotes')->default(0);

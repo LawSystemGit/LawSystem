@@ -69,6 +69,32 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/KuwaitAlyoum/{lastVersion}/saveLastInput', 'KuwaiTodayController@saveLastInput')->name('saveLastVersion');
     Route::get('/KuwaitAlyoum/{version}/show', 'KuwaiTodayController@show')->name('showVersion');
 
+    // Al Kuwait Alyoum announcements
+    Route::get('KuwaitAlyoum/{versionID}/Announcements/addAnnouncement', 'AnnouncementsController@create')->name('add_Announcement');
+    Route::post('KuwaitAlyoum/{versionID}/Announcements/saveAnnouncement', 'AnnouncementsController@store')->name('save_Announcement');
+    Route::get('KuwaitAlyoum/Announcements/{Announcement}/edit', 'AnnouncementsController@edit')->name('edit_Announcement');
+    Route::patch('KuwaitAlyoum/Announcements/{Announcement}/update', 'AnnouncementsController@update')->name('update_Announcement');
+    Route::delete('KuwaitAlyoum/Announcements/{Announcement}/delete', 'AnnouncementsController@update')->name('delete_Announcement');
+
+    // Al Kuwait Alyoum  penal Provision Penalprovision
+    Route::get('KuwaitAlyoum/{versionID}/Penalprovisions/addProvision', 'PenalprovisionController@create')->name('add_Provision');
+    Route::post('KuwaitAlyoum/{versionID}/Penalprovisions/saveProvision', 'PenalprovisionController@store')->name('save_Provision');
+    Route::get('KuwaitAlyoum/Penalprovision/{provision}/edit', 'PenalprovisionController@edit')->name('edit_Provision');
+    Route::patch('KuwaitAlyoum/Penalprovision/{provision}/update', 'PenalprovisionController@update')->name('update_Provision');
+    Route::delete('KuwaitAlyoum/Penalprovision/{provision}/delete', 'PenalprovisionController@delete')->name('delete_Provision');
+
+    // Al Kuwait Alyoum  Directives  Directive
+    Route::get('KuwaitAlyoum/{versionID}/Directives/addDirective', 'DirectivesController@create')->name('add_Directive');
+    Route::post('KuwaitAlyoum/{versionID}/Directives/saveDirective', 'DirectivesController@store')->name('save_Directive');
+    Route::get('KuwaitAlyoum/Directives/{directive}/edit', 'DirectivesController@edit')->name('edit_Directive');
+    Route::patch('KuwaitAlyoum/Directives/{directive}/update', 'DirectivesController@update')->name('update_Directive');
+    Route::delete('KuwaitAlyoum/Directives/{directive}/delete', 'DirectivesController@delete')->name('delete_Directive');
+
+    //
+
+
+
+
 
 });
 

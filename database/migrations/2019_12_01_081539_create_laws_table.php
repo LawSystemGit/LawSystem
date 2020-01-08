@@ -18,7 +18,7 @@ class CreateLawsTable extends Migration
             $table->string('lawtype');
             $table->text('lawcategory');
             $table->string('lawno');
-            $table->string('lawyear');
+            $table->year('lawyear');
             $table->text('lawrelation');
             $table->date('publishdate')->nullable();
             $table->integer('publishid')->nullable();

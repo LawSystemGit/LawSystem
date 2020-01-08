@@ -27,48 +27,73 @@
                 <div class="col-lg-6">
                     <div
                         class="navbar d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end rec-counts">
-                        <select class="SelectRemovedSearch w_200_px  btn_1">
-                            <option><a href="#">
-                                    <span class="edit-icon btn-icon-width inline-icon green-icon">إضافة إعلان</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة قرار</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة حكم</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة مرسوم</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة مقترح</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة قانون</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة تعليمات</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة تنوية</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة محضر إجتماع</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة دعوة</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة إستدراك</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة تفليسة</span>
-                                </a></option>
-                            <option><a href="#">
-                                    <span>إضافة براءة إختراع</span>
-                                </a></option>
-                        </select>
 
+
+                        {{--                        <select class="SelectRemovedSearch w_200_px  btn_1">--}}
+                        {{--                            <option selected>إضافة</option>--}}
+                        {{--                            <option value="{{route('add_Announcement',['versionID'=>$version->id])}}">--}}
+                        {{--                               jodfgiou--}}
+                        {{--                            </option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة قرار</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة حكم</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة مرسوم</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة مقترح</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة قانون</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة تعليمات</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة تنوية</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة محضر إجتماع</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة دعوة</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة إستدراك</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة تفليسة</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                            <option><a href="#">--}}
+                        {{--                                    <span>إضافة براءة إختراع</span>--}}
+                        {{--                                </a></option>--}}
+                        {{--                        </select>--}}
+                        {{--                        style="padding: 0px 39px;min-width: 85px !important;height: 38px;"--}}
+                        <div class="btn-group">
+                            <button type="button" class="btn general_btn btn_1 dropdown-toggle" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"
+                                    style="    width: 153px;height: 38px;">
+                                أضف إلى العدد
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item"
+                                   href="{{route('add_Announcement',['versionID'=>$version->id])}}"
+                                   title="أضف إعلان">
+                                    أضف إعلان
+                                </a>
+                                <a class="dropdown-item" href="{{route('add_Provision',['versionID'=>$version->id])}}"
+                                   title=" أضف حكم جزائي">
+                                    أضف حكم جزائي
+                                </a>
+                                <a class="dropdown-item" href="{{route('add_Provision',['versionID'=>$version->id])}}"
+                                   title="  أضف تعليمات">
+                                    أضف تعليمات
+                                </a>
+                            </div>
+                        </div>
                         <a href="#">
                             <button class="general_btn btn_1 ml-2" style="height: 38px;">
                                 <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل العدد</span>
@@ -79,7 +104,7 @@
                                 <i class="plus-icon btn-icon-width inline-icon green-icon"></i><span>إضافة ملحق</span>
                             </button>
                         </a>
-                        <a href="#">
+                        <a href="{{route('addVersion')}}">
                             <button class="general_btn btn_1 ml-2" style="height: 38px;">
                                 <i class="plus-icon btn-icon-width inline-icon green-icon"></i><span>إضافة عدد</span>
                             </button>
@@ -159,7 +184,9 @@
                                                 <a class="tab-link" href='#article'
                                                 > <span
                                                         class="circle"></span>
-                                                    عدد الإعلانات (20)
+                                                    عدد الإعلانات
+                                                    ({{$version-> announcements_count?$version-> announcements_count:0}}
+                                                    )
                                                 </a>
                                             </td>
                                         </tr>
@@ -168,7 +195,8 @@
                                                 <a class="tab-link" href='#article'
                                                 > <span
                                                         class="circle"></span>
-                                                    عدد القرارات 51)
+                                                    عدد الأحكام الجزائية
+                                                    ({{$version-> provisions_count?$version-> provisions_count:0}})
                                                 </a>
                                             </td>
                                         </tr>
@@ -177,7 +205,7 @@
                                                 <a class="tab-link" href='#article'
                                                 > <span
                                                         class="circle"></span>
-                                                    عدد الأحكام (01)
+                                                    عدد القرارات (01)
                                                 </a>
                                             </td>
 
