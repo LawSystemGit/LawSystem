@@ -4,14 +4,15 @@ namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Announcements;
+use \App\Models\Announcements;
+use \App\Models\Penalprovision;
 class KuwaiToday extends Model
 {
     protected $fillable = [
         'versionno', 'versiontype', 'versiondate', 'versionfile'
     ];
-    protected $withCount = ['Announcements', 'Provisions'];
-    protected $with = ['Announcements', 'Provisions'];
+    protected $withCount = ['Announcements', 'Provisions', 'Directives'];
+    protected $with = ['Announcements', 'Provisions', 'Directives'];
 
     public function Announcements()
     {
@@ -23,5 +24,9 @@ class KuwaiToday extends Model
         return $this->hasMany(Penalprovision::class, 'kuwai_todays_id');
     }
 
+    public function Directives()
+    {
+        return $this->hasMany(Directives::class, 'kuwai_todays_id');
+    }
 
 }

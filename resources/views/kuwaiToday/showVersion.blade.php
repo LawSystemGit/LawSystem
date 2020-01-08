@@ -88,7 +88,7 @@
                                    title=" أضف حكم جزائي">
                                     أضف حكم جزائي
                                 </a>
-                                <a class="dropdown-item" href="{{route('add_Provision',['versionID'=>$version->id])}}"
+                                <a class="dropdown-item" href="{{route('add_Directive',['versionID'=>$version->id])}}"
                                    title="  أضف تعليمات">
                                     أضف تعليمات
                                 </a>
@@ -205,7 +205,8 @@
                                                 <a class="tab-link" href='#article'
                                                 > <span
                                                         class="circle"></span>
-                                                    عدد القرارات (01)
+                                                    عدد التعليمات
+                                                    ({{$version-> directives_count?$version-> directives_count:0}})
                                                 </a>
                                             </td>
 
