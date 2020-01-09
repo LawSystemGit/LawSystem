@@ -97,9 +97,12 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('KuwaitAlyoum/Decrees/{decree}/update', 'AlKuwaitAlyoum\DecreeController@update')->name('update_Decree');
     Route::delete('KuwaitAlyoum/Decrees/{decree}/delete', 'AlKuwaitAlyoum\DecreeController@delete')->name('delete_Decree');
 
-    // Al Kuwait Alyoum  Directives  Directive المراسيم
-
-
+    // Al Kuwait Alyoum  Notice  Notice التنويهات
+    Route::get('KuwaitAlyoum/{versionID}/Notices/addDecree', 'AlKuwaitAlyoum\NoticeController@create')->name('add_Notice');
+    Route::post('KuwaitAlyoum/{versionID}/Notices/saveDecree', 'AlKuwaitAlyoum\NoticeController@store')->name('save_Notice');
+    Route::get('KuwaitAlyoum/Notices/{Notice}/edit', 'AlKuwaitAlyoum\NoticeController@edit')->name('edit_Notice');
+    Route::patch('KuwaitAlyoum/Notices/{Notice}/update', 'AlKuwaitAlyoum\NoticeController@update')->name('update_Notice');
+    Route::delete('KuwaitAlyoum/Notices/{Notice}/delete', 'AlKuwaitAlyoum\NoticeController@delete')->name('delete_Notice');
 
 
 });

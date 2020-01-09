@@ -51,6 +51,10 @@
                                    title="  أضف تعليمات">
                                     أضف تعليمات
                                 </a>
+                                <a class="dropdown-item" href="{{route('add_Directive',['versionID'=>$version->id])}}"
+                                   title="  أضف تنوية">
+                                    أضف تنوية
+                                </a>
                             </div>
                         </div>
                         <a href="#">
@@ -181,56 +185,20 @@
                                             </td>
 
                                         </tr>
-
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد المراسيم
+                                                    ({{$version->notices_count?$version->notices_count:0}})
+                                                </a>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-
-                            {{--                            <div class="col-md-9 float-right">--}}
-                            {{--                                @foreach($law->lawArticles as $article)--}}
-                            {{--                                    <div class="article " id="article{{$article->id}}">--}}
-                            {{--                                        <h1 style="border-bottom: 1px solid #eee;">مادة {{$article->articleno}} </h1>--}}
-                            {{--                                        <br/>--}}
-                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الكتاب : {{$article->subjectid}}--}}
-                            {{--                                                &nbsp;&nbsp;</b></div>--}}
-                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; عنوان الكتاب--}}
-                            {{--                                                : {{$article->subjectitle}} &nbsp;&nbsp;</b></div>--}}
-                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp; رقم الباب : {{$article->chapterid}}--}}
-                            {{--                                                &nbsp;&nbsp;</b></div>--}}
-                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الباب : {{$article->chaptertitle}}--}}
-                            {{--                                                &nbsp;&nbsp;</b></div>--}}
-                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;رقم الفصل : {{$article->sectionid}}--}}
-                            {{--                                                &nbsp;&nbsp;</b></div>--}}
-                            {{--                                        <div class="float-right"><b>&nbsp;&nbsp;عنوان الفصل : {{$article->sectiontitle}}--}}
-                            {{--                                                &nbsp;&nbsp;</b></div>--}}
-                            {{--                                        <br>--}}
-                            {{--                                        <div><b>&nbsp;&nbsp;عنوان المادة : {{$article->articletitle}} &nbsp;&nbsp;</b>--}}
-                            {{--                                        </div>--}}
-                            {{--                                        <br/>--}}
-                            {{--                                        <p style="font-size: 21px;text-justify: inter-word;text-align: justify;">--}}
-                            {{--                                            {{$article->articlebody}}--}}
-                            {{--                                        </p>--}}
-                            {{--                                        <a href="{{route('editArticle',['articleID'=>$article])}}">--}}
-                            {{--                                            <button class="general_btn btn_1 ml-2">--}}
-                            {{--                                                <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>--}}
-                            {{--                                            </button>--}}
-                            {{--                                        </a>--}}
-                            {{--                                        --}}{{--                                        <a href="{{route('deleteArticle',['articleID'=>$article])}}">--}}
-                            {{--                                        <button class="general_btn btn_1 ml-2"--}}
-                            {{--                                                onclick="deleteArticle({{$article->id}})"--}}
-                            {{--                                        >--}}
-                            {{--                                            <i class="times-icon btn-icon-width inline-icon green-icon"></i><span>حذف</span>--}}
-                            {{--                                        </button>--}}
-                            {{--                                        --}}{{--                                        </a>--}}
-                            {{--                                        <br/><br/>--}}
-                            {{--                                    </div>--}}
-                            {{--                                @endforeach--}}
-                            {{--                            </div>--}}
-                            {{--                        </div>--}}
-                            {{--                    </div>--}}
-                            {{--                </div>--}}
-                            {{--            </div>--}}
                         </div>
                     </div>
                 </div>
