@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editDecree.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DirectivesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DirectivesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnnouncementsController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DecreeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/code" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DirectivesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DirectivesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PenalprovisionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/PenalprovisionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="99" column="55" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
+            <state relative-caret-position="338">
+              <caret line="90" column="80" selection-start-line="90" selection-start-column="80" selection-end-line="90" selection-end-column="80" />
               <folding>
                 <element signature="e#7#43#0#PHP" expanded="true" />
               </folding>
@@ -71,7 +71,45 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DecreeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="36" />
+              <folding>
+                <element signature="e#55#83#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DirectivesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#55#83#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/code">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="28" column="21" selection-end-line="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>AnnouncementsController</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,10 +148,17 @@
         <option value="$PROJECT_DIR$/app/Models/KuwaiToday.php" />
         <option value="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Decree.php" />
-        <option value="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/RelatedToVersion/editDecree.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/DecreeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DirectivesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/DecreeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/v1/code" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Al-Kuwait-Alyoum/DecreeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DecreeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/code" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/AnnouncementsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/PenalprovisionController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DirectivesController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
@@ -258,6 +303,14 @@
               <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="AlKuwaitAlyoum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,15 +364,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\LawSystem\resources\views\kuwaiToday" />
-      <recent name="E:\xampp\htdocs\LawSystem\app" />
-      <recent name="E:\xampp\htdocs\LawSystem\app\Models" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\xampp\htdocs\LawSystem\storage\app\public\files" />
       <recent name="C:\xampp\htdocs\LawSystem\public\css" />
       <recent name="C:\xampp\htdocs\LawSystem\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\AlKuwaitAlyoum" />
+      <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers" />
+      <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\v1" />
+      <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\Al-Kuwait-Alyoum" />
+      <recent name="E:\xampp\htdocs\LawSystem\resources\views\kuwaiToday" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -373,7 +428,7 @@
       <workItem from="1578306536626" duration="8551000" />
       <workItem from="1578415240838" duration="10176000" />
       <workItem from="1578490222086" duration="3121000" />
-      <workItem from="1578550994934" duration="6600000" />
+      <workItem from="1578550994934" duration="10152000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -704,11 +759,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578493293952</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="the Decrees is finished&#10;تم الإنتهاء من المراسيم">
+      <created>1578560831130</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1578560831130</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30313000" />
+    <option name="totallyTimeSpent" value="33865000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -730,7 +792,7 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4986577" weight="0.8286119" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4986577" weight="0.6090652" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Database" order="0" weight="0.3295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -777,7 +839,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="fixing if the law file is null buh" />
     <MESSAGE value="تغيير شكل عرض القوانين" />
     <MESSAGE value="عرض المواد" />
     <MESSAGE value="gdfbg" />
@@ -802,12 +863,12 @@
     <MESSAGE value="fixing edit law blade file" />
     <MESSAGE value="إضافة إعلان إضافة حكم جزائي إضافة تعليمات" />
     <MESSAGE value="تم الإنتهاء من التعليمات" />
-    <option name="LAST_COMMIT_MESSAGE" value="تم الإنتهاء من التعليمات" />
+    <MESSAGE value="the Decrees is finished&#10;تم الإنتهاء من المراسيم" />
+    <option name="LAST_COMMIT_MESSAGE" value="the Decrees is finished&#10;تم الإنتهاء من المراسيم" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_12_31_070406_create_announcements_table.php" />
     <entry file="file://$PROJECT_DIR$/app/Models/announcementarticles.php" />
     <entry file="file://$PROJECT_DIR$/app/Models/announcement.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_12_31_070436_create_announcementarticles_table.php" />
@@ -1093,26 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AnnouncementsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="70" column="79" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="98" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PenalprovisionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#40#66#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Decree.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -1120,13 +1161,6 @@
           <folding>
             <element signature="e#30#69#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="85" column="49" lean-forward="true" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -1139,28 +1173,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DecreeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+        <state relative-caret-position="218">
+          <caret line="77" column="16" selection-end-line="101" />
           <folding>
             <element signature="e#40#66#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DirectivesController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="81" column="39" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+        <state relative-caret-position="24">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
           <folding>
-            <element signature="e#40#66#0#PHP" expanded="true" />
+            <element signature="e#3139#3160#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/code">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="28" column="21" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/AnnouncementsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#55#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/PenalprovisionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DecreeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <element signature="e#55#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DirectivesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#55#83#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="99" column="55" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
+        <state relative-caret-position="338">
+          <caret line="90" column="80" selection-start-line="90" selection-start-column="80" selection-end-line="90" selection-end-column="80" />
           <folding>
             <element signature="e#7#43#0#PHP" expanded="true" />
           </folding>

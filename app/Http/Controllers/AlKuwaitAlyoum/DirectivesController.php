@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\AlKuwaitAlyoum;
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\Directives;
 use App\Models\KuwaiToday;
-use Illuminate\Http\Request;
 use Session;
+
 class DirectivesController extends Controller
 {
     public function create(KuwaiToday $versionID)

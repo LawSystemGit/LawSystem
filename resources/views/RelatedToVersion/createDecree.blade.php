@@ -61,11 +61,15 @@
                                                required>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label> سنة الإصدار</label>
+                                        <label>
+                                            سنة الإصدار
+                                            <span style="color: maroon"><b>{{$errors->first('decreeyear')}}</b></span>
+                                        </label>
                                         <input type="num" name="decreeyear" id="decreeyear" lang="ar"
                                                class="form-control"
                                                placeholder="سنة الإصدار" {{old('decreeyear')}} dir="rtl"
                                                required>
+
                                     </div>
                                 </div>
                                 <div class="form-row">

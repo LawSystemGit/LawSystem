@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
-
-use App\Models\KuwaiToday;
+namespace App\Http\Controllers\AlKuwaitAlyoum;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\KuwaiToday;
 use App\Models\Penalprovision;
 use Session;
 class PenalprovisionController extends Controller
