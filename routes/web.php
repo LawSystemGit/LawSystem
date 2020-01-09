@@ -20,7 +20,7 @@ Route::get('/logout', 'AuthController@logout')->name('logout');
 Route::middleware(['auth'])->group(function () {
 
 
-// law Rotes
+// law Rotes القوانين والمواد
     Route::get('laws', 'LawsController@index')->name('getLaws');
     Route::get('laws-list', 'LawsController@lawsList');
     Route::get('/laws/create/{lastLaw?}', 'LawsController@create')->name('addNewLaw');
@@ -43,7 +43,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/laws/{articleID}/relatedJudgments', 'lawfrontController@relatedJudgments')->name('relatedJudgments');
     Route::get('/laws/SearchArticles/{articleNo}', 'LawsController@SearchArticles')->name('searchArticle');
 
-// judgments routes
+// judgments routes  الاحكام
 
     Route::get('/judgments', 'JudgmentsController@index')->name('getJudgments');
     Route::get('judgments-list', 'JudgmentsController@judgmentsList');
@@ -60,7 +60,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/judgments/{noteID}/deleteNote', 'JudgmentNotesController@deleteNote')->name('deleteNote');
 
 
-    // Al Kuwait Alyoum Routes
+    // Al Kuwait Alyoum Routes الكويت اليوم
     Route::get('KuwaitAlyoum', 'KuwaiTodayController@index')->name('KuwaitAlyoum');
     Route::get('KuwaitAlyoum-list', 'KuwaiTodayController@KuwaitAlyoumList')->name('KuwaitAlyoumList');
     Route::get('/KuwaitAlyoum/create/{lastVersion?}', 'KuwaiTodayController@create')->name('addVersion');
@@ -69,29 +69,35 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/KuwaitAlyoum/{lastVersion}/saveLastInput', 'KuwaiTodayController@saveLastInput')->name('saveLastVersion');
     Route::get('/KuwaitAlyoum/{version}/show', 'KuwaiTodayController@show')->name('showVersion');
 
-    // Al Kuwait Alyoum announcements
+    // Al Kuwait Alyoum announcements  الاعلانات
     Route::get('KuwaitAlyoum/{versionID}/Announcements/addAnnouncement', 'AnnouncementsController@create')->name('add_Announcement');
     Route::post('KuwaitAlyoum/{versionID}/Announcements/saveAnnouncement', 'AnnouncementsController@store')->name('save_Announcement');
     Route::get('KuwaitAlyoum/Announcements/{Announcement}/edit', 'AnnouncementsController@edit')->name('edit_Announcement');
     Route::patch('KuwaitAlyoum/Announcements/{Announcement}/update', 'AnnouncementsController@update')->name('update_Announcement');
     Route::delete('KuwaitAlyoum/Announcements/{Announcement}/delete', 'AnnouncementsController@update')->name('delete_Announcement');
 
-    // Al Kuwait Alyoum  penal Provision Penalprovision
+    // Al Kuwait Alyoum  penal Provision Penalprovision الاحكام الجزائية
     Route::get('KuwaitAlyoum/{versionID}/Penalprovisions/addProvision', 'PenalprovisionController@create')->name('add_Provision');
     Route::post('KuwaitAlyoum/{versionID}/Penalprovisions/saveProvision', 'PenalprovisionController@store')->name('save_Provision');
     Route::get('KuwaitAlyoum/Penalprovision/{provision}/edit', 'PenalprovisionController@edit')->name('edit_Provision');
     Route::patch('KuwaitAlyoum/Penalprovision/{provision}/update', 'PenalprovisionController@update')->name('update_Provision');
     Route::delete('KuwaitAlyoum/Penalprovision/{provision}/delete', 'PenalprovisionController@delete')->name('delete_Provision');
 
-    // Al Kuwait Alyoum  Directives  Directive
+    // Al Kuwait Alyoum  Directives  Directive التعليمات
     Route::get('KuwaitAlyoum/{versionID}/Directives/addDirective', 'DirectivesController@create')->name('add_Directive');
     Route::post('KuwaitAlyoum/{versionID}/Directives/saveDirective', 'DirectivesController@store')->name('save_Directive');
     Route::get('KuwaitAlyoum/Directives/{directive}/edit', 'DirectivesController@edit')->name('edit_Directive');
     Route::patch('KuwaitAlyoum/Directives/{directive}/update', 'DirectivesController@update')->name('update_Directive');
     Route::delete('KuwaitAlyoum/Directives/{directive}/delete', 'DirectivesController@delete')->name('delete_Directive');
 
-    //
+    // Al Kuwait Alyoum  Directives  Directive المراسيم
+    Route::get('KuwaitAlyoum/{versionID}/Decrees/addDecree', 'DecreeController@create')->name('add_Decree');
+    Route::post('KuwaitAlyoum/{versionID}/Decrees/saveDecree', 'DecreeController@store')->name('save_Decree');
+    Route::get('KuwaitAlyoum/Decrees/{decree}/edit', 'DecreeController@edit')->name('edit_Decree');
+    Route::patch('KuwaitAlyoum/Decrees/{decree}/update', 'DecreeController@update')->name('update_Decree');
+    Route::delete('KuwaitAlyoum/Decrees/{decree}/delete', 'DecreeController@delete')->name('delete_Decree');
 
+    // Al Kuwait Alyoum  Directives  Directive المراسيم
 
 
 

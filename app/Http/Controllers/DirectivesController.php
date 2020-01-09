@@ -71,4 +71,14 @@ class DirectivesController extends Controller
         }
 
     }
+
+    public function destroy(Directives $directive)
+    {
+        $id = $directive->kuwaitVersion->id;
+        Session::put('notification', [
+            'message' => " تم  حذف التعليمات بنجاح  ",
+            'alert-type' => 'success',
+        ]);
+        return redirect()->route('showVersion', ['version' => $id]);
+    }
 }

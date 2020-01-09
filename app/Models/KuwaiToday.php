@@ -6,13 +6,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use \App\Models\Announcements;
 use \App\Models\Penalprovision;
+use App\Models\Decree;
 class KuwaiToday extends Model
 {
     protected $fillable = [
         'versionno', 'versiontype', 'versiondate', 'versionfile'
     ];
-    protected $withCount = ['Announcements', 'Provisions', 'Directives'];
-    protected $with = ['Announcements', 'Provisions', 'Directives'];
+    protected $withCount = ['Announcements', 'Provisions', 'Directives', 'Decrees'];
+    protected $with = ['Announcements', 'Provisions', 'Directives', 'Decrees'];
 
     public function Announcements()
     {
@@ -29,4 +30,8 @@ class KuwaiToday extends Model
         return $this->hasMany(Directives::class, 'kuwai_todays_id');
     }
 
+    public function Decrees()
+    {
+        return $this->hasMany(Decree::class, 'kuwai_todays_id');
+    }
 }
