@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnnouncementsController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DecreeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/code" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DirectivesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DirectivesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PenalprovisionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/PenalprovisionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecree.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="90" column="80" selection-start-line="90" selection-start-column="80" selection-end-line="90" selection-end-column="80" />
+            <state relative-caret-position="512">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="e#7#43#0#PHP" expanded="true" />
               </folding>
@@ -91,15 +85,6 @@
               <folding>
                 <element signature="e#55#83#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/code">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="28" column="21" selection-end-line="88" />
             </state>
           </provider>
         </entry>
@@ -310,12 +295,6 @@
             <path>
               <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -323,27 +302,6 @@
               <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="kuwaiToday" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="RelatedToVersion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LawSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LawSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="SystemLaws" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,7 +386,7 @@
       <workItem from="1578306536626" duration="8551000" />
       <workItem from="1578415240838" duration="10176000" />
       <workItem from="1578490222086" duration="3121000" />
-      <workItem from="1578550994934" duration="10152000" />
+      <workItem from="1578550994934" duration="10413000" />
     </task>
     <task id="LOCAL-00001" summary="change pc">
       <created>1577208499564</created>
@@ -766,11 +724,18 @@
       <option name="project" value="LOCAL" />
       <updated>1578560831130</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="some code refactoring">
+      <created>1578564795787</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1578564795787</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33865000" />
+    <option name="totallyTimeSpent" value="34126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -778,7 +743,7 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.17516778" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.24362417" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="1" weight="0.3286119" />
@@ -839,7 +804,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="تغيير شكل عرض القوانين" />
     <MESSAGE value="عرض المواد" />
     <MESSAGE value="gdfbg" />
     <MESSAGE value="editing some buttons" />
@@ -864,12 +828,12 @@
     <MESSAGE value="إضافة إعلان إضافة حكم جزائي إضافة تعليمات" />
     <MESSAGE value="تم الإنتهاء من التعليمات" />
     <MESSAGE value="the Decrees is finished&#10;تم الإنتهاء من المراسيم" />
-    <option name="LAST_COMMIT_MESSAGE" value="the Decrees is finished&#10;تم الإنتهاء من المراسيم" />
+    <MESSAGE value="some code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="some code refactoring" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/announcementarticles.php" />
     <entry file="file://$PROJECT_DIR$/app/Models/announcement.php" />
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_12_31_070436_create_announcementarticles_table.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/SystemLaws/EditlastLaw.blade.php">
@@ -1242,10 +1206,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/lawfrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="90" column="80" selection-start-line="90" selection-start-column="80" selection-end-line="90" selection-end-column="80" />
+        <state relative-caret-position="512">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
           <folding>
             <element signature="e#7#43#0#PHP" expanded="true" />
           </folding>
