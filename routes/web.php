@@ -3,8 +3,12 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
+Route::middleware(['auth'])->group(function () {
+
+});
 // this is comment
 Route::get('/', 'AuthController@index');
+
 
 // login routes
 Route::get('/login', 'AuthController@index')->name('login');
@@ -98,11 +102,12 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('KuwaitAlyoum/Decrees/{decree}/delete', 'AlKuwaitAlyoum\DecreeController@delete')->name('delete_Decree');
 
     // Al Kuwait Alyoum  Notice  Notice التنويهات
-    Route::get('KuwaitAlyoum/{versionID}/Notices/addDecree', 'AlKuwaitAlyoum\NoticeController@create')->name('add_Notice');
-    Route::post('KuwaitAlyoum/{versionID}/Notices/saveDecree', 'AlKuwaitAlyoum\NoticeController@store')->name('save_Notice');
-    Route::get('KuwaitAlyoum/Notices/{Notice}/edit', 'AlKuwaitAlyoum\NoticeController@edit')->name('edit_Notice');
-    Route::patch('KuwaitAlyoum/Notices/{Notice}/update', 'AlKuwaitAlyoum\NoticeController@update')->name('update_Notice');
-    Route::delete('KuwaitAlyoum/Notices/{Notice}/delete', 'AlKuwaitAlyoum\NoticeController@delete')->name('delete_Notice');
+    Route::get('KuwaitAlyoum/{versionID}/Notices/addNotice', 'AlKuwaitAlyoum\NoticeController@create')->name('add_Notice');
+    Route::post('KuwaitAlyoum/{versionID}/Notices/saveNotice', 'AlKuwaitAlyoum\NoticeController@store')->name('save_Notice');
+    Route::get('KuwaitAlyoum/Notices/{notice}/edit', 'AlKuwaitAlyoum\NoticeController@edit')
+        ->name('edit_Notice');
+    Route::patch('KuwaitAlyoum/Notices/{notice}/update', 'AlKuwaitAlyoum\NoticeController@update')->name('update_Notice');
+    Route::delete('KuwaitAlyoum/Notices/{notice}/delete', 'AlKuwaitAlyoum\NoticeController@delete')->name('delete_Notice');
 
 
 });

@@ -51,7 +51,8 @@
                                    title="  أضف تعليمات">
                                     أضف تعليمات
                                 </a>
-                                <a class="dropdown-item" href="{{route('add_Directive',['versionID'=>$version->id])}}"
+                                <a class="dropdown-item"
+                                   href="{{route('add_Notice',['versionID'=>$version->id])}}"
                                    title="  أضف تنوية">
                                     أضف تنوية
                                 </a>
@@ -110,7 +111,7 @@
                     <div class="col-lg-12 tbl-new-brdr">
                         <div class="panel panel-default no-brdr">
 
-                            <div class="col-md-2 float-right">
+                            <div class="col-md-3 float-right">
 
                                 <div class="user-block">
                                     <table class="table table-striped mb-0">
@@ -190,11 +191,12 @@
                                                 <a class="tab-link" href='#article'
                                                 > <span
                                                         class="circle"></span>
-                                                    عدد المراسيم
+                                                    عدد التنويهات
                                                     ({{$version->notices_count?$version->notices_count:0}})
                                                 </a>
                                             </td>
                                         </tr>
+
                                         </tbody>
                                     </table>
                                 </div>

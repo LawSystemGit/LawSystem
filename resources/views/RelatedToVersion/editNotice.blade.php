@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    إضافة تنوية
+    تعديل تنوية
 @endsection
 
 @section('stylesheets')
@@ -21,8 +21,8 @@
                         <ol class="breadcrumb">
                             <li><a href="#">الرئيسية</a></li>
                             <li>الكويت اليوم</li>
-                            <li>العدد رقم {{$versionID->versionno}}</li>
-                            <li>إضافة تنوية</li>
+                            <li>العدد رقم {{$notice->kuwaitVersion->versionno}}</li>
+                            <li>تعديل تنوية</li>
                         </ol>
                     </div>
                 </div>
@@ -34,17 +34,19 @@
             <div class="row mt-0">
                 <div class="col-lg-12 tbl-new-brdr">
                     <div class="panel panel-default no-brdr">
-                        <form action="{{route('save_Notice',['versionID'=>$versionID->id])}}"
+                        <form action="{{route('update_Notice',['notice'=>$notice])}}"
                               method="POST"
                               enctype="multipart/form-data">
                             @csrf
+                            {{method_field('PATCH')}}
                             <div class="col-md-12 float-right">
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
                                         <label>جهه التنويه</label>
                                         <input type="num" name="noticesource" id="noticesource"
                                                class="form-control"
-                                               placeholder="جهه التنويه" {{old('noticesource')}}
+                                               placeholder="جهه التنويه" value="{{old
+                                               ('noticesource')??$notice->noticesource??''}}"
                                                dir="rtl"
                                         >
                                     </div>
@@ -54,7 +56,8 @@
                                                lang="en"
                                                class="form-control"
                                                placeholder=" تاريخ الإصدار"
-                                               {{old('noticedate')}} dir="ltr"
+                                               value="{{old
+                                               ('noticedate')??$notice->noticedate??''}}" dir="ltr"
                                         >
                                     </div>
                                 </div>
@@ -65,7 +68,8 @@
                                         <textarea lang="ar" class="form-control"
                                                   name="noticebody" id="noticebody"
                                                   required placeholder="نص التنويه" rows="8">
-                                            {{old('noticebody')}}
+                                            {{old
+                                               ('noticebody')??$notice->noticebody??''}}
                                         </textarea>
                                     </div>
                                 </div>
@@ -75,7 +79,8 @@
                                         <button type="submit" data-dismiss="modal"
                                                 class="btn general_btn btn_1">حفظ
                                         </button>
-                                        <a href="{{route('showVersion',['version'=>$versionID])}}"
+                                        <a href="{{route('showVersion',
+                                        ['version'=>$notice->kuwaitVersion->id])}}"
                                            data-dismiss="modal"
                                            class="btn general_btn btn_1">العودة</a>
                                     </div>
