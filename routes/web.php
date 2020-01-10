@@ -109,6 +109,14 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('KuwaitAlyoum/Notices/{notice}/update', 'AlKuwaitAlyoum\NoticeController@update')->name('update_Notice');
     Route::delete('KuwaitAlyoum/Notices/{notice}/delete', 'AlKuwaitAlyoum\NoticeController@delete')->name('delete_Notice');
 
+    // Al Kuwait Alyoum  Decisions  decision القرارات
+    Route::get('KuwaitAlyoum/{versionID}/Decisions/addDecision', 'AlKuwaitAlyoum\DecisionController@create')->name('add_Decision');
+    Route::post('KuwaitAlyoum/{versionID}/Decisions/saveDecision', 'AlKuwaitAlyoum\DecisionController@store')->name('save_Decision');
+    Route::get('KuwaitAlyoum/Decisions/{decision}/edit', 'AlKuwaitAlyoum\DecisionController@edit')
+        ->name('edit_Decision');
+    Route::patch('KuwaitAlyoum/Decisions/{decision}/update', 'AlKuwaitAlyoum\DecisionController@update')->name('update_Decision');
+    Route::delete('KuwaitAlyoum/Decisions/{decision}/delete', 'AlKuwaitAlyoum\DecisionController@delete')->name('delete_Decision');
+
 
 });
 

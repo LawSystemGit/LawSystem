@@ -56,6 +56,11 @@
                                    title="  أضف تنوية">
                                     أضف تنوية
                                 </a>
+                                <a class="dropdown-item"
+                                   href="{{route('add_Decision',['versionID'=>$version->id])}}"
+                                   title="  أضف قرار">
+                                    أضف قرار
+                                </a>
                             </div>
                         </div>
                         <a href="#">
@@ -185,6 +190,17 @@
                                                 </a>
                                             </td>
 
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد القرارات
+                                                    ({{$version->decisions_count?$version->decisions_count:0}}
+                                                    )
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
