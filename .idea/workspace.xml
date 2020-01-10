@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/DecisionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Decision.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/code" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_10_164920_create_decisions_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createDecision.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editDecision.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,14 +252,7 @@
       <workItem from="1578566421774" duration="2402000" />
       <workItem from="1578640142500" duration="5000" />
       <workItem from="1578643148338" duration="11000" />
-      <workItem from="1578662167516" duration="12850000" />
-    </task>
-    <task id="LOCAL-00004" summary="change pc bju">
-      <created>1577209150060</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1577209150060</updated>
+      <workItem from="1578662167516" duration="13142000" />
     </task>
     <task id="LOCAL-00005" summary="change pc bju">
       <created>1577210321405</created>
@@ -609,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578672635842</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Decisions is finished">
+      <created>1578679446095</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1578679446096</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +634,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="gdfbg" />
     <MESSAGE value="editing some buttons" />
     <MESSAGE value="delete article button is working" />
     <MESSAGE value="delete article button" />
@@ -671,7 +658,8 @@
     <MESSAGE value="the Decrees is finished&#10;تم الإنتهاء من المراسيم" />
     <MESSAGE value="some code refactoring" />
     <MESSAGE value="Notices is finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notices is finished" />
+    <MESSAGE value="Decisions is finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Decisions is finished" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
