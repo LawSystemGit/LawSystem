@@ -117,6 +117,14 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('KuwaitAlyoum/Decisions/{decision}/update', 'AlKuwaitAlyoum\DecisionController@update')->name('update_Decision');
     Route::delete('KuwaitAlyoum/Decisions/{decision}/delete', 'AlKuwaitAlyoum\DecisionController@delete')->name('delete_Decision');
 
+    // Al Kuwait Alyoum  meeting record محضر إجتماع MeetingRecordController
+    Route::get('KuwaitAlyoum/{versionID}/MeetingRecord/addmeetingRecord', 'AlKuwaitAlyoum\MeetingRecordController@create')->name('add_meetingRecord');
+    Route::post('KuwaitAlyoum/{versionID}/MeetingRecord/savemeetingRecord', 'AlKuwaitAlyoum\MeetingRecordController@store')->name('save_meetingRecord');
+    Route::get('KuwaitAlyoum/MeetingRecord/{meetingRecord}/edit', 'AlKuwaitAlyoum\MeetingRecordController@edit')
+        ->name('edit_meetingRecord');
+    Route::patch('KuwaitAlyoum/MeetingRecord/{meetingRecord}/update', 'AlKuwaitAlyoum\MeetingRecordController@update')->name('update_meetingRecord');
+    Route::delete('KuwaitAlyoum/MeetingRecord/{meetingRecord}/delete', 'AlKuwaitAlyoum\MeetingRecordController@delete')->name('delete_meetingRecord');
+
 
 });
 

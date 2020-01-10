@@ -8,14 +8,15 @@ use \App\Models\Penalprovision;
 use App\Models\Decree;
 use App\Models\Notice;
 use App\Models\Decision;
+use App\Models\MeetingRecord;
 
 class KuwaiToday extends Model
 {
     protected $fillable = [
         'versionno', 'versiontype', 'versiondate', 'versionfile'
     ];
-    protected $withCount = ['Announcements', 'Provisions', 'Directives', 'Decrees', 'Notices', 'Decisions'];
-    protected $with = ['Announcements', 'Provisions', 'Directives', 'Decrees', 'Notices', 'Decisions'];
+    protected $withCount = ['Announcements', 'Provisions', 'Directives', 'Decrees', 'Notices', 'Decisions', 'MeetingRecords'];
+    protected $with = ['Announcements', 'Provisions', 'Directives', 'Decrees', 'Notices', 'Decisions', 'MeetingRecords'];
 
     public function Announcements()
     {
@@ -45,5 +46,10 @@ class KuwaiToday extends Model
     public function Decisions()
     {
         return $this->hasMany(Decision::class, 'kuwai_todays_id');
+    }
+
+    public function MeetingRecords()
+    {
+        return $this->hasMany(MeetingRecord::class, 'kuwai_todays_id');
     }
 }

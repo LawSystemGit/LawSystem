@@ -61,6 +61,11 @@
                                    title="  أضف قرار">
                                     أضف قرار
                                 </a>
+                                <a class="dropdown-item"
+                                   href="{{route('add_meetingRecord',['versionID'=>$version->id])}}"
+                                   title="محضر إجتماع">
+                                    محضر إجتماع
+                                </a>
                             </div>
                         </div>
                         <a href="#">
@@ -125,13 +130,13 @@
                                             <th>
                                                 <div class="float-right ml-5"
                                                      style="padding-top: 12px;">
-                                                    <i class="cogs-icon btn-icon-width inline-icon gray-icon"></i>
-                                                    عدد مواد القانون (20)
+                                                    {{--                                                    <i class="cogs-icon btn-icon-width inline-icon gray-icon"></i>--}}
+                                                    {{--                                                    عدد مواد القانون (20)--}}
                                                 </div>
                                                 <form>
                                                     <div class="input-group search_code">
-                                                        <input type="text" class="form-control"
-                                                               placeholder="رقم المادة">
+                                                        {{--                                                        <input type="text" class="form-control"--}}
+                                                        {{--                                                               placeholder="رقم المادة">--}}
                                                     </div>
                                                 </form>
                                             </th>
@@ -212,7 +217,17 @@
                                                 </a>
                                             </td>
                                         </tr>
-
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد محاضر الإجتماع
+                                                    ({{$version->meeting_records_count?$version->meeting_records_count:0}}
+                                                    )
+                                                </a>
+                                            </td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="" />
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="Decisions is finished">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/MeetingRecordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/MeetingRecord.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_10_182357_create_meeting_records_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createmeetRecord.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editmeetRecord.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +176,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -252,14 +262,9 @@
       <workItem from="1578566421774" duration="2402000" />
       <workItem from="1578640142500" duration="5000" />
       <workItem from="1578643148338" duration="11000" />
-      <workItem from="1578662167516" duration="13142000" />
-    </task>
-    <task id="LOCAL-00005" summary="change pc bju">
-      <created>1577210321405</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1577210321405</updated>
+      <workItem from="1578662167516" duration="13185000" />
+      <workItem from="1578680073680" duration="81000" />
+      <workItem from="1578680188761" duration="5068000" />
     </task>
     <task id="LOCAL-00006" summary="fixing if the law file is null buh">
       <created>1577611873747</created>
@@ -597,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578679446096</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Decisions is finished">
+      <created>1578679553416</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1578679553416</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
