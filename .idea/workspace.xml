@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createInvitation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editInvitation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/InvitationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/InvitationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,14 +255,7 @@
       <workItem from="1578662167516" duration="13185000" />
       <workItem from="1578680073680" duration="81000" />
       <workItem from="1578680188761" duration="5834000" />
-      <workItem from="1578726763664" duration="4050000" />
-    </task>
-    <task id="LOCAL-00008" summary="تغيير شكل عرض القوانين">
-      <created>1577619787821</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1577619787821</updated>
+      <workItem from="1578726763664" duration="4485000" />
     </task>
     <task id="LOCAL-00009" summary="عرض المواد">
       <created>1577623868416</created>
@@ -606,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578728727953</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="invitations is finished">
+      <created>1578730972574</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1578730972575</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,7 +637,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="delete article button" />
     <MESSAGE value="removing order by articleno" />
     <MESSAGE value="master.blade.php code refactoring" />
     <MESSAGE value="judgments notes delection &amp; edititing notes number is corrected ." />
@@ -668,7 +661,8 @@
     <MESSAGE value="Decisions is finished" />
     <MESSAGE value=" meeting record محضر إجتماع" />
     <MESSAGE value="creating invitations code" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating invitations code" />
+    <MESSAGE value="invitations is finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="invitations is finished" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
