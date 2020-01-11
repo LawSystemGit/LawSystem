@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\AlKuwaitAlyoum;
 
-use App\Models\MeetingRecord;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Invitation;

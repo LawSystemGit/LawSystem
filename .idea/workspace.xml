@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="" />
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/CorrectionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Correction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_181337_create_corrections_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createCorrection.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editCorrection.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/InvitationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/InvitationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,17 +180,17 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\LawSystem\storage\app\public\files" />
+      <recent name="C:\xampp\htdocs\LawSystem\public\css" />
+      <recent name="C:\xampp\htdocs\LawSystem\public\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\AlKuwaitAlyoum" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\v1" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\Al-Kuwait-Alyoum" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\LawSystem\storage\app\public\files" />
-      <recent name="C:\xampp\htdocs\LawSystem\public\css" />
-      <recent name="C:\xampp\htdocs\LawSystem\public\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -255,7 +266,10 @@
       <workItem from="1578662167516" duration="13185000" />
       <workItem from="1578680073680" duration="81000" />
       <workItem from="1578680188761" duration="5834000" />
-      <workItem from="1578726763664" duration="4485000" />
+      <workItem from="1578726763664" duration="5758000" />
+      <workItem from="1578741669103" duration="19000" />
+      <workItem from="1578746487274" duration="183000" />
+      <workItem from="1578765141453" duration="4641000" />
     </task>
     <task id="LOCAL-00009" summary="عرض المواد">
       <created>1577623868416</created>

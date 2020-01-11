@@ -28,7 +28,8 @@
                     <div
                         class="navbar d-flex flex-wrap align-items-center justify-content-start justify-content-lg-end rec-counts">
                         <div class="btn-group">
-                            <button type="button" class="btn general_btn btn_1 dropdown-toggle" data-toggle="dropdown"
+                            <button type="button" class="btn general_btn btn_1 dropdown-toggle"
+                                    data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false"
                                     style="    width: 153px;height: 38px;">
                                 أضف إلى العدد
@@ -39,15 +40,23 @@
                                    title="أضف إعلان">
                                     أضف إعلان
                                 </a>
-                                <a class="dropdown-item" href="{{route('add_Provision',['versionID'=>$version->id])}}"
+                                <a class="dropdown-item"
+                                   href="{{route('add_Provision',['versionID'=>$version->id])}}"
                                    title=" أضف حكم جزائي">
                                     أضف حكم جزائي
                                 </a>
-                                <a class="dropdown-item" href="{{route('add_Decree',['versionID'=>$version->id])}}"
+                                <a class="dropdown-item"
+                                   href="{{route('add_Decree',['versionID'=>$version->id])}}"
                                    title=" أضف مرسوم">
                                     أضف مرسوم
                                 </a>
-                                <a class="dropdown-item" href="{{route('add_Directive',['versionID'=>$version->id])}}"
+                                <a class="dropdown-item" href="{{route('add_Correction',
+                                ['versionID'=>$version->id])}}"
+                                   title=" أضف إستدراك">
+                                    أضف إستدراك
+                                </a>
+                                <a class="dropdown-item"
+                                   href="{{route('add_Directive',['versionID'=>$version->id])}}"
                                    title="  أضف تعليمات">
                                     أضف تعليمات
                                 </a>
@@ -175,7 +184,20 @@
                                                 > <span
                                                         class="circle"></span>
                                                     عدد الأحكام الجزائية
-                                                    ({{$version-> provisions_count?$version-> provisions_count:0}})
+                                                    ({{$version-> provisions_count?$version-> provisions_count:0}}
+                                                    )
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد الإستدراكات
+                                                    ({{$version-> corrections_count?$version->
+                                                    corrections_count:0}}
+                                                    )
                                                 </a>
                                             </td>
                                         </tr>
@@ -185,7 +207,8 @@
                                                 > <span
                                                         class="circle"></span>
                                                     عدد التعليمات
-                                                    ({{$version-> directives_count?$version-> directives_count:0}})
+                                                    ({{$version-> directives_count?$version-> directives_count:0}}
+                                                    )
                                                 </a>
                                             </td>
 
@@ -196,7 +219,8 @@
                                                 > <span
                                                         class="circle"></span>
                                                     عدد المراسيم
-                                                    ({{$version->decrees_count?$version->decrees_count:0}})
+                                                    ({{$version->decrees_count?$version->decrees_count:0}}
+                                                    )
                                                 </a>
                                             </td>
 
@@ -218,7 +242,8 @@
                                                 > <span
                                                         class="circle"></span>
                                                     عدد التنويهات
-                                                    ({{$version->notices_count?$version->notices_count:0}})
+                                                    ({{$version->notices_count?$version->notices_count:0}}
+                                                    )
                                                 </a>
                                             </td>
                                         </tr>
@@ -257,7 +282,8 @@
 @endsection
 
 @section('secripts')
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
