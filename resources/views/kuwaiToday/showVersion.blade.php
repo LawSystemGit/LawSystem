@@ -64,7 +64,12 @@
                                 <a class="dropdown-item"
                                    href="{{route('add_meetingRecord',['versionID'=>$version->id])}}"
                                    title="محضر إجتماع">
-                                    محضر إجتماع
+                                    أضف محضر إجتماع
+                                </a>
+                                <a class="dropdown-item"
+                                   href="{{route('add_invitation',['versionID'=>$version->id])}}"
+                                   title="أضف دعوه">
+                                    أضف دعوه
                                 </a>
                             </div>
                         </div>
@@ -224,6 +229,17 @@
                                                         class="circle"></span>
                                                     عدد محاضر الإجتماع
                                                     ({{$version->meeting_records_count?$version->meeting_records_count:0}}
+                                                    )
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a class="tab-link" href='#article'
+                                                > <span
+                                                        class="circle"></span>
+                                                    عدد الدعوات
+                                                    ({{$version->invitations_count?$version->invitations_count:0}}
                                                     )
                                                 </a>
                                             </td>
