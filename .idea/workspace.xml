@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/CorrectionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Correction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_181337_create_corrections_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createCorrection.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editCorrection.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BankruptcyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Bankruptcy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_193203_create_bankruptcies_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/InvitationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/InvitationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -269,14 +264,7 @@
       <workItem from="1578726763664" duration="5758000" />
       <workItem from="1578741669103" duration="19000" />
       <workItem from="1578746487274" duration="183000" />
-      <workItem from="1578765141453" duration="4641000" />
-    </task>
-    <task id="LOCAL-00009" summary="عرض المواد">
-      <created>1577623868416</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1577623868416</updated>
+      <workItem from="1578765141453" duration="5743000" />
     </task>
     <task id="LOCAL-00010" summary="عرض المواد">
       <created>1577624133677</created>
@@ -614,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578730972575</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Correction is finished&#10;تم الإنتهاء من الإستدراكات">
+      <created>1578770267341</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1578770267342</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,7 +646,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removing order by articleno" />
     <MESSAGE value="master.blade.php code refactoring" />
     <MESSAGE value="judgments notes delection &amp; edititing notes number is corrected ." />
     <MESSAGE value="kuwait Alyoum" />
@@ -676,7 +670,8 @@
     <MESSAGE value=" meeting record محضر إجتماع" />
     <MESSAGE value="creating invitations code" />
     <MESSAGE value="invitations is finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="invitations is finished" />
+    <MESSAGE value="Correction is finished&#10;تم الإنتهاء من الإستدراكات" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction is finished&#10;تم الإنتهاء من الإستدراكات" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

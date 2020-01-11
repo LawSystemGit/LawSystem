@@ -133,7 +133,6 @@ Route::middleware(['auth'])->group(function () {
     Route::patch ('KuwaitAlyoum/Invitations/{invitation}/update' , 'AlKuwaitAlyoum\InvitationController@update')->name ('update_invitation');
     Route::delete ('KuwaitAlyoum/Invitations/{invitation}/delete' , 'AlKuwaitAlyoum\InvitationController@delete')->name ('delete_invitation');
 
-
     // Al Kuwait Alyoum Correction Controller  الإستدراكات
     Route::get ('KuwaitAlyoum/{versionID}/Corrections/addCorrection' , 'AlKuwaitAlyoum\CorrectionController@create')->name ('add_Correction');
     Route::post ('KuwaitAlyoum/{versionID}/Corrections/saveCorrection' , 'AlKuwaitAlyoum\CorrectionController@store')->name ('save_Correction');
@@ -141,6 +140,7 @@ Route::middleware(['auth'])->group(function () {
         ->name ('edit_Correction');
     Route::patch ('KuwaitAlyoum/Corrections/{correction}/update' , 'AlKuwaitAlyoum\CorrectionController@update')->name ('update_Correction');
     Route::delete ('KuwaitAlyoum/Corrections/{correction}/delete' , 'AlKuwaitAlyoum\CorrectionController@delete')->name ('delete_Correction');
+
 
 });
 
