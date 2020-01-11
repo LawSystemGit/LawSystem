@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="Decisions is finished">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/MeetingRecordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/MeetingRecord.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_10_182357_create_meeting_records_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createmeetRecord.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editmeetRecord.blade.php" afterDir="false" />
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/InvitationController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Invitation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_072959_create_invitations_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/code" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -176,20 +175,20 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\LawSystem\storage\app\public\files" />
-      <recent name="C:\xampp\htdocs\LawSystem\public\css" />
-      <recent name="C:\xampp\htdocs\LawSystem\public\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\AlKuwaitAlyoum" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\v1" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\Al-Kuwait-Alyoum" />
-      <recent name="E:\xampp\htdocs\LawSystem\resources\views\kuwaiToday" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\LawSystem\storage\app\public\files" />
+      <recent name="C:\xampp\htdocs\LawSystem\public\css" />
+      <recent name="C:\xampp\htdocs\LawSystem\public\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -264,14 +263,8 @@
       <workItem from="1578643148338" duration="11000" />
       <workItem from="1578662167516" duration="13185000" />
       <workItem from="1578680073680" duration="81000" />
-      <workItem from="1578680188761" duration="5068000" />
-    </task>
-    <task id="LOCAL-00006" summary="fixing if the law file is null buh">
-      <created>1577611873747</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1577611873747</updated>
+      <workItem from="1578680188761" duration="5834000" />
+      <workItem from="1578726763664" duration="1805000" />
     </task>
     <task id="LOCAL-00007" summary="fixing if the law file is null buh">
       <created>1577613822257</created>
@@ -609,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578679553416</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary=" meeting record محضر إجتماع">
+      <created>1578686622138</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1578686622139</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +646,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="editing some buttons" />
     <MESSAGE value="delete article button is working" />
     <MESSAGE value="delete article button" />
     <MESSAGE value="removing order by articleno" />
@@ -671,7 +670,8 @@
     <MESSAGE value="some code refactoring" />
     <MESSAGE value="Notices is finished" />
     <MESSAGE value="Decisions is finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Decisions is finished" />
+    <MESSAGE value=" meeting record محضر إجتماع" />
+    <option name="LAST_COMMIT_MESSAGE" value=" meeting record محضر إجتماع" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

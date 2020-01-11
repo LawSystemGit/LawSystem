@@ -125,6 +125,14 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('KuwaitAlyoum/MeetingRecord/{meetingRecord}/update', 'AlKuwaitAlyoum\MeetingRecordController@update')->name('update_meetingRecord');
     Route::delete('KuwaitAlyoum/MeetingRecord/{meetingRecord}/delete', 'AlKuwaitAlyoum\MeetingRecordController@delete')->name('delete_meetingRecord');
 
+    // Al Kuwait Alyoum  Invitation
+    Route::get ('KuwaitAlyoum/{versionID}/Invitations/addInvitation' , 'AlKuwaitAlyoum\InvitationController@create')->name ('add_invitation');
+    Route::post ('KuwaitAlyoum/{versionID}/Invitations/saveInvitation' , 'AlKuwaitAlyoum\InvitationController@store')->name ('save_invitation');
+    Route::get ('KuwaitAlyoum/Invitations/{invitation}/edit' , 'AlKuwaitAlyoum\InvitationController@edit')
+        ->name ('edit_invitation');
+    Route::patch ('KuwaitAlyoum/Invitations/{invitation}/update' , 'AlKuwaitAlyoum\InvitationController@update')->name ('update_invitation');
+    Route::delete ('KuwaitAlyoum/Invitations/{invitation}/delete' , 'AlKuwaitAlyoum\InvitationController@delete')->name ('delete_invitation');
+
 
 });
 

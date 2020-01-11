@@ -9,14 +9,14 @@ use App\Models\Decree;
 use App\Models\Notice;
 use App\Models\Decision;
 use App\Models\MeetingRecord;
-
+use App\Models\Invitation;
 class KuwaiToday extends Model
 {
     protected $fillable = [
         'versionno', 'versiontype', 'versiondate', 'versionfile'
     ];
-    protected $withCount = ['Announcements', 'Provisions', 'Directives', 'Decrees', 'Notices', 'Decisions', 'MeetingRecords'];
-    protected $with = ['Announcements', 'Provisions', 'Directives', 'Decrees', 'Notices', 'Decisions', 'MeetingRecords'];
+    protected $withCount = ['Announcements' , 'Provisions' , 'Directives' , 'Decrees' , 'Notices' , 'Decisions' , 'MeetingRecords' , 'Invitations'];
+    protected $with = ['Announcements' , 'Provisions' , 'Directives' , 'Decrees' , 'Notices' , 'Decisions' , 'MeetingRecords' , 'Invitations'];
 
     public function Announcements()
     {
@@ -51,5 +51,10 @@ class KuwaiToday extends Model
     public function MeetingRecords()
     {
         return $this->hasMany(MeetingRecord::class, 'kuwai_todays_id');
+    }
+
+    public function Invitations ()
+    {
+        return $this->hasMany (Invitation::class , 'kuwai_todays_id');
     }
 }
