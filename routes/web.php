@@ -141,6 +141,14 @@ Route::middleware(['auth'])->group(function () {
     Route::patch ('KuwaitAlyoum/Corrections/{correction}/update' , 'AlKuwaitAlyoum\CorrectionController@update')->name ('update_Correction');
     Route::delete ('KuwaitAlyoum/Corrections/{correction}/delete' , 'AlKuwaitAlyoum\CorrectionController@delete')->name ('delete_Correction');
 
+    // Al Kuwait Alyoum Correction Controller  الإستدراكات
+    Route::get ('KuwaitAlyoum/{versionID}/Bankruptcies/addBankruptcy' , 'AlKuwaitAlyoum\BankruptcyController@create')->name ('add_Bankruptcy');
+    Route::post ('KuwaitAlyoum/{versionID}/Bankruptcies/saveBankruptcy' , 'AlKuwaitAlyoum\BankruptcyController@store')->name ('save_Bankruptcy');
+    Route::get ('KuwaitAlyoum/Bankruptcies/{bankruptcy}/edit' , 'AlKuwaitAlyoum\BankruptcyController@edit')
+        ->name ('edit_Bankruptcy');
+    Route::patch ('KuwaitAlyoum/Bankruptcies/{bankruptcy}/update' , 'AlKuwaitAlyoum\BankruptcyController@update')->name ('update_Bankruptcy');
+    Route::delete ('KuwaitAlyoum/Bankruptcies/{bankruptcy}/delete' , 'AlKuwaitAlyoum\BankruptcyController@delete')->name ('delete_Bankruptcy');
+
 
 });
 

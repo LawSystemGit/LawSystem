@@ -1,0 +1,20 @@
+Schema::create ('bankruptcies' , function (Blueprint $table) {
+            $table->bigIncrements ('id');
+            $table->unsignedInteger ('kuwai_todays_id');
+            $table->string ('bankruptcysource');
+            $table->string ('bankruptcyagainst');
+            $table->string ('bankruptcyjudg');
+            $table->date ('bankruptcydate');
+            $table->longText ('bankruptcybody');
+            $table->timestamps ();
+        });
+
+         protected $fillable = [
+                'kuwai_todays_id','bankruptcysource','bankruptcyagainst','bankruptcyjudg',
+                'bankruptcydate','bankruptcybody'
+            ];
+
+            public function kuwaitVersion ()
+            {
+                return $this->belongsTo (KuwaiToday::class , 'kuwai_todays_id');
+            }

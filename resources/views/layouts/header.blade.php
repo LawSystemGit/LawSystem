@@ -4,13 +4,13 @@
 
        <!-- start header -->
        <header class="navbar no-wrap main-header d-block d-lg-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo">
+           <a href="#" class="logo">
           <p class="logo-lg">شعار مكتب المحامي</p>
           <p class="logo-md">يتم استدعاء صورة الشعار من اعدادات النظام</p>
         </a>
         <div class="header__topbar">
           <div class="header__topbar-item hover-none align-items-center">
-            <form action="file.html">
+              <form action="#">
               <div class="input-group search_code">
                 <span class="input-group-addon"><i class="search-icon header-small-icon inline-icon gray-icon "></i></span>
                 <input type="text" class="form-control" placeholder="كود رقم..">
@@ -18,7 +18,7 @@
             </form>
           </div>
           <div class="header__topbar-item">
-            <a href="musers.html" class="header__topbar-text">
+              <a href="#" class="header__topbar-text">
               <div class="cogs-icon header-large-icon inline-icon white-icon "></div>
             </a>
           </div>
@@ -64,7 +64,7 @@
                   </ul>
               </li>
               <li class="kt-notification__item-details">
-                  <a href="">
+                  <a href="#">
                     <div class="kt-notification__item-title kt-font-bold text-center">
                       مشاهدة الكل
                     </div>
@@ -114,7 +114,7 @@
                   </ul>
               </li>
               <li class="kt-notification__item-details">
-                  <a href="">
+                  <a href="#">
                     <div class="kt-notification__item-title kt-font-bold text-center">
                       مشاهدة الكل
                     </div>
@@ -213,13 +213,14 @@
                   </div>
                 </li>
                 <li class="kt-notification__item-details text-center dropdown-user-body">
-                  <a href="musers.html">عرض الملف الشخصى</a>
+                    <a href="#">عرض الملف الشخصى</a>
                 </li>
                 <li class="kt-notification__item-details text-center dropdown-user-body">
-                  <a href="musers.html" data-toggle="modal" data-target="#ModalResetPass">إعدادات الحساب</a>
+                    <a href="#" data-toggle="modal" data-target="#ModalResetPass">إعدادات الحساب</a>
                 </li>
                 <li class="kt-notification__item-details text-center dropdown-user-body">
-                  <a href="musers.html" data-toggle="modal" data-target="#ModalRepresentative">تحويل مناديب</a>
+                    <a href="#" data-toggle="modal" data-target="#ModalRepresentative">تحويل
+                        مناديب</a>
                 </li>
                 <li class="kt-notification__item-details dropdown-user-footer p-2 d-flex align-items-center  justify-content-between">
                   <a href="#" class="btn_profile"><span>الملف الشخصي </span></a>

@@ -17,6 +17,7 @@ class CreateBankruptciesTable extends Migration
             $table->bigIncrements ('id');
             $table->unsignedInteger ('kuwai_todays_id');
             $table->string ('bankruptcysource');
+            $table->string ('bankruptcyagainst');
             $table->string ('bankruptcyjudg');
             $table->date ('bankruptcydate');
             $table->longText ('bankruptcybody');

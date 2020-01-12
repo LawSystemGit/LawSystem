@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BankruptcyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Bankruptcy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_11_193203_create_bankruptcies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/code" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_12_082005_create_bankruptcies_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createBankruptcy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editBankruptcy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/SystemLaws/code2.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/code.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BankruptcyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/BankruptcyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Bankruptcy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bankruptcy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_11_193203_create_bankruptcies_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,11 +186,6 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\LawSystem\storage\app\public\files" />
-      <recent name="C:\xampp\htdocs\LawSystem\public\css" />
-      <recent name="C:\xampp\htdocs\LawSystem\public\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\AlKuwaitAlyoum" />
@@ -187,6 +193,325 @@
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\v1" />
       <recent name="E:\xampp\htdocs\LawSystem\app\Http\Controllers\Al-Kuwait-Alyoum" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\LawSystem\storage\app\public\files" />
+      <recent name="C:\xampp\htdocs\LawSystem\public\css" />
+      <recent name="C:\xampp\htdocs\LawSystem\public\images" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1578831298000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjBMdTRyc21hTXVlbDIybXZjUzVzOWc9PSIsInZhbHVlIjoiTGtFcUdzTlpMUngyVTlONnhWZ0ZFQTRIdVJMellnbVFyQ1NrTGFPTXF4b1lPdWlqSFp6eTRDS0dBZTNQTWYwdiIsIm1hYyI6ImUzOGViMTVmNDZlNzRmODcxMDc3MTNjZmJlNzFlNjcwYjViNWNiZjZmNmYyMWUxMTFjOTI3YzRjYzE5MDgxNjcifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1578831298000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="lawsystem_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InltZHpieFJcL1ZwTTFwOW90ZWMwYUt3PT0iLCJ2YWx1ZSI6InlvRWFsa3haZmxvcE9pTWpqcjJpRTlBWFlkU1BhSktpTkRmN1hzWk1zeUhyTmFOcStraVZYOHh6Vzc1STJoTjkiLCJtYWMiOiJjZmQzOWFkOGI3NWE1NjRiODJhZjcwMjZjMDA2MzRjODJjMzZjODEwZDg0ZGE4YjBhMzBlNGY2NWRjNDAyYzUwIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/laws-list" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="&quot;$2y$10$suZ9iJxaQQuYqPgbn./KQ.ojRpFiCKkRu7FvJmqXjTou48O79EN4a&quot;" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1578831289000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImN0YVJRbnhqTHhBcUtTSitlWjNHc2c9PSIsInZhbHVlIjoiZjlHRmk1SmVsXC90R3pxSk13V0RkSDBibTJ6YVVxN1FieitUVWJndnI0VHJ0SUJRaktMNG84aUJBTzJSNUNxRWUiLCJtYWMiOiI4NTY3MTFhOGJmYmYyNGZmYmFkYmQ4ZmQ0YmU1MTM2NjA0NTI4MTMwODJjMWQxN2RkMTNkMmFkM2EzYzFmYWVjIn0%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1578831289000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="lawsystem_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IjZEMllURHBnbG5XV3MyV0JUaEY0eGc9PSIsInZhbHVlIjoiZkRwN0ZoOW8wUU5ZQmVpcW9rMlJrcmFIS3RcL3NJb0JHNEc3ZVJ1dXlpNVdJTk5aamtaZzhXTjkwbWZvaWJiQU4iLCJtYWMiOiJjOThjM2NkMzAzYzNiNTA5OTE0MGQwMzY2YWRhOWFkZTczMjNlNTQ3NzljMGI3MGY4NzcwOTNlZWU3Y2Y2Mzk0In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="/api/laws-list" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="&quot;$2y$10$suZ9iJxaQQuYqPgbn./KQ.ojRpFiCKkRu7FvJmqXjTou48O79EN4a&quot;" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1578831272000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6InI4OUhlQ3NUaFhxR2dDR0lPNEtZR1E9PSIsInZhbHVlIjoiVzNoNThITTlJN25SYW1ka1dYcDc1TmpRTjNNNUxjeFdJYjZXS3ZyTFNINU5CS1J4bGRLOE1vWGlFWUhST1lNZCIsIm1hYyI6IjVkMDEwNmZlYzFiNTNmZTNkM2Y0YjQyY2RlZTkwNDg2YjA1YmQyMWU1NmRmMzNhNDcxOWVjM2QyODUxYmU4NWQifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1578831272000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="lawsystem_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImdXYmVOQ2dBV3FRTWw2cU50aDRldGc9PSIsInZhbHVlIjoiMnZNemx6eDZxNjVBRFY3QTBoSFNJcEcxQ2FCeHcyZlwvMXJFQ1dWTDNpTFFlQjE2SGRLd1Q3ZURpYnlTMThoXC9PIiwibWFjIjoiYWQzZjNhNDgyNzc5NjVjODI2YjA2YWVmNDZjZGY0MTQwY2JjYzRmNTdiYjhkMjkyYWExNTNlZmZmYjdjOTJkOCJ9" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="api/laws-list" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="&quot;$2y$10$suZ9iJxaQQuYqPgbn./KQ.ojRpFiCKkRu7FvJmqXjTou48O79EN4a&quot;" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1578831218000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImNcL0RhcDhQc05cL3hOTWwwZ1BBR1RrUT09IiwidmFsdWUiOiJPbTJ5U293RERETHR1dUVOYzVieFJYdXNhWktmSTYwYnRFUFczSVV2YUIyeU1DSmRYSzBtZjJBS0VCZ0xEaENQIiwibWFjIjoiYTFkNTAxN2Q0YWUyYWEwZTM1MjhjNjVjOWFlZjEzMTc0M2EyOWMyMTg3NWFhY2NjM2JiMGYxZWQxMDFjYzgwMCJ9" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1578831218000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="lawsystem_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImY2Sm1DT0Q0TTRaWnVtQkRyRlZiaGc9PSIsInZhbHVlIjoid2lEYWNsbXlVanNSTm04aXVLYkJHb3RBdXNkRjdpZFV1N3ZRSjM4YUd2U3BcL1NxVkQ2Yk5maTdmVUVCd2J0MlIiLCJtYWMiOiJkYzc0MDA0OTI3MDMyODkwMWQ1YTQ1YWFmZTdmMDZkZmMzYTE0YTNhN2VhMTE5ZTE4MDc5Mzk1OGU2M2ZjNzE1In0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="laws-list" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="&quot;$2y$10$suZ9iJxaQQuYqPgbn./KQ.ojRpFiCKkRu7FvJmqXjTou48O79EN4a&quot;" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1578831111000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IithSWlCRmNsM2xEVDNxbmNPSzE3NHc9PSIsInZhbHVlIjoiNlUrNUwxMStPZlhpSWFha2ZJWXJScWkzNmJDS1h2RzNHZGVkY1owcDZ1WFREN2h4N1RiYUZwTkpYK0JEV01LVyIsIm1hYyI6IjNjZmQ2YzI4M2Q3MjJjMDY4MmY3MTE5ZGRlMDEyYTM5ZGJhODc5MzQ4YzY3ZmVmZWJlYzZlZmI3NmJhMzcxNmYifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1578831111000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="lawsystem_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6IkR4YWh1NzhMN0dxOFhONkkxVWZlcnc9PSIsInZhbHVlIjoiRldMUmFlT0diT1BRM0VxMFQyRmd2NjcxZHRkVitPMmc3bG1NbUZKZnBPNFwvdVRMaFBzTXdpdHFaTTRzRWRKN3QiLCJtYWMiOiI1ODlhNzczMTIxZDRjMmUwZTZiZTc3OWNhN2FlODZjODA2ZmJjOGNhZTNkZmUxMDMwOWY3OTU5NTMyNzdmYWYyIn0%3D" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="laws-list" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="ojRpFiCKkRu7FvJmqXjTou48O79EN4a" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="$2y$10$suZ9iJxaQQuYqPgbn./KQ.ojRpFiCKkRu7FvJmqXjTou48O79EN4a" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1578831061000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="XSRF-TOKEN" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6ImI4bktuK3hQYWxORHUxMHJVNXJNRnc9PSIsInZhbHVlIjoiSExHN2lDWjdwcTZ4amRLd1FuaUNrV003aWsxVklEbEJFcjlkWWpFMzI2aHFwNWxGSERpWGlhUVJLTDV6UHdxdSIsIm1hYyI6IjI4Yzg5YjhjZTRmNzdiY2ZiMTQwYzFlOWJhZDQ5Y2NiMzRlYWFkNTI0YjU2MGY2OTZmNGZhYTQ2ODIwMTkzMDkifQ%3D%3D" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="1578831061000" />
+                <option name="domain" value="localhost" />
+                <option name="name" value="lawsystem_session" />
+                <option name="path" value="/" />
+                <option name="value" value="eyJpdiI6Ilwvb2pzUjI1NkJWemR6ZmRQVm90Zk1nPT0iLCJ2YWx1ZSI6InNjR2szMHdFb3IzOWpKXC9YakJndjM3NHltS1NvU0pMcGhpcU1aSjFPRGEzWHJ1cU9RdHdBZjZaSUM1V1pMcDMrIiwibWFjIjoiMjE5M2I5MTgyMWQxOTAyZDEyMDNlNjQyYTY1YzY0NjAxOTIzNTg5NTA5OTc3YzdhNjY4N2IzN2M1NzE2YzZiYyJ9" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="laws-list" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="ojRpFiCKkRu7FvJmqXjTou48O79EN4a" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000" />
+          <option name="urlPath" value="laws-list" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="api_token" />
+                <option name="value" value="$2y$10$suZ9iJxaQQuYqPgbn./KQ.ojRpFiCKkRu7FvJmqXjTou48O79EN4a" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -264,14 +589,9 @@
       <workItem from="1578726763664" duration="5758000" />
       <workItem from="1578741669103" duration="19000" />
       <workItem from="1578746487274" duration="183000" />
-      <workItem from="1578765141453" duration="5743000" />
-    </task>
-    <task id="LOCAL-00010" summary="عرض المواد">
-      <created>1577624133677</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1577624133677</updated>
+      <workItem from="1578765141453" duration="5835000" />
+      <workItem from="1578816637743" duration="69000" />
+      <workItem from="1578816899708" duration="16065000" />
     </task>
     <task id="LOCAL-00011" summary="عرض المواد">
       <created>1577627378221</created>
@@ -609,7 +929,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578770267342</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="التفليسة">
+      <created>1578771383811</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1578771383811</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +973,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="master.blade.php code refactoring" />
     <MESSAGE value="judgments notes delection &amp; edititing notes number is corrected ." />
     <MESSAGE value="kuwait Alyoum" />
     <MESSAGE value="fixing kuwait Alyoum create page" />
@@ -671,7 +997,8 @@
     <MESSAGE value="creating invitations code" />
     <MESSAGE value="invitations is finished" />
     <MESSAGE value="Correction is finished&#10;تم الإنتهاء من الإستدراكات" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction is finished&#10;تم الإنتهاء من الإستدراكات" />
+    <MESSAGE value="التفليسة" />
+    <option name="LAST_COMMIT_MESSAGE" value="التفليسة" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

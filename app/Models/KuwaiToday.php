@@ -17,9 +17,14 @@ class KuwaiToday extends Model
     protected $fillable = [
         'versionno' , 'versiontype' , 'versiondate' , 'versionfile'
     ];
+
     protected $withCount = ['Announcements' , 'Provisions' , 'Directives' , 'Decrees' , 'Notices'
-        , 'Decisions' , 'MeetingRecords' , 'Invitations' , 'Corrections'];
-    protected $with = ['Announcements' , 'Provisions' , 'Directives' , 'Decrees' , 'Notices' , 'Decisions' , 'MeetingRecords' , 'Invitations' , 'Corrections'];
+        , 'Decisions' , 'MeetingRecords' , 'Invitations' , 'Corrections' , 'Bankruptcies'];
+
+
+    protected $with = ['Announcements' , 'Provisions' , 'Directives' ,
+        'Decrees' , 'Notices' , 'Decisions' , 'MeetingRecords' ,
+        'Invitations' , 'Corrections' , 'Bankruptcies'];
 
     public function Announcements ()
     {
@@ -64,6 +69,11 @@ class KuwaiToday extends Model
     public function Corrections ()
     {
         return $this->hasMany (Correction::class , 'kuwai_todays_id');
+    }
+
+    public function Bankruptcies ()
+    {
+        return $this->hasMany (Bankruptcy::class , 'kuwai_todays_id');
     }
 
 
