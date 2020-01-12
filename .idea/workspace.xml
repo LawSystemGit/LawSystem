@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/code" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_12_082005_create_bankruptcies_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/createBankruptcy.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/RelatedToVersion/editBankruptcy.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/SystemLaws/code2.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/code.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BankruptcyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlKuwaitAlyoum/BankruptcyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bankruptcy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bankruptcy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/KuwaiToday.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KuwaiToday.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_11_193203_create_bankruptcies_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/kuwaiToday/showVersion.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="7cd86267-b324-44bc-b7e6-16fd5ef99b8f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -591,14 +574,7 @@
       <workItem from="1578746487274" duration="183000" />
       <workItem from="1578765141453" duration="5835000" />
       <workItem from="1578816637743" duration="69000" />
-      <workItem from="1578816899708" duration="16065000" />
-    </task>
-    <task id="LOCAL-00011" summary="عرض المواد">
-      <created>1577627378221</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1577627378221</updated>
+      <workItem from="1578816899708" duration="16361000" />
     </task>
     <task id="LOCAL-00012" summary="gdfbg">
       <created>1577627451976</created>
@@ -936,7 +912,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578771383811</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="الكود خلصان بنسبة 90 %">
+      <created>1578841886327</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1578841886328</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -973,7 +956,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="judgments notes delection &amp; edititing notes number is corrected ." />
     <MESSAGE value="kuwait Alyoum" />
     <MESSAGE value="fixing kuwait Alyoum create page" />
     <MESSAGE value="create update last version blade file" />
@@ -998,7 +980,8 @@
     <MESSAGE value="invitations is finished" />
     <MESSAGE value="Correction is finished&#10;تم الإنتهاء من الإستدراكات" />
     <MESSAGE value="التفليسة" />
-    <option name="LAST_COMMIT_MESSAGE" value="التفليسة" />
+    <MESSAGE value="الكود خلصان بنسبة 90 %" />
+    <option name="LAST_COMMIT_MESSAGE" value="الكود خلصان بنسبة 90 %" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
