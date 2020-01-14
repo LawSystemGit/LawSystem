@@ -75,6 +75,36 @@ class KuwaiTodayController extends Controller
     {
         return view('kuwaiToday.showVersion', compact(['version']));
     }
+     public function edit(KuwaiToday $versionID)
+    {
+        return view('kuwaiToday.edit', compact(['versionID']));
+    }
+
+    public function update(Request $request, KuwaiToday $version)
+    {
+        $this->validate($request,
+            [
+                'versionNo' => 'required',
+                'versionType' => 'required',
+                'versionDate' => 'required',
+            ], [  // change the default english error validation messages with arabic ones
+                'versionNo.required' => 'مطلوب إدخال رقم العدد',
+                'versionType.required' => 'مطلوب إخال نوع العدد',
+                'versionDate.required' => 'مطلوب إدخال تاريخ العدد',
+            ]);
+        $version->versionno = $request->versionNo;
+        $version->versiontype = $request->versionType;
+        $version->versiondate = $request->versionDate;
+        $path = fileHandling::fileRename('/public/KuwaitAlyoum_finished/', $version->versionfile, $request->versionNo . '.' . 'pdf');
+        $version->save();
+        if ($version) {
+            Session::put('notification', [
+                'message' => " تم تعديل العدد بنجاح ",
+                'alert-type' => 'success',
+            ]);
+            return redirect()->route('showVersion', ['version' => $version]);
+        }
+    }
 
     public function updateLastInput(KuwaiToday $lastVersion)
     {
