@@ -69,6 +69,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('KuwaitAlyoum-list', 'KuwaiTodayController@KuwaitAlyoumList')->name('KuwaitAlyoumList');
     Route::get('/KuwaitAlyoum/create/{lastVersion?}', 'KuwaiTodayController@create')->name('addVersion');
     Route::post('/KuwaitAlyoum/store', 'KuwaiTodayController@store')->name('saveVersion');
+    Route::get('/KuwaitAlyoum/{versionID}/edit', 'KuwaiTodayController@edit')->name('editVersion');
+    Route::patch('/KuwaitAlyoum/{version}/update', 'KuwaiTodayController@update')->name('updateVersion');
     Route::get('/KuwaitAlyoum/{lastVersion}/updateLastInput', 'KuwaiTodayController@updateLastInput')->name('updateLastVersion');
     Route::patch('/KuwaitAlyoum/{lastVersion}/saveLastInput', 'KuwaiTodayController@saveLastInput')->name('saveLastVersion');
     Route::get('/KuwaitAlyoum/{version}/show', 'KuwaiTodayController@show')->name('showVersion');
