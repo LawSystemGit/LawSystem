@@ -277,6 +277,11 @@
                                                 <p>رقم الإعلان : {{$announce->announno}}</p>
                                                 <p>العنوان : {{$announce->announctitle}}</p>
                                                 <p>{{$announce->announcbody}}</p>
+                                                <a href="{{route('edit_Announcement',['Announcement'=>$announce])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -290,6 +295,12 @@
                                                 <p>رقم المخفر : {{$pro->policestation}}</p>
                                                 <p>تاريخ الجلسة : {{$pro->provisiondate}}</p>
                                                 <p>{{$pro->provisionbody}}</p>
+                                                <a href="{{route('edit_Provision',
+                                                ['provision'=>$pro])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -303,6 +314,11 @@
                                                 <p>تاريخ الجلسة
                                                     : {{$correction->correctiondate}}</p>
                                                 <p>{{$correction->correctionbody}}</p>
+                                                <a href="{{route('edit_Correction',['correction'=>$correction])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -317,6 +333,11 @@
                                                 <p>تعليمات رقم : {{$directive->directiveno}}</p>
                                                 <p> لسنة : {{$directive->directiveyear}}</p>
                                                 <p>{{$directive->directivebody}}</p>
+                                                <a href="{{route('edit_Directive',['directive'=>$directive])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -333,6 +354,11 @@
                                                 <p> العنوان : {{$decree->decreetitle}}</p>
                                                 <p> لسنة : {{$decree->decreeyear}}</p>
                                                 <p>{{$decree->decreebody}}</p>
+                                                <a href="{{route('edit_Decree',['decree'=>$decree])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -348,6 +374,11 @@
                                                     : {{$decision->decisionno}}</h4>
                                                 <p> العنوان : {{$decision->decisiontitle}}</p>
                                                 <p>{{$decision->decisionbody}}</p>
+                                                <a href="{{route('edit_Decision',['decision'=>$decision])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -360,6 +391,11 @@
                                                     : {{$notice->noticesource}}</h4>
                                                 <p> تاريخ الإصدار : {{$notice->noticedate}}</p>
                                                 <p>{{$notice->noticebody}}</p>
+                                                <a href="{{route('edit_Notice',['notice'=>$notice])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -372,6 +408,11 @@
                                                     : {{$record->meetingsource}}</h4>
                                                 <p> تاريخ الإصدار : {{$record->meetingdate}}</p>
                                                 <p>{{$record->meetingrecord}}</p>
+                                                <a href="{{route('edit_meetingRecord',['meetingRecord'=>$record])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -383,6 +424,11 @@
                                                 <h4 style="border-bottom: 1px solid #eee;">الجهه
                                                     : {{$invitation->invitationsource}}</h4>
                                                 <p>{{$invitation->invitationbody}}</p>
+                                                <a href="{{route('edit_invitation',['invitation'=>$invitation])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
@@ -399,6 +445,11 @@
                                                 <p> تاريخ الجلسة
                                                     : {{$bankruptcy->bankruptcydate}}</p>
                                                 <p>{{$bankruptcy->bankruptcybody}}</p>
+                                                <a href="{{route('edit_Bankruptcy',['bankruptcy'=>$bankruptcy])}}">
+                                                    <button class="general_btn btn_1 ml-2">
+                                                        <i class="edit-icon btn-icon-width inline-icon green-icon"></i><span>تعديل</span>
+                                                    </button>
+                                                </a>
                                             </div>
                                             <br>
                                         @endforeach
